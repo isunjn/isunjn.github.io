@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on @isunjn</title>
+    <link>https://isunjn.me/blog/</link>
+    <description>Recent content in Blogs on @isunjn</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <copyright>Copyright © 2021, isunjn.</copyright>
+    <lastBuildDate>Mon, 24 May 2021 16:47:58 +0800</lastBuildDate><atom:link href="https://isunjn.me/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>https://isunjn.me/hello-world/</link>
+      <pubDate>Mon, 24 May 2021 16:47:58 +0800</pubDate>
+      
+      <guid>https://isunjn.me/hello-world/</guid>
+      <description>Hope this traditional incantation can also help me with writing blogs&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,16 +2,16 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
 	<title>isunjn::blog</title>
 	<subtitle>The blog of @isunjn</subtitle>
-	<link href="https://isunjn/blog/feed.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://isunjn/blog/"/>
+	<link href="https://isunjn.me/blog/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://isunjn.me/blog/"/>
 	<updated>2022-09-20T00:00:00+00:00</updated>
-	<id>https://isunjn/blog/feed.xml</id>
+	<id>https://isunjn.me/blog/feed.xml</id>
 	<entry xml:lang="zh-CN">
 		<title>读《Effective TypeScript》</title>
 		<published>2022-09-20T00:00:00+00:00</published>
 		<updated>2022-09-20T00:00:00+00:00</updated>
-		<link href="https://isunjn/blog/read-effective-ts/" type="text/html"/>
-		<id>https://isunjn/blog/read-effective-ts/</id>
+		<link href="https://isunjn.me/blog/read-effective-ts/" type="text/html"/>
+		<id>https://isunjn.me/blog/read-effective-ts/</id>
 		<content type="html">&lt;p&gt;《Effective TypeScipt》是一本评价很好的 TS 相关书籍，书中介绍了 62 个类型相关的技巧&#x2F;建议，对理解 TypeScript 的类型系统以及如何应对一些日常开发中会遇到的实际问题很有帮助。
 我看的英文版，很易读，和读技术文档差别不大。总之这本书还是很推荐的。&lt;&#x2F;p&gt;
 &lt;p&gt;以下是我在读的过程中记的一些要点笔记：&lt;&#x2F;p&gt;
@@ -721,8 +721,8 @@
 		<title>用 TypeScript 实现 SNL 编译器前端</title>
 		<published>2022-04-30T00:00:00+00:00</published>
 		<updated>2022-04-30T00:00:00+00:00</updated>
-		<link href="https://isunjn/blog/snl-compiler-in-ts/" type="text/html"/>
-		<id>https://isunjn/blog/snl-compiler-in-ts/</id>
+		<link href="https://isunjn.me/blog/snl-compiler-in-ts/" type="text/html"/>
+		<id>https://isunjn.me/blog/snl-compiler-in-ts/</id>
 		<content type="html">&lt;p&gt;SNL (Small Nested Language) 是我校用于教学的一个非常简单(且不完整)的&amp;quot;高级&amp;quot;编程语言, 编译原理的课设就是实现它的编译器前端部分, 我试着用 TypeScript 完成了这个任务, 整体做下来感觉难度不大，确实是个玩具语言的玩具编译器，这里简单记录一下实现过程。&lt;&#x2F;p&gt;
 &lt;p&gt;项目地址: &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;snlc&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;snlc&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;blockquote class=&quot;callout note&quot;&gt;
@@ -985,8 +985,8 @@
 &lt;p&gt;追求形式确实比追求内容要容易许多，有很多想写&#x2F;计划写博客的人文章还没写多少，却把时间都花在了折腾写作工具、选主题、改样式之上……我就是其中之一，实在惭愧 😢&lt;&#x2F;p&gt;
 &lt;p&gt;因为多少有一点强迫症，看了好多别的博客主题，都不是很满意，自己就动手写了一个。其实写这种静态的博客主题主要是写 CSS，并没有太多的&#x27;技术含量&#x27;，主要还是审美和设计，过程中思考了一些关于博客内容和样式的东西，觉得还是值得说一说的。&lt;&#x2F;p&gt;
 </summary>
-		<link href="https://isunjn/blog/serene-theme/" type="text/html"/>
-		<id>https://isunjn/blog/serene-theme/</id>
+		<link href="https://isunjn.me/blog/serene-theme/" type="text/html"/>
+		<id>https://isunjn.me/blog/serene-theme/</id>
 		<content type="html">&lt;blockquote class=&quot;callout warning&quot;&gt;
     
     &lt;div class=&quot;icon&quot;&gt;
@@ -1066,8 +1066,8 @@
 		<title>Say Hello Again</title>
 		<published>2021-10-21T00:00:00+00:00</published>
 		<updated>2021-10-21T00:00:00+00:00</updated>
-		<link href="https://isunjn/blog/say-hello-again/" type="text/html"/>
-		<id>https://isunjn/blog/say-hello-again/</id>
+		<link href="https://isunjn.me/blog/say-hello-again/" type="text/html"/>
+		<id>https://isunjn.me/blog/say-hello-again/</id>
 		<content type="html">&lt;p&gt;这是博客的第一篇文章。我很喜欢个人博客这种形式，除了通过其他人的博客学了很多技术相关的东西之外，个人博客往往还会有一些作者本人的经历、思考和感悟，有一种独特的人文关怀感，曾带给我许多感动。&lt;&#x2F;p&gt;
 &lt;p&gt;在茫茫的互联网上拥有一个属于自己的空间可以记录、表达、分享，确实很吸引人，不过很多人(就比如我)往往过分注重形式，忽视了博客最重要的其实是有价值的内容，是持续的思考和写作。可能因为有一点强迫症，我搭建过好几次博客，用静态网站生成器做一个博客站点很容易，但是总感觉不是我想要的样子，自己当时也没有内容才是关键的觉悟，没有写下些什么，就不了了之了。&lt;&#x2F;p&gt;
 &lt;p&gt;最终，我还是按自己心中的想法做了&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;serene&quot;&gt;一个博客主题&lt;&#x2F;a&gt;... 静态网站生成器用的是 &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;，它是用 Rust 写的，好像每种语言都有相应的 &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;jamstack.org&#x2F;generators&#x2F;&quot;&gt;Static Site Generator&lt;&#x2F;a&gt;，选 Zola 也没什么特殊的理由，只是看文档感觉比较容易上手，各种功能也都有，虽然 Hexo 和 Hugo 用的人更多一些。主题取名 Serene，设计较简洁，围绕阅读做了一些特殊的考虑，我希望这是一个以内容为主的博客主题。书写是为了更好的思考，希望未来能产出一些有价值的内容。&lt;&#x2F;p&gt;

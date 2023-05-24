@@ -2,21 +2,21 @@
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="zh-CN">
 	<title>isunjn::blog</title>
 	<subtitle>The blog of @isunjn</subtitle>
-	<link href="https://isunjn.me/blog/feed.xml" rel="self" type="application/atom+xml"/>
-    <link href="https://isunjn.me/blog/"/>
+	<link href="https://isunjn/blog/feed.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://isunjn/blog/"/>
 	<updated>2022-09-20T00:00:00+00:00</updated>
-	<id>https://isunjn.me/blog/feed.xml</id>
+	<id>https://isunjn/blog/feed.xml</id>
 	<entry xml:lang="zh-CN">
 		<title>读《Effective TypeScript》</title>
 		<published>2022-09-20T00:00:00+00:00</published>
 		<updated>2022-09-20T00:00:00+00:00</updated>
-		<link href="https://isunjn.me/blog/read-effective-ts/" type="text/html"/>
-		<id>https://isunjn.me/blog/read-effective-ts/</id>
+		<link href="https://isunjn/blog/read-effective-ts/" type="text/html"/>
+		<id>https://isunjn/blog/read-effective-ts/</id>
 		<content type="html">&lt;p&gt;《Effective TypeScipt》是一本评价很好的 TS 相关书籍，书中介绍了 62 个类型相关的技巧&#x2F;建议，对理解 TypeScript 的类型系统以及如何应对一些日常开发中会遇到的实际问题很有帮助。
 我看的英文版，很易读，和读技术文档差别不大。总之这本书还是很推荐的。&lt;&#x2F;p&gt;
 &lt;p&gt;以下是我在读的过程中记的一些要点笔记：&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
-&lt;h3 id=&quot;1-6-getting-to-know-typescript&quot;&gt;1-6: Getting to Know TypeScript&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;1-6-getting-to-know-typescript&quot;&gt;1-6: Getting to Know TypeScript&lt;a class=&quot;zola-anchor&quot; href=&quot;#1-6-getting-to-know-typescript&quot; aria-label=&quot;Anchor link for: 1-6-getting-to-know-typescript&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;TS 是 JS 的超集，它保留了大部分 JS 的运行时行为模型，一小部分 JS 允许的行为在 TS 中不被允许，另外一些则可以通过编译器 flag 来控制是否保留&lt;&#x2F;p&gt;
@@ -55,7 +55,7 @@
 &lt;p&gt;avoid &lt;code&gt;any&lt;&#x2F;code&gt;!&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;7-think-of-types-as-sets-of-values&quot;&gt;7: Think of Types as Sets of Values&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;7-think-of-types-as-sets-of-values&quot;&gt;7: Think of Types as Sets of Values&lt;a class=&quot;zola-anchor&quot; href=&quot;#7-think-of-types-as-sets-of-values&quot; aria-label=&quot;Anchor link for: 7-think-of-types-as-sets-of-values&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;从范畴论的角度来说，类型是值的集合&lt;&#x2F;p&gt;
@@ -82,7 +82,7 @@
 &lt;p&gt;Think of “extends,” “assignable to,” and “subtype of ” as synonyms for “subset of.”&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space&quot;&gt;8: Know How to Tell Whether a Symbol Is in the Tyep Sapce or Value Space&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space&quot;&gt;8: Know How to Tell Whether a Symbol Is in the Tyep Sapce or Value Space&lt;a class=&quot;zola-anchor&quot; href=&quot;#8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space&quot; aria-label=&quot;Anchor link for: 8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;TS 中的类型标识符和值标识符互不冲突，可以同名&lt;&#x2F;p&gt;
@@ -100,7 +100,7 @@
 &lt;p&gt;&lt;code&gt;typeof&lt;&#x2F;code&gt;、&lt;code&gt;this&lt;&#x2F;code&gt;以及其他许多操作符和关键字在类型和值的上下文中有不同的意义&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;9-prefer-type-declartions-to-type-assertions&quot;&gt;9: Prefer Type Declartions to Type Assertions&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;9-prefer-type-declartions-to-type-assertions&quot;&gt;9: Prefer Type Declartions to Type Assertions&lt;a class=&quot;zola-anchor&quot; href=&quot;#9-prefer-type-declartions-to-type-assertions&quot; aria-label=&quot;Anchor link for: 9-prefer-type-declartions-to-type-assertions&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;有两种方式给一个值进行类型注解：&lt;code&gt;const val: Person = {}&lt;&#x2F;code&gt; &lt;code&gt;const cal = {} as Person&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -124,8 +124,8 @@
 &lt;p&gt;&lt;code&gt;const people = [&#x27;alice&#x27;, &#x27;bob&#x27;].map((ame): Person =&amp;gt; ({ name }));&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;10-avoid-object-wrapper-types&quot;&gt;10: Avoid Object Wrapper Types&lt;&#x2F;h3&gt;
-&lt;h3 id=&quot;11-recognize-the-limits-of-excess-prperty-checking&quot;&gt;11: Recognize the Limits of Excess Prperty Checking&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;10-avoid-object-wrapper-types&quot;&gt;10: Avoid Object Wrapper Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#10-avoid-object-wrapper-types&quot; aria-label=&quot;Anchor link for: 10-avoid-object-wrapper-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;11-recognize-the-limits-of-excess-prperty-checking&quot;&gt;11: Recognize the Limits of Excess Prperty Checking&lt;a class=&quot;zola-anchor&quot; href=&quot;#11-recognize-the-limits-of-excess-prperty-checking&quot; aria-label=&quot;Anchor link for: 11-recognize-the-limits-of-excess-prperty-checking&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;尽管是结构化类型系统，Ts 提供了“excess propety checking”检测来帮助发现错误，它作用于对象字面量，（这意味着如果先把对象字面量赋值给一个变量，再用这个变量的话就不会触发该检查）&lt;&#x2F;p&gt;
@@ -140,7 +140,7 @@
 &lt;p&gt;这两种检查均是在结构化类型对可赋值性检查之外的检查，有助于帮助发现 typo 和其他一些涉及属性名的错误，在类型有可选字段时尤其有用&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;12-apply-types-to-entire-function-expressions-when-possible&quot;&gt;12: Apply Types to Entire Function Expressions When Possible&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;12-apply-types-to-entire-function-expressions-when-possible&quot;&gt;12: Apply Types to Entire Function Expressions When Possible&lt;a class=&quot;zola-anchor&quot; href=&quot;#12-apply-types-to-entire-function-expressions-when-possible&quot; aria-label=&quot;Anchor link for: 12-apply-types-to-entire-function-expressions-when-possible&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;考虑对整个函数表达式应用一个类型注解，而不是对参数和返回值进行注解&lt;&#x2F;p&gt;
@@ -158,7 +158,7 @@
 &lt;p&gt;使用&lt;code&gt;typeof fn&lt;&#x2F;code&gt;来得到另一个函数的类型来使用&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;13-know-the-differences-between-type-and-interface&quot;&gt;13: Know the Differences Between type and interface&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;13-know-the-differences-between-type-and-interface&quot;&gt;13: Know the Differences Between type and interface&lt;a class=&quot;zola-anchor&quot; href=&quot;#13-know-the-differences-between-type-and-interface&quot; aria-label=&quot;Anchor link for: 13-know-the-differences-between-type-and-interface&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;总体上 type 比 interface 更加强大，尤其是涉及到 union type 时，元组和数组类型用 type 也更容易表达&lt;&#x2F;p&gt;
@@ -184,7 +184,7 @@
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;14-use-type-operations-and-generics-to-avoid-repeating-yourself&quot;&gt;14: Use Type Operations and Generics to Avoid Repeating Yourself&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;14-use-type-operations-and-generics-to-avoid-repeating-yourself&quot;&gt;14: Use Type Operations and Generics to Avoid Repeating Yourself&lt;a class=&quot;zola-anchor&quot; href=&quot;#14-use-type-operations-and-generics-to-avoid-repeating-yourself&quot; aria-label=&quot;Anchor link for: 14-use-type-operations-and-generics-to-avoid-repeating-yourself&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;DRY 也同样应该应用在类型方面，类型上的重复更加常见，因为人们不熟悉为减少类型重复而采用的模式&lt;&#x2F;p&gt;
@@ -214,7 +214,7 @@
 &lt;p&gt;通过&lt;code&gt;extends&lt;&#x2F;code&gt;关键字来对泛型参数进行约束&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;15-use-index-signatures-for-dynamic-data&quot;&gt;15: Use Index Signatures for Dynamic Data&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;15-use-index-signatures-for-dynamic-data&quot;&gt;15: Use Index Signatures for Dynamic Data&lt;a class=&quot;zola-anchor&quot; href=&quot;#15-use-index-signatures-for-dynamic-data&quot; aria-label=&quot;Anchor link for: 15-use-index-signatures-for-dynamic-data&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;索引签名用在动态数据的场景中，例如解析 CSV，列名提前不知道&lt;code&gt;{ [columnName: string]: string }[]&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -245,7 +245,7 @@
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures&quot;&gt;16: Prefer Arrays, Tuples, and ArrayLike to number Index Signatures&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures&quot;&gt;16: Prefer Arrays, Tuples, and ArrayLike to number Index Signatures&lt;a class=&quot;zola-anchor&quot; href=&quot;#16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures&quot; aria-label=&quot;Anchor link for: 16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;数组的索引在运行时实际上也是 string 类型的，但 TS 将其类型声明为 number，有助于帮助发现错误，number index signatures 仅仅是一个 TS 构造&lt;&#x2F;p&gt;
@@ -257,7 +257,7 @@
 &lt;p&gt;标准库提供&lt;code&gt;ArrayLike&amp;lt;T&amp;gt;&lt;&#x2F;code&gt;类型，只有 length 属性和 number index signature&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;17-use-readonly-to-avoid-errors-associated-with-mutation&quot;&gt;17: Use readonly to Avoid Errors Associated with Mutation&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;17-use-readonly-to-avoid-errors-associated-with-mutation&quot;&gt;17: Use readonly to Avoid Errors Associated with Mutation&lt;a class=&quot;zola-anchor&quot; href=&quot;#17-use-readonly-to-avoid-errors-associated-with-mutation&quot; aria-label=&quot;Anchor link for: 17-use-readonly-to-avoid-errors-associated-with-mutation&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;number[]&lt;&#x2F;code&gt;是&lt;code&gt;readonly number[]&lt;&#x2F;code&gt;的子类型（而不是反过来），所以&lt;code&gt;number[]&lt;&#x2F;code&gt;类型的值可以被赋值给&lt;code&gt;readonly number[]&lt;&#x2F;code&gt;类型的变量，反过来则不行&lt;&#x2F;p&gt;
@@ -272,7 +272,7 @@
 &lt;p&gt;&lt;code&gt;readonly&lt;&#x2F;code&gt; is shallow&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;18-use-mapped-types-to-keep-values-in-sync&quot;&gt;18: Use Mapped Types to Keep Values in Sync&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;18-use-mapped-types-to-keep-values-in-sync&quot;&gt;18: Use Mapped Types to Keep Values in Sync&lt;a class=&quot;zola-anchor&quot; href=&quot;#18-use-mapped-types-to-keep-values-in-sync&quot; aria-label=&quot;Anchor link for: 18-use-mapped-types-to-keep-values-in-sync&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;如果你想要一个对象有和另一个对象完全一致的属性，使用 mapped types&lt;&#x2F;p&gt;
@@ -284,7 +284,7 @@
 &lt;p&gt;&lt;code&gt;const REQUIRES_UPDATE: {[k in keyof ScatterProps]: boolean} = {xs:true, xy: true onClick:false};&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;19-avoid-cluttering-your-code-with-inferable-types&quot;&gt;19: Avoid Cluttering Your Code with Inferable Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;19-avoid-cluttering-your-code-with-inferable-types&quot;&gt;19: Avoid Cluttering Your Code with Inferable Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#19-avoid-cluttering-your-code-with-inferable-types&quot; aria-label=&quot;Anchor link for: 19-avoid-cluttering-your-code-with-inferable-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;手动注解可以被推断的类型总体上不被推荐&lt;&#x2F;p&gt;
@@ -305,7 +305,7 @@
 &lt;p&gt;函数返回值类似，能够被 infer，但最好显式注解&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;20-use-different-variables-for-different-types&quot;&gt;20: Use Different Variables for Different Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;20-use-different-variables-for-different-types&quot;&gt;20: Use Different Variables for Different Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#20-use-different-variables-for-different-types&quot; aria-label=&quot;Anchor link for: 20-use-different-variables-for-different-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;丢弃 js 的动态类型特性&lt;&#x2F;p&gt;
@@ -328,7 +328,7 @@
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;21-understand-type-widening&quot;&gt;21: Understand Type Widening&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;21-understand-type-widening&quot;&gt;21: Understand Type Widening&lt;a class=&quot;zola-anchor&quot; href=&quot;#21-understand-type-widening&quot; aria-label=&quot;Anchor link for: 21-understand-type-widening&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;类型扩展发生在 ts 尝试通过赋值给变量的值来推断变量的类型时&lt;&#x2F;p&gt;
@@ -340,7 +340,7 @@
 &lt;p&gt;通过显式类型注解、更多的上下文信息、&lt;code&gt;as const&lt;&#x2F;code&gt;等方式来阻止类型猜测&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;22-understand-type-narrowing&quot;&gt;22: Understand Type Narrowing&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;22-understand-type-narrowing&quot;&gt;22: Understand Type Narrowing&lt;a class=&quot;zola-anchor&quot; href=&quot;#22-understand-type-narrowing&quot; aria-label=&quot;Anchor link for: 22-understand-type-narrowing&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;TS 通过条件判断和控制流分析来进行类型收缩&lt;&#x2F;p&gt;
@@ -352,7 +352,7 @@
 &lt;p&gt;使用自定义类型谓词函数来在 map&#x2F;filter&#x2F;reduce 等地方进行类型收缩&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;23-create-objects-all-at-once&quot;&gt;23: Create Objects All at Once&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;23-create-objects-all-at-once&quot;&gt;23: Create Objects All at Once&lt;a class=&quot;zola-anchor&quot; href=&quot;#23-create-objects-all-at-once&quot; aria-label=&quot;Anchor link for: 23-create-objects-all-at-once&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;prefer creating objects all at once, rather than piece by piece&lt;&#x2F;p&gt;
@@ -367,7 +367,7 @@
 &lt;p&gt;如果要条件地添加一个属性，需要使用一个辅助函数 &lt;code&gt;p98&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;24-be-consisitent-in-your-use-of-aliases&quot;&gt;24: Be Consisitent in Your Use of Aliases&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;24-be-consisitent-in-your-use-of-aliases&quot;&gt;24: Be Consisitent in Your Use of Aliases&lt;a class=&quot;zola-anchor&quot; href=&quot;#24-be-consisitent-in-your-use-of-aliases&quot; aria-label=&quot;Anchor link for: 24-be-consisitent-in-your-use-of-aliases&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;这里的 alias 指引用同一个对象的多个变量，会引入不一致&lt;&#x2F;p&gt;
@@ -382,7 +382,7 @@
 &lt;p&gt;对一个值进行的某个属性信息类型判断后，在这个值之上的函数调用可能会更改这个属性，但 ts 控制流分析不会重新验证去反映出这个变化&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;25-use-async-functions-instead-of-callbacks-for-asynchronous-code&quot;&gt;25: Use async Functions Instead of Callbacks for Asynchronous Code&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;25-use-async-functions-instead-of-callbacks-for-asynchronous-code&quot;&gt;25: Use async Functions Instead of Callbacks for Asynchronous Code&lt;a class=&quot;zola-anchor&quot; href=&quot;#25-use-async-functions-instead-of-callbacks-for-asynchronous-code&quot; aria-label=&quot;Anchor link for: 25-use-async-functions-instead-of-callbacks-for-asynchronous-code&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;Promise.race()&lt;&#x2F;code&gt;返回值的类型是各个 promise 的类型的 union&lt;&#x2F;p&gt;
@@ -400,7 +400,7 @@
 &lt;p&gt;如果一个函数返回一个 promise，将其声明为 async&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;26-understand-how-context-is-used-in-type-inference&quot;&gt;26: Understand How Context Is Used in Type Inference&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;26-understand-how-context-is-used-in-type-inference&quot;&gt;26: Understand How Context Is Used in Type Inference&lt;a class=&quot;zola-anchor&quot; href=&quot;#26-understand-how-context-is-used-in-type-inference&quot; aria-label=&quot;Anchor link for: 26-understand-how-context-is-used-in-type-inference&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;值所在的上下文会影响类型推断，一些在 JS 中结果相同的写法在 TS 中可能导致推断出不同的类型&lt;&#x2F;p&gt;
@@ -420,7 +420,7 @@
 &lt;&#x2F;ul&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;27-use-functional-constructs-and-libraries-to-help-types-flow&quot;&gt;27: Use Functional Constructs and Libraries to Help Types Flow&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;27-use-functional-constructs-and-libraries-to-help-types-flow&quot;&gt;27: Use Functional Constructs and Libraries to Help Types Flow&lt;a class=&quot;zola-anchor&quot; href=&quot;#27-use-functional-constructs-and-libraries-to-help-types-flow&quot; aria-label=&quot;Anchor link for: 27-use-functional-constructs-and-libraries-to-help-types-flow&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;函数式风格的库&#x2F;构件的 TS 类型声明天然使得类型 flow through&lt;&#x2F;p&gt;
@@ -429,11 +429,11 @@
 &lt;p&gt;使用内置的函数式构件和第三方函数式类库来增强类型流，增加易读性，减少显式类型注解&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;28-prefer-types-that-always-represent-valid-states&quot;&gt;28: Prefer Types That Always Represent Valid States&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;28-prefer-types-that-always-represent-valid-states&quot;&gt;28: Prefer Types That Always Represent Valid States&lt;a class=&quot;zola-anchor&quot; href=&quot;#28-prefer-types-that-always-represent-valid-states&quot; aria-label=&quot;Anchor link for: 28-prefer-types-that-always-represent-valid-states&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;保持状态总是&lt;em&gt;有效&#x2F;合法&lt;&#x2F;em&gt;状态，设计良好的状态能表达出的所有组合都是合理&#x2F;有效的&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce&quot;&gt;29: Be Liberal in What You Accept and Strict in What You Produce&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce&quot;&gt;29: Be Liberal in What You Accept and Strict in What You Produce&lt;a class=&quot;zola-anchor&quot; href=&quot;#29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce&quot; aria-label=&quot;Anchor link for: 29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;参数类型可以更 open 一些，有多种不同的形式，这样函数用起来更&lt;em&gt;方便&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
@@ -445,7 +445,7 @@
 &lt;p&gt;可以为参数和返回值设计相关但又不同的类型，一种更规范，用于返回值，一种更宽松，用于参数&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;30-don-t-repeat-type-information-in-documentation&quot;&gt;30: Don’t Repeat Type Information in Documentation&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;30-don-t-repeat-type-information-in-documentation&quot;&gt;30: Don’t Repeat Type Information in Documentation&lt;a class=&quot;zola-anchor&quot; href=&quot;#30-don-t-repeat-type-information-in-documentation&quot; aria-label=&quot;Anchor link for: 30-don-t-repeat-type-information-in-documentation&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;避免在文档和变量名中重复类型信息&lt;&#x2F;p&gt;
@@ -454,7 +454,7 @@
 &lt;p&gt;单位信息如果不能通过类型表达出来的话，可以加在变量名中&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;31-push-null-values-to-the-perimeter-of-your-types&quot;&gt;31: Push Null Values to the Perimeter of Your Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;31-push-null-values-to-the-perimeter-of-your-types&quot;&gt;31: Push Null Values to the Perimeter of Your Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#31-push-null-values-to-the-perimeter-of-your-types&quot; aria-label=&quot;Anchor link for: 31-push-null-values-to-the-perimeter-of-your-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;返回一整个完全不为空的对象或者 null，而不是多个相互关联的可能为 null 可能不为 null 的值&lt;&#x2F;p&gt;
@@ -463,7 +463,7 @@
 &lt;p&gt;考虑将类的字段声明为都不为 null，然后用一个静态方法去拿到所有值后再去构造，而不是以 null 作为初始值去构造&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;32-prefer-unions-of-interfaces-to-interfaces-of-unions&quot;&gt;32: Prefer Unions of Interfaces to Interfaces of Unions&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;32-prefer-unions-of-interfaces-to-interfaces-of-unions&quot;&gt;32: Prefer Unions of Interfaces to Interfaces of Unions&lt;a class=&quot;zola-anchor&quot; href=&quot;#32-prefer-unions-of-interfaces-to-interfaces-of-unions&quot; aria-label=&quot;Anchor link for: 32-prefer-unions-of-interfaces-to-interfaces-of-unions&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;如果一个类型的多个属性都是 union，通常是错误的抽象，会导致非法状态的出现&lt;&#x2F;p&gt;
@@ -472,7 +472,7 @@
 &lt;p&gt;If you can represent a data type in TypeScript with a tagged union, it’s usually a good idea to do so&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;33-prefer-more-precise-alternatives-to-string-types&quot;&gt;33: Prefer More Precise Alternatives to String Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;33-prefer-more-precise-alternatives-to-string-types&quot;&gt;33: Prefer More Precise Alternatives to String Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#33-prefer-more-precise-alternatives-to-string-types&quot; aria-label=&quot;Anchor link for: 33-prefer-more-precise-alternatives-to-string-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Avoid “stringly typed”&lt;&#x2F;p&gt;
@@ -481,7 +481,7 @@
 &lt;p&gt;命名类型还可以用&lt;code&gt;&#x2F;** *&#x2F;&lt;&#x2F;code&gt;来加文档注释&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;34-prefer-incomplete-types-to-inaccurate-types&quot;&gt;34: Prefer Incomplete Types to Inaccurate Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;34-prefer-incomplete-types-to-inaccurate-types&quot;&gt;34: Prefer Incomplete Types to Inaccurate Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#34-prefer-incomplete-types-to-inaccurate-types&quot; aria-label=&quot;Anchor link for: 34-prefer-incomplete-types-to-inaccurate-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;增加类型精确性的同时也导致出现不正确的可能性增大&lt;&#x2F;p&gt;
@@ -490,15 +490,15 @@
 &lt;p&gt;避免过于精确的类型导致使用&#x2F;理解起来过去复杂，尽量避免导致自动补全失效的改动&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;35-generate-types-from-apis-and-sepcs-not-data&quot;&gt;35: Generate Types from APIs and Sepcs, Not Data&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;35-generate-types-from-apis-and-sepcs-not-data&quot;&gt;35: Generate Types from APIs and Sepcs, Not Data&lt;a class=&quot;zola-anchor&quot; href=&quot;#35-generate-types-from-apis-and-sepcs-not-data&quot; aria-label=&quot;Anchor link for: 35-generate-types-from-apis-and-sepcs-not-data&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;避免从样例数据生成类型&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;36-name-types-using-the-language-of-your-problem-domain&quot;&gt;36: Name Types Using the Language of Your Problem Domain&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;36-name-types-using-the-language-of-your-problem-domain&quot;&gt;36: Name Types Using the Language of Your Problem Domain&lt;a class=&quot;zola-anchor&quot; href=&quot;#36-name-types-using-the-language-of-your-problem-domain&quot; aria-label=&quot;Anchor link for: 36-name-types-using-the-language-of-your-problem-domain&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;避免不恰当的命名&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;37-consider-brands-for-nominal-typing&quot;&gt;37: Consider “Brands” for Nominal Typing&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;37-consider-brands-for-nominal-typing&quot;&gt;37: Consider “Brands” for Nominal Typing&lt;a class=&quot;zola-anchor&quot; href=&quot;#37-consider-brands-for-nominal-typing&quot; aria-label=&quot;Anchor link for: 37-consider-brands-for-nominal-typing&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;TS 中让类型变为 Nonminal Type 的方式是为类型增加一个独特的标记字段，称为&lt;code&gt;brand&lt;&#x2F;code&gt;，这会引入运行时开销&lt;&#x2F;p&gt;
@@ -507,7 +507,7 @@
 &lt;p&gt;也可以仅在类型层面上使用这些标记，还可以将内置类型变为 nominal 的，需要结合类型谓词&#x2F;断言来使用，结合运行时的断言，可以做到类型系统原本无法做到的一些事&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;38-use-the-narrowest-possible-scope-for-any-types&quot;&gt;38: Use the Narrowest Possible Scope for &lt;code&gt;any&lt;&#x2F;code&gt; Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;38-use-the-narrowest-possible-scope-for-any-types&quot;&gt;38: Use the Narrowest Possible Scope for &lt;code&gt;any&lt;&#x2F;code&gt; Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#38-use-the-narrowest-possible-scope-for-any-types&quot; aria-label=&quot;Anchor link for: 38-use-the-narrowest-possible-scope-for-any-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;需要类型强转的时候使用&lt;code&gt;as any&lt;&#x2F;code&gt;而不是将类型注解改为&lt;code&gt;any&lt;&#x2F;code&gt;，这样不会把变量在其他地方也搞成&lt;code&gt;any&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -516,7 +516,7 @@
 &lt;p&gt;永远不要将返回类型声明为&lt;code&gt;any&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;39-prefer-more-precise-variants-of-any-to-plain-any&quot;&gt;39: Prefer More Precise Variants of &lt;code&gt;any&lt;&#x2F;code&gt; to Plain &lt;code&gt;any&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;39-prefer-more-precise-variants-of-any-to-plain-any&quot;&gt;39: Prefer More Precise Variants of &lt;code&gt;any&lt;&#x2F;code&gt; to Plain &lt;code&gt;any&lt;&#x2F;code&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#39-prefer-more-precise-variants-of-any-to-plain-any&quot; aria-label=&quot;Anchor link for: 39-prefer-more-precise-variants-of-any-to-plain-any&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;any[]&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -528,7 +528,7 @@
 &lt;p&gt;&lt;code&gt;() =&amp;gt; any&lt;&#x2F;code&gt; &lt;code&gt;(...args: any[]) =&amp;gt; any&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;40-hide-unsafe-type-assertions-in-well-typed-functions&quot;&gt;40: Hide Unsafe Type Assertions in Well-Typed Functions&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;40-hide-unsafe-type-assertions-in-well-typed-functions&quot;&gt;40: Hide Unsafe Type Assertions in Well-Typed Functions&lt;a class=&quot;zola-anchor&quot; href=&quot;#40-hide-unsafe-type-assertions-in-well-typed-functions&quot; aria-label=&quot;Anchor link for: 40-hide-unsafe-type-assertions-in-well-typed-functions&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;有一些函数的签名是类型安全的，但具体实现较难做到完全类型安全&lt;&#x2F;p&gt;
@@ -537,7 +537,7 @@
 &lt;p&gt;可以考虑将不安全的类型断言操作隐藏在一个签名类型正确的函数内部&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;41-understand-evolving-any&quot;&gt;41: Understand Evolving &lt;code&gt;any&lt;&#x2F;code&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;41-understand-evolving-any&quot;&gt;41: Understand Evolving &lt;code&gt;any&lt;&#x2F;code&gt;&lt;a class=&quot;zola-anchor&quot; href=&quot;#41-understand-evolving-any&quot; aria-label=&quot;Anchor link for: 41-understand-evolving-any&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;如果一个变量根据初始赋值被推断为&lt;code&gt;any&lt;&#x2F;code&gt;，会根据后续使用情况变推断成更具体的类型&lt;&#x2F;p&gt;
@@ -546,7 +546,7 @@
 &lt;p&gt;最好还是显式地进行类型注解&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;42-use-unknown-instead-of-any-for-values-with-an-unknown-type&quot;&gt;42: Use &lt;code&gt;unknown&lt;&#x2F;code&gt; Instead of &lt;code&gt;any&lt;&#x2F;code&gt; for Values with an Unknown Type&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;42-use-unknown-instead-of-any-for-values-with-an-unknown-type&quot;&gt;42: Use &lt;code&gt;unknown&lt;&#x2F;code&gt; Instead of &lt;code&gt;any&lt;&#x2F;code&gt; for Values with an Unknown Type&lt;a class=&quot;zola-anchor&quot; href=&quot;#42-use-unknown-instead-of-any-for-values-with-an-unknown-type&quot; aria-label=&quot;Anchor link for: 42-use-unknown-instead-of-any-for-values-with-an-unknown-type&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;unknown&lt;&#x2F;code&gt;是一个比&lt;code&gt;any&lt;&#x2F;code&gt;更类型安全的类型，如果不知道值的类型，最好用&lt;code&gt;unknown&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -558,7 +558,7 @@
 &lt;p&gt;&lt;code&gt;{}&lt;&#x2F;code&gt; &lt;code&gt;object&lt;&#x2F;code&gt; &lt;code&gt;unknown&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;43-prefer-type-safe-approaches-to-monkey-patching&quot;&gt;43: Prefer Type-Safe Approaches to Monkey Patching&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;43-prefer-type-safe-approaches-to-monkey-patching&quot;&gt;43: Prefer Type-Safe Approaches to Monkey Patching&lt;a class=&quot;zola-anchor&quot; href=&quot;#43-prefer-type-safe-approaches-to-monkey-patching&quot; aria-label=&quot;Anchor link for: 43-prefer-type-safe-approaches-to-monkey-patching&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;尽可能避免在全局对象&#x2F;宿主环境对象上加属性这种操作&lt;&#x2F;p&gt;
@@ -567,12 +567,12 @@
 &lt;p&gt;如果避免不了，可以用 interface 的声明合并功能，或 extends 出一个更具体的类型然后再断言&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;44-track-your-type-coverage-to-prevent-regressions-in-type-safety&quot;&gt;44: Track Your Type Coverage to Prevent Regressions in Type Safety&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;44-track-your-type-coverage-to-prevent-regressions-in-type-safety&quot;&gt;44: Track Your Type Coverage to Prevent Regressions in Type Safety&lt;a class=&quot;zola-anchor&quot; href=&quot;#44-track-your-type-coverage-to-prevent-regressions-in-type-safety&quot; aria-label=&quot;Anchor link for: 44-track-your-type-coverage-to-prevent-regressions-in-type-safety&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;npx type-coverage&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;45-put-typescript-and-types-in-devdependencies&quot;&gt;45: Put TypeScript and @types in devDependencies&lt;&#x2F;h3&gt;
-&lt;h3 id=&quot;46-understand-the-three-versions-involved-in-type-declarations&quot;&gt;46: Understand the Three Versions Involved in Type Declarations&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;45-put-typescript-and-types-in-devdependencies&quot;&gt;45: Put TypeScript and @types in devDependencies&lt;a class=&quot;zola-anchor&quot; href=&quot;#45-put-typescript-and-types-in-devdependencies&quot; aria-label=&quot;Anchor link for: 45-put-typescript-and-types-in-devdependencies&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;46-understand-the-three-versions-involved-in-type-declarations&quot;&gt;46: Understand the Three Versions Involved in Type Declarations&lt;a class=&quot;zola-anchor&quot; href=&quot;#46-understand-the-three-versions-involved-in-type-declarations&quot; aria-label=&quot;Anchor link for: 46-understand-the-three-versions-involved-in-type-declarations&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;依赖管理涉及到的版本问题：包本身，包类型声明(@types)，TSC&lt;&#x2F;p&gt;
@@ -587,11 +587,11 @@
 &lt;p&gt;如果库本身就是用 TS 写的，可以将类型声明和库一起打包，虽然也可能有一些问题；如果不是，最好是用 DefinitelyTyped 来维护&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;47-export-all-types-that-appear-in-public-apis&quot;&gt;47: Export All Types That Appear in Public APIs&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;47-export-all-types-that-appear-in-public-apis&quot;&gt;47: Export All Types That Appear in Public APIs&lt;a class=&quot;zola-anchor&quot; href=&quot;#47-export-all-types-that-appear-in-public-apis&quot; aria-label=&quot;Anchor link for: 47-export-all-types-that-appear-in-public-apis&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;虽然一些出现在 API 中但没有显式导出的类型可以被库的用户手动提取出来，但最好还是将这些类型都显式地导出比较好&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;48-use-tsdoc-for-api-comments&quot;&gt;48: Use TSDoc for API Comments&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;48-use-tsdoc-for-api-comments&quot;&gt;48: Use TSDoc for API Comments&lt;a class=&quot;zola-anchor&quot; href=&quot;#48-use-tsdoc-for-api-comments&quot; aria-label=&quot;Anchor link for: 48-use-tsdoc-for-api-comments&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;&#x2F;** *&#x2F;&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -612,11 +612,11 @@
 &lt;p&gt;避免过于 verbose&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;49-provide-a-type-for-this-in-callbacks&quot;&gt;49: Provide a Type for &lt;code&gt;this&lt;&#x2F;code&gt; in Callbacks&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;49-provide-a-type-for-this-in-callbacks&quot;&gt;49: Provide a Type for &lt;code&gt;this&lt;&#x2F;code&gt; in Callbacks&lt;a class=&quot;zola-anchor&quot; href=&quot;#49-provide-a-type-for-this-in-callbacks&quot; aria-label=&quot;Anchor link for: 49-provide-a-type-for-this-in-callbacks&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;如果作为 API 的回调函数中限制了 this 的值&#x2F;类型，需要在函数签名中指定 this 的类型&lt;code&gt;this: XXXType&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;50-prefer-conditional-types-to-overloaded-declarations&quot;&gt;50: Prefer Conditional Types to Overloaded Declarations&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;50-prefer-conditional-types-to-overloaded-declarations&quot;&gt;50: Prefer Conditional Types to Overloaded Declarations&lt;a class=&quot;zola-anchor&quot; href=&quot;#50-prefer-conditional-types-to-overloaded-declarations&quot; aria-label=&quot;Anchor link for: 50-prefer-conditional-types-to-overloaded-declarations&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;function double&amp;lt;T extends number | string&amp;gt;(x: T): T extends string ? string : number {...}&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -625,7 +625,7 @@
 &lt;p&gt;Conditional types distribute over unions&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;51-mirror-types-to-sever-dependencies&quot;&gt;51: Mirror Types to Sever Dependencies&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;51-mirror-types-to-sever-dependencies&quot;&gt;51: Mirror Types to Sever Dependencies&lt;a class=&quot;zola-anchor&quot; href=&quot;#51-mirror-types-to-sever-dependencies&quot; aria-label=&quot;Anchor link for: 51-mirror-types-to-sever-dependencies&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;Don’t force JS users to depend on @types, Don’t force web developers to depend on NodeJS&lt;&#x2F;p&gt;
@@ -634,7 +634,7 @@
 &lt;p&gt;可以利用结构化类型将第三方库的类型 mirror 成自己的&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;52-be-aware-of-the-pitfalls-of-testing-types&quot;&gt;52: Be Aware of the Pitfalls of Testing Types&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;52-be-aware-of-the-pitfalls-of-testing-types&quot;&gt;52: Be Aware of the Pitfalls of Testing Types&lt;a class=&quot;zola-anchor&quot; href=&quot;#52-be-aware-of-the-pitfalls-of-testing-types&quot; aria-label=&quot;Anchor link for: 52-be-aware-of-the-pitfalls-of-testing-types&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;测试类型时注意 equality 和 assignability 的区别&lt;&#x2F;p&gt;
@@ -643,7 +643,7 @@
 &lt;p&gt;使用 dtslint 之类的工具&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;53-prefer-ecmascript-features-to-typescript-features&quot;&gt;53: Prefer ECMAScript Features to TypeScript Features&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;53-prefer-ecmascript-features-to-typescript-features&quot;&gt;53: Prefer ECMAScript Features to TypeScript Features&lt;a class=&quot;zola-anchor&quot; href=&quot;#53-prefer-ecmascript-features-to-typescript-features&quot; aria-label=&quot;Anchor link for: 53-prefer-ecmascript-features-to-typescript-features&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;TS 的部分功能是为了弥补 JS 的缺失，随着 JS 的发展，其中一些不再需要了，现在应该仅将 TS 定位在 type 层面上来使用，避免使用 enum 等&lt;&#x2F;p&gt;
@@ -661,7 +661,7 @@
 &lt;p&gt;装饰器仍然未稳定，尝试避免使用&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;54-know-how-to-iterate-over-objects&quot;&gt;54: Know How to Iterate Over Objects&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;54-know-how-to-iterate-over-objects&quot;&gt;54: Know How to Iterate Over Objects&lt;a class=&quot;zola-anchor&quot; href=&quot;#54-know-how-to-iterate-over-objects&quot; aria-label=&quot;Anchor link for: 54-know-how-to-iterate-over-objects&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;let k: keyof T&lt;&#x2F;code&gt;&amp;amp;&lt;code&gt;for-in&lt;&#x2F;code&gt; 当对象属性已知时，注意这种方式可能产生运行时错误，比如实际对象包含类型声明之外的属性、对象原型链上有可枚举的属性&lt;&#x2F;p&gt;
@@ -670,23 +670,23 @@
 &lt;p&gt;&lt;code&gt;Object.entries()&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;55-understand-the-dom-hierarchy&quot;&gt;55: Understand the DOM hierarchy&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;55-understand-the-dom-hierarchy&quot;&gt;55: Understand the DOM hierarchy&lt;a class=&quot;zola-anchor&quot; href=&quot;#55-understand-the-dom-hierarchy&quot; aria-label=&quot;Anchor link for: 55-understand-the-dom-hierarchy&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;EventTarget -&amp;gt; Node -&amp;gt; Element -&amp;gt; HTMLElement -&amp;gt; HTMLBUttonElement&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;56-don-t-rely-on-private-to-hide-information&quot;&gt;56: Don’t Rely on Private to Hide Information&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;56-don-t-rely-on-private-to-hide-information&quot;&gt;56: Don’t Rely on Private to Hide Information&lt;a class=&quot;zola-anchor&quot; href=&quot;#56-don-t-rely-on-private-to-hide-information&quot; aria-label=&quot;Anchor link for: 56-don-t-rely-on-private-to-hide-information&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;private&lt;&#x2F;code&gt;仅仅是一个类型层面的约束，不要过于依赖&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;57-use-source-maps-to-debug-typescript&quot;&gt;57: Use Source Maps to Debug TypeScript&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;57-use-source-maps-to-debug-typescript&quot;&gt;57: Use Source Maps to Debug TypeScript&lt;a class=&quot;zola-anchor&quot; href=&quot;#57-use-source-maps-to-debug-typescript&quot; aria-label=&quot;Anchor link for: 57-use-source-maps-to-debug-typescript&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;“sourceMap”: true&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;58-write-modern-javascript&quot;&gt;58: Write Modern JavaScript&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;58-write-modern-javascript&quot;&gt;58: Write Modern JavaScript&lt;a class=&quot;zola-anchor&quot; href=&quot;#58-write-modern-javascript&quot; aria-label=&quot;Anchor link for: 58-write-modern-javascript&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;tsc 会执行转译，尽量用最新的 JS 特性&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;59-use-ts-check-and-jsdoc-to-experiment-with-typescript&quot;&gt;59: Use @ts-check and JSDoc to Experiment with Typescript&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;59-use-ts-check-and-jsdoc-to-experiment-with-typescript&quot;&gt;59: Use @ts-check and JSDoc to Experiment with Typescript&lt;a class=&quot;zola-anchor&quot; href=&quot;#59-use-ts-check-and-jsdoc-to-experiment-with-typescript&quot; aria-label=&quot;Anchor link for: 59-use-ts-check-and-jsdoc-to-experiment-with-typescript&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;&lt;code&gt;@ts-check&lt;&#x2F;code&gt;&lt;&#x2F;p&gt;
@@ -695,11 +695,11 @@
 &lt;p&gt;不要纠结于把 JSDoc 全写对，目标应该是转成 TS 文件&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;60-use-allowjs-to-mix-typescript-and-javascript&quot;&gt;60: Use allowJs to Mix TypeScript and JavaScript&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;60-use-allowjs-to-mix-typescript-and-javascript&quot;&gt;60: Use allowJs to Mix TypeScript and JavaScript&lt;a class=&quot;zola-anchor&quot; href=&quot;#60-use-allowjs-to-mix-typescript-and-javascript&quot; aria-label=&quot;Anchor link for: 60-use-allowjs-to-mix-typescript-and-javascript&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;allowJs&lt;&#x2F;code&gt;&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;61-convert-module-by-module-up-your-dependency-graph&quot;&gt;61: Convert Module by Module Up Your Dependency Graph&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;61-convert-module-by-module-up-your-dependency-graph&quot;&gt;61: Convert Module by Module Up Your Dependency Graph&lt;a class=&quot;zola-anchor&quot; href=&quot;#61-convert-module-by-module-up-your-dependency-graph&quot; aria-label=&quot;Anchor link for: 61-convert-module-by-module-up-your-dependency-graph&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;
 &lt;p&gt;一个模块一个模块来&lt;&#x2F;p&gt;
@@ -711,7 +711,7 @@
 &lt;p&gt;从依赖图的底层开始向上依次进行&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;62-don-t-condider-migration-complete-until-you-enable-noimplicitany&quot;&gt;62: Don’t Condider Migration Complete Until You Enable noImplicitAny&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;62-don-t-condider-migration-complete-until-you-enable-noimplicitany&quot;&gt;62: Don’t Condider Migration Complete Until You Enable noImplicitAny&lt;a class=&quot;zola-anchor&quot; href=&quot;#62-don-t-condider-migration-complete-until-you-enable-noimplicitany&quot; aria-label=&quot;Anchor link for: 62-don-t-condider-migration-complete-until-you-enable-noimplicitany&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;ul&gt;
 &lt;li&gt;将所有隐式 any 去除后才算完全转到 TS&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
@@ -721,18 +721,21 @@
 		<title>用 TypeScript 实现 SNL 编译器前端</title>
 		<published>2022-04-30T00:00:00+00:00</published>
 		<updated>2022-04-30T00:00:00+00:00</updated>
-		<link href="https://isunjn.me/blog/snl-compiler-in-ts/" type="text/html"/>
-		<id>https://isunjn.me/blog/snl-compiler-in-ts/</id>
+		<link href="https://isunjn/blog/snl-compiler-in-ts/" type="text/html"/>
+		<id>https://isunjn/blog/snl-compiler-in-ts/</id>
 		<content type="html">&lt;p&gt;SNL (Small Nested Language) 是我校用于教学的一个非常简单(且不完整)的&amp;quot;高级&amp;quot;编程语言, 编译原理的课设就是实现它的编译器前端部分, 我试着用 TypeScript 完成了这个任务, 整体做下来感觉难度不大，确实是个玩具语言的玩具编译器，这里简单记录一下实现过程。&lt;&#x2F;p&gt;
 &lt;p&gt;项目地址: &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;snlc&quot;&gt;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;snlc&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
-&lt;blockquote class=&quot;note info&quot;&gt;
-    &lt;i class=&quot;ri-information-line ri-lg&quot;&gt;&lt;&#x2F;i&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
     &lt;div class=&quot;content&quot;&gt;
         
         &lt;p&gt;本文假设读者对 TypeScript 以及编译原理的相关概念有基本的了解&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
-&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;snl-yu-yan&quot;&gt;SNL 语言&lt;&#x2F;h2&gt;
+&lt;&#x2F;blockquote&gt;&lt;h2 id=&quot;snl-yu-yan&quot;&gt;SNL 语言&lt;a class=&quot;zola-anchor&quot; href=&quot;#snl-yu-yan&quot; aria-label=&quot;Anchor link for: snl-yu-yan&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;这是一个长得基本和 Pascal 一样的过程式语言。变量先声明再使用，数据类型支持整型、字符型、数组、记录，过程允许嵌套定义，允许递归调用。作为一个教学用的简易语言，SNL 有非常大的局限性，比如不支持布尔类型和逻辑运算（但比较表达式实际上会产生一个布尔型的值）、条件表达式必须有 else 块且至少一条语句、字符型仅能声明而不能对其赋值……尽管如此，它仍然“具备高级程序设计语言的常见特征”，至少教材上它自己是这么说 :）&lt;&#x2F;p&gt;
 &lt;p&gt;一段简单的 SNL 代码：&lt;&#x2F;p&gt;
 &lt;pre style=&quot;background-color:#2e3440;color:#d8dee9;&quot;&gt;&lt;code&gt;&lt;span&gt;program p
@@ -754,16 +757,16 @@
 &lt;&#x2F;span&gt;&lt;span&gt;end.
 &lt;&#x2F;span&gt;&lt;&#x2F;code&gt;&lt;&#x2F;pre&gt;
 &lt;p&gt;你还可以看下 &lt;code&gt;sample&#x2F;&lt;&#x2F;code&gt; 文件夹下的其他几个代码示例，以及 &lt;code&gt;docs&#x2F;snl.bnf&lt;&#x2F;code&gt; （注意该文件并没有按照严格的 BNF 格式书写）&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;ci-fa-fen-xi&quot;&gt;词法分析&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;ci-fa-fen-xi&quot;&gt;词法分析&lt;a class=&quot;zola-anchor&quot; href=&quot;#ci-fa-fen-xi&quot; aria-label=&quot;Anchor link for: ci-fa-fen-xi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;编译器的第一个组件是词法分析器（lexer），这个阶段会去除掉源代码（字符序列）的注释和空白符，并将各种字符序列转换成为称之为 Token 的表示形式，得到一个 Token List。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;dfa&quot;&gt;DFA&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;dfa&quot;&gt;DFA&lt;a class=&quot;zola-anchor&quot; href=&quot;#dfa&quot; aria-label=&quot;Anchor link for: dfa&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;词法分析的主要依据是该语言的词法 DFA，通过 DFA 判断某段字符序列是否合法、如果合法的话具体是哪种词法元素。&lt;&#x2F;p&gt;
 &lt;p&gt;SNL 的 DFA：&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;isunjn&#x2F;isunjn.github.io&#x2F;img&#x2F;202205021124104.png&quot; alt=&quot;SNL DFA&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;每个状态会根据当前字符进行判断，是转到另一个状态，还是生成一个 Token，还是出错（图中省略了出错状态）。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;token&quot;&gt;Token&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;token&quot;&gt;Token&lt;a class=&quot;zola-anchor&quot; href=&quot;#token&quot; aria-label=&quot;Anchor link for: token&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;具体到代码实现，我们需要先定义一下 Token 的数据结构。见 &lt;code&gt;src&#x2F;common&#x2F;token.ts&lt;&#x2F;code&gt;，它有四个字段，分别是行号、列号、词法类型（lex）、语义信息（sem）。每个关键字算作一种单独的词法类型，用它的大写表示。并非所有 Token 都有语义信息，标识符、整型、字符型需要记录他们具体的值作为其语义信息，其他 Token 则不需要语义信息部分。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;ci-fa-fen-xi-de-shi-xian&quot;&gt;词法分析的实现&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;ci-fa-fen-xi-de-shi-xian&quot;&gt;词法分析的实现&lt;a class=&quot;zola-anchor&quot; href=&quot;#ci-fa-fen-xi-de-shi-xian&quot; aria-label=&quot;Anchor link for: ci-fa-fen-xi-de-shi-xian&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;见 &lt;code&gt;src&#x2F;lexer.ts&lt;&#x2F;code&gt;，我们给 DFA 中的每个状态写一个函数，处理该状态内部的情况，这些状态处理函数的参数是当前正在处理的字符和一个将来可能会用作语义信息的字符数组，返回值是另一个状态处理函数（的引用）或者一个 Token 或者一个词法错误。&lt;&#x2F;p&gt;
 &lt;p&gt;lexer 函数会对全局变量进行初始化并调用 tokenizer，tokenizer 负责每次完成一个 Token 的解析，返回一个 Token 或一个 LexError。（其实 tokenizer 也是词法分析器的意思，和 lexer 是同义词，不过用在这里表示识别一个 Token 好像也说得过去）&lt;&#x2F;p&gt;
 &lt;p&gt;词法分析要考虑的点：&lt;&#x2F;p&gt;
@@ -773,19 +776,19 @@
 &lt;li&gt;标识符判定时需要判断是否是语言关键字&lt;&#x2F;li&gt;
 &lt;li&gt;根据所处状态进行相应的错误处理（我这里的实现并没有考虑到错误恢复，可能会导致错误连环出现）&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;yu-fa-fen-xi&quot;&gt;语法分析&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;yu-fa-fen-xi&quot;&gt;语法分析&lt;a class=&quot;zola-anchor&quot; href=&quot;#yu-fa-fen-xi&quot; aria-label=&quot;Anchor link for: yu-fa-fen-xi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;词法分析完成后，（如果没有词法错误）我们就得到了源程序的 Token List，可以进行下一步的语法分析了。&lt;&#x2F;p&gt;
 &lt;p&gt;语法分析根据语言的文法规则对 Token 序列进行解析（parse)，生成一颗抽象语法树（Abstract Syntax Tree，AST），或产生语法错误（SyntaxError）。&lt;&#x2F;p&gt;
 &lt;p&gt;语言的文法规则是定义好了的，用若干条产生式表示，教材里 SNL 有 104 条产生式，见 &lt;code&gt;docs&#x2F;snl.bnf&lt;&#x2F;code&gt;。这些规则定义了源码中的 Token 序列能以怎样的方式排列起来（即满足语法要求）。&lt;&#x2F;p&gt;
 &lt;p&gt;语法分析分为自顶向下分析和自底向上分析，自顶向下又分为递归向下法和 LL(1) 分析法，因为课设要求自顶向下的这两种方法都要做，所以这里实现了两个 parser。&lt;&#x2F;p&gt;
 &lt;p&gt;语法分析的相关原理限于篇幅我在这里就不赘述了，只讲一下具体代码实现。&lt;&#x2F;p&gt;
 &lt;p&gt;我们首先定义一下描述文法时需要用到的终结符和非终结符类型，请查看 &lt;code&gt;src&#x2F;common&#x2F;grammar.ts&lt;&#x2F;code&gt;，定义文法规则为 &lt;code&gt;Rule&lt;&#x2F;code&gt;，将 104 条规则保存到一个 Map 中，称为 &lt;code&gt;grammar&lt;&#x2F;code&gt;，通过规则的序号来索引。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;predict-ji&quot;&gt;Predict 集&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;predict-ji&quot;&gt;Predict 集&lt;a class=&quot;zola-anchor&quot; href=&quot;#predict-ji&quot; aria-label=&quot;Anchor link for: predict-ji&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;递归下降法会用到产生式的预测集，当文法中出现一个非终结符有多条产生式的情况时需要根据各产生式的预测集进行下一步动作，LL(1) 分析法也会用到根据预测集构造的预测表。&lt;&#x2F;p&gt;
 &lt;p&gt;因为产生式是给定了的，所以实际上预测集也是不变的，可以提前手工计算出来，教材里也是直接给出了（不过教材里的预测集是有错的，话说这教材写得&lt;del&gt;还真是烂呀&lt;&#x2F;del&gt;还真是给了同学们很大的发挥空间）&lt;&#x2F;p&gt;
 &lt;p&gt;因为这个玩具项目的主要目的还是学习编译原理，我们实现一遍预测集生成算法也无妨，这里我参考 &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;LL_parser&quot;&gt;LL parser - Wikipedia&lt;&#x2F;a&gt; 里关于 LL(1) 分析表的算法描述，实现了预测集和预测表的生成，见 &lt;code&gt;src&#x2F;common&#x2F;predict.ts&lt;&#x2F;code&gt;，导出的两个函数分别被两个 parser 使用。&lt;&#x2F;p&gt;
 &lt;p&gt;这种预测集 “generated on the fly” 的方式其实是不太合理的，没有必要每次编译都重新进行一遍这样结果已经确定的计算，特别是编译器这种性能敏感型程序。这里主要是出于学习目的。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;ast-ding-yi&quot;&gt;AST 定义&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;ast-ding-yi&quot;&gt;AST 定义&lt;a class=&quot;zola-anchor&quot; href=&quot;#ast-ding-yi&quot; aria-label=&quot;Anchor link for: ast-ding-yi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;我们还需要知道语法分析的输出具体是什么，为此我们需要定义抽象语法树的结构，而抽象语法树节点的数据结构定义可能是整个项目最大的难点了。&lt;&#x2F;p&gt;
 &lt;p&gt;教材在这里用了一种很奇葩的方式，它将所有不同类型的树节点的字段全部 union 到一个结构体里，再根据类型字段判断哪几个数据字段是有效的……不嫌浪费内存吗.jpg ，正确的做法应该是为每种节点定义一个类型。&lt;&#x2F;p&gt;
 &lt;p&gt;SNL 的 AST 有这几种节点：&lt;&#x2F;p&gt;
@@ -803,7 +806,7 @@
 &lt;p&gt;通过 createNode 函数来新建一个 &lt;code&gt;NullableNode&amp;lt;T&amp;gt;&lt;&#x2F;code&gt;，根据 kind 参数的值来新建具体的类型。&lt;&#x2F;p&gt;
 &lt;p&gt;这样处理确实能用，但感觉不太优雅，代码看起来也比较怪，也许将每一个类型定义为 class 然后写构造函数会更好一点，我的 TS 水平还有待提高 😢&lt;&#x2F;p&gt;
 &lt;p&gt;还有我们的语法分析实现并没有考虑错误恢复，每次识别到一个错误就会停止继续解析，局限性很大。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;di-gui-xia-jiang-jie-xi&quot;&gt;递归下降解析&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;di-gui-xia-jiang-jie-xi&quot;&gt;递归下降解析&lt;a class=&quot;zola-anchor&quot; href=&quot;#di-gui-xia-jiang-jie-xi&quot; aria-label=&quot;Anchor link for: di-gui-xia-jiang-jie-xi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;现在有了 AST 的定义，可以进行具体的语法分析了，先来看看更加直观的递归下降法。&lt;&#x2F;p&gt;
 &lt;p&gt;所谓递归下降法，说的是为每一个非终结符写一个子程序，处理其产生式右部，终结符则进行匹配，非终结符则递归调用该非终结符的处理子程序。&lt;&#x2F;p&gt;
 &lt;p&gt;很容易可以写出这样的代码：&lt;&#x2F;p&gt;
@@ -873,7 +876,7 @@
 &lt;p&gt;可以看到代码更加简短，且更加语义化。&lt;&#x2F;p&gt;
 &lt;p&gt;更高层级的抽象通常会带来额外的性能开销，这里的 ParsingWorker 跟直接在每个 parse 函数里写 if 相比会有新建实例和方法调用的额外开销，而编译器属于偏底层、性能敏感型的系统级程序，一个真实世界中 non-trivial 的编译器一定不会大量使用有额外开销的抽象。不过咱这是个玩具编译器，为了简洁性和语义化牺牲一点性能完全是可以接受的。&lt;&#x2F;p&gt;
 &lt;p&gt;学习 Rust 时接触到一个叫做零开销抽象（zero-cost abstraction）的概念，指的是语言为你提供的抽象相比你自己手写的不会开销更大，相反只会更加高效，&amp;quot;What you don’t use, you don’t pay for. And further: What you do use, you couldn’t hand code any better.&amp;quot; 实现这一目标需要语言的精心设计和编译器的优化。Rust 尽力提供零开销抽象，使得在享受抽象带来的便利的同时不会有额外的性能开销，这对于性能敏感型程序是很重要的。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;ll-1-jie-xi&quot;&gt;LL(1)解析&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;ll-1-jie-xi&quot;&gt;LL(1)解析&lt;a class=&quot;zola-anchor&quot; href=&quot;#ll-1-jie-xi&quot; aria-label=&quot;Anchor link for: ll-1-jie-xi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;LL(1) 解析和递归下降解析的思路是相似的，只不过是把递归的系统调用栈改为自己手动维护的符号栈而已。LL(1) 解析的主要算法请见 &lt;code&gt;src&#x2F;ll1-parser.ts&lt;&#x2F;code&gt; 中的 &lt;code&gt;parse&lt;&#x2F;code&gt; 函数。&lt;&#x2F;p&gt;
 &lt;p&gt;问题在于，我们不仅要对 Token 序列是否合法进行判定，还需要在判定的过程中构建抽象语法树。为此除了符号栈之外，还需要一个语法树栈，以及用于处理表达式的操作数栈和操作符栈。&lt;&#x2F;p&gt;
 &lt;p&gt;构建语法树的主要思路是，在将产生式右部压入符号栈时适时地进行一些额外的动作（这里称之为 action），比如创建一个相应的树节点并将其字段指针压入语法树栈，后面再生成节点时会从语法树栈中弹出一个这样的字段指针并将其赋值为该新建的节点，新节点的字段也相应地入栈。&lt;&#x2F;p&gt;
@@ -905,7 +908,7 @@
 &lt;&#x2F;ul&gt;
 &lt;p&gt;在开始处理表达式时（83 号产生式的 action 处）我们为每个表达式记录一些信息，存在 &lt;code&gt;exp_info_stack&lt;&#x2F;code&gt; 中，这个栈的元素是一个三元组：在操作数栈中的开始位置、是否需要连接、是否有兄弟节点。&lt;&#x2F;p&gt;
 &lt;p&gt;然后在和表达式相关的产生式的 action 中对这些标志变量以及操作数栈和操作符栈进行相应的操作就可以正确地构造出优先级正确的表达式节点了，注意在处理表达式时也会暂时性地用到语法树栈。具体的处理逻辑请看代码。&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;yu-yi-fen-xi&quot;&gt;语义分析&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;yu-yi-fen-xi&quot;&gt;语义分析&lt;a class=&quot;zola-anchor&quot; href=&quot;#yu-yi-fen-xi&quot; aria-label=&quot;Anchor link for: yu-yi-fen-xi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;完成语法分析后得到了语法树，相应的语法错误也得以检测，下一个步骤是语义分析。由于本项目只完成编译器前端部分，所以语义分析模块只检测语义错误，没有别的输出。&lt;&#x2F;p&gt;
 &lt;p&gt;SNL 的语义错误包括：&lt;&#x2F;p&gt;
 &lt;ol&gt;
@@ -922,19 +925,19 @@
 &lt;li&gt;表达式运算符两侧分量类型不匹配&lt;&#x2F;li&gt;
 &lt;li&gt;if 和 while 语句的条件部分不是布尔型（但其实这条在语法分析阶段就得以保证了，SNL 的文法保证了条件部分只能是比较表达式）&lt;&#x2F;li&gt;
 &lt;&#x2F;ol&gt;
-&lt;h3 id=&quot;fu-hao-biao&quot;&gt;符号表&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;fu-hao-biao&quot;&gt;符号表&lt;a class=&quot;zola-anchor&quot; href=&quot;#fu-hao-biao&quot; aria-label=&quot;Anchor link for: fu-hao-biao&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;语义分析的关键在于构造符号表， 记录程序中出现的所有标识符及它的“种类”信息，分为类型标识符、变量标识符和过程标识符，符号表项称为 &lt;code&gt;TableItem&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
 &lt;p&gt;类型标识符需要以某种形式记录它的“类型”，变量标识符也需要，另外还需要记录变量是按值访问还是按引用访问，过程标识符则需要记录参数的信息，一个参数可以当作一个变量标识符来对待。&lt;&#x2F;p&gt;
 &lt;p&gt;“类型”信息使用 &lt;code&gt;Ty&lt;&#x2F;code&gt; 来表示，整形、字符型、布尔型属于原始类型，只需要单独的一个实例就可以，array 和 record 类型则每个类型都不同，需要记录自己的额外信息，array 需要记录它的元素的“类型”，record 需要记录它的域的相关信息。&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;code&gt;TableItem&lt;&#x2F;code&gt; 和 &lt;code&gt;Ty&lt;&#x2F;code&gt; 的具体定义请见 &lt;code&gt;src&#x2F;sem-analyzer.ts&lt;&#x2F;code&gt;，当处理程序时，每个作用域会有一个符号表，整个程序有一个 &lt;code&gt;Ty&lt;&#x2F;code&gt; 表（一个数组）来记录所有出现的“类型”。&lt;&#x2F;p&gt;
 &lt;p&gt;语义分析在分析程序的声明部分时建立符号表，在分析程序的语句部分时遇到标识符则查找符号表，在这个过程中进行类型检查和其他语义错误检测。&lt;&#x2F;p&gt;
-&lt;h3 id=&quot;zuo-yong-yu&quot;&gt;作用域&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;zuo-yong-yu&quot;&gt;作用域&lt;a class=&quot;zola-anchor&quot; href=&quot;#zuo-yong-yu&quot; aria-label=&quot;Anchor link for: zuo-yong-yu&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;语义分析的一个关键在于“作用域”的处理，SNL 支持嵌套过程定义，每个过程内部都算作一个新的作用域，在这个作用域里可能会存在作用域遮蔽效应，即本地标识符定义覆盖了外部作用域中的标识符定义。&lt;&#x2F;p&gt;
 &lt;p&gt;每个作用域都有一个符号表，这些符号表组织在一个栈中。&lt;&#x2F;p&gt;
 &lt;p&gt;代码实现上语义分析分为 build 和 check 两个主要动作，在声明部分（主程序的和每个过程的）进行构建&#x2F;维护符号表（build），在语句部分进行相应的语义检查（check），遇到过程定义时递归地向下处理，这时会新建一个作用域（nest in），处理完一个过程后销毁该作用域（nest out）&lt;&#x2F;p&gt;
 &lt;p&gt;check 可以分为语句检查、表达式检查和变量检查，在 check 阶段只需要针对上面列出的语义错误在相应的位置写具体的逻辑就好。具体逻辑请看代码，注意代码里的 &lt;code&gt;Scope&lt;&#x2F;code&gt; 类表示整个作用域集合，而不是单独的一层作用域。&lt;&#x2F;p&gt;
 &lt;p&gt;到这里，这个玩具编译器（前端）就基本完成了。&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;ming-ling-xing-jie-mian&quot;&gt;命令行界面&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;ming-ling-xing-jie-mian&quot;&gt;命令行界面&lt;a class=&quot;zola-anchor&quot; href=&quot;#ming-ling-xing-jie-mian&quot; aria-label=&quot;Anchor link for: ming-ling-xing-jie-mian&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;再来做一下命令行界面，命令称为 &lt;code&gt;snlc&lt;&#x2F;code&gt; (SNL Compiler)，第一个参数是需要编译的 snl 文件路径，另外有这些标志参数：&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;
@@ -953,12 +956,12 @@
 &lt;p&gt;&lt;code&gt;--ll&lt;&#x2F;code&gt; 使用 LL(1) parser，默认是递归下降 parser&lt;&#x2F;p&gt;
 &lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h3 id=&quot;pretty-print&quot;&gt;Pretty Print&lt;&#x2F;h3&gt;
+&lt;h3 id=&quot;pretty-print&quot;&gt;Pretty Print&lt;a class=&quot;zola-anchor&quot; href=&quot;#pretty-print&quot; aria-label=&quot;Anchor link for: pretty-print&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h3&gt;
 &lt;p&gt;还可以让命令行输出更加“用户友好”一些。&lt;&#x2F;p&gt;
 &lt;p&gt;打印错误信息时模仿了 Rust 编译器的错误输出风格，会显示行号和那一行的代码，指出错误的位置。&lt;&#x2F;p&gt;
 &lt;p&gt;打印 AST 时则使用了 Linux 的 tree 命名风格的树形输出，这个效果的实现关键在于递归打印时维护一个 prefix 栈。&lt;&#x2F;p&gt;
 &lt;p&gt;&lt;img src=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;snlc&#x2F;blob&#x2F;main&#x2F;docs&#x2F;example.png?raw=true&quot; alt=&quot;样例输出截图&quot; &#x2F;&gt;&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;zong-jie&quot;&gt;总结&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;zong-jie&quot;&gt;总结&lt;a class=&quot;zola-anchor&quot; href=&quot;#zong-jie&quot; aria-label=&quot;Anchor link for: zong-jie&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;总的来说，这确实是一个大学生课设级别的玩具语言的玩具编译器实现，还只有前端部分，但真正动手实现一个编译器仍然让我学到了很多东西，也让我体会到了编译器的奥妙。等之后有时间了想再系统地学一学相关的知识，看一下那本编译原理龙书，还有那本《Crafting Interpreters》，可能要等到秋招之后了。&lt;&#x2F;p&gt;
 </content>
 	</entry>
@@ -966,49 +969,84 @@
 		<title>Serene - 一款简洁优雅的博客主题</title>
 		<published>2022-01-19T00:00:00+00:00</published>
 		<updated>2022-04-19T00:00:00+00:00</updated>
-        <summary>&lt;p&gt;追求形式确实比追求内容要容易许多，有很多想写&#x2F;计划写博客的人文章还没写多少，却把时间都花在了折腾写作工具、选主题、改样式之上……我就是其中之一，实在惭愧 😢&lt;&#x2F;p&gt;
+        <summary>&lt;blockquote class=&quot;callout warning&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12.865 3.00017L22.3912 19.5002C22.6674 19.9785 22.5035 20.5901 22.0252 20.8662C21.8732 20.954 21.7008 21.0002 21.5252 21.0002H2.47266C1.92037 21.0002 1.47266 20.5525 1.47266 20.0002C1.47266 19.8246 1.51886 19.6522 1.60663 19.5002L11.1329 3.00017C11.4091 2.52187 12.0206 2.358 12.4989 2.63414C12.651 2.72191 12.7772 2.84815 12.865 3.00017ZM4.20471 19.0002H19.7932L11.9989 5.50017L4.20471 19.0002ZM10.9989 16.0002H12.9989V18.0002H10.9989V16.0002ZM10.9989 9.00017H12.9989V14.0002H10.9989V9.00017Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        
+        &lt;p&gt;&lt;strong&gt;2023.5 更新:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
+        &lt;p&gt;Serene v1.0.0 发布了，这篇文章里提到的很多想法已经被我自己推翻了...&lt;&#x2F;p&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;追求形式确实比追求内容要容易许多，有很多想写&#x2F;计划写博客的人文章还没写多少，却把时间都花在了折腾写作工具、选主题、改样式之上……我就是其中之一，实在惭愧 😢&lt;&#x2F;p&gt;
 &lt;p&gt;因为多少有一点强迫症，看了好多别的博客主题，都不是很满意，自己就动手写了一个。其实写这种静态的博客主题主要是写 CSS，并没有太多的&#x27;技术含量&#x27;，主要还是审美和设计，过程中思考了一些关于博客内容和样式的东西，觉得还是值得说一说的。&lt;&#x2F;p&gt;
 </summary>
-		<link href="https://isunjn.me/blog/serene-theme/" type="text/html"/>
-		<id>https://isunjn.me/blog/serene-theme/</id>
-		<content type="html">&lt;p&gt;追求形式确实比追求内容要容易许多，有很多想写&#x2F;计划写博客的人文章还没写多少，却把时间都花在了折腾写作工具、选主题、改样式之上……我就是其中之一，实在惭愧 😢&lt;&#x2F;p&gt;
+		<link href="https://isunjn/blog/serene-theme/" type="text/html"/>
+		<id>https://isunjn/blog/serene-theme/</id>
+		<content type="html">&lt;blockquote class=&quot;callout warning&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12.865 3.00017L22.3912 19.5002C22.6674 19.9785 22.5035 20.5901 22.0252 20.8662C21.8732 20.954 21.7008 21.0002 21.5252 21.0002H2.47266C1.92037 21.0002 1.47266 20.5525 1.47266 20.0002C1.47266 19.8246 1.51886 19.6522 1.60663 19.5002L11.1329 3.00017C11.4091 2.52187 12.0206 2.358 12.4989 2.63414C12.651 2.72191 12.7772 2.84815 12.865 3.00017ZM4.20471 19.0002H19.7932L11.9989 5.50017L4.20471 19.0002ZM10.9989 16.0002H12.9989V18.0002H10.9989V16.0002ZM10.9989 9.00017H12.9989V14.0002H10.9989V9.00017Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
+    &lt;div class=&quot;content&quot;&gt;
+        
+        &lt;p&gt;&lt;strong&gt;2023.5 更新:&lt;&#x2F;strong&gt;&lt;&#x2F;p&gt;
+        
+        &lt;p&gt;Serene v1.0.0 发布了，这篇文章里提到的很多想法已经被我自己推翻了...&lt;&#x2F;p&gt;
+
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;追求形式确实比追求内容要容易许多，有很多想写&#x2F;计划写博客的人文章还没写多少，却把时间都花在了折腾写作工具、选主题、改样式之上……我就是其中之一，实在惭愧 😢&lt;&#x2F;p&gt;
 &lt;p&gt;因为多少有一点强迫症，看了好多别的博客主题，都不是很满意，自己就动手写了一个。其实写这种静态的博客主题主要是写 CSS，并没有太多的&#x27;技术含量&#x27;，主要还是审美和设计，过程中思考了一些关于博客内容和样式的东西，觉得还是值得说一说的。&lt;&#x2F;p&gt;
 &lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;
 &lt;p&gt;主题取名 serene，有平静、清澈、晴朗之意。&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;serene&quot;&gt;GitHub&lt;&#x2F;a&gt; | &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;serene-demo-site.vercel.app&quot;&gt;Demo&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
 &lt;p&gt;很多博客（主题）会给人一种花里胡哨的感觉，每次看到有的博客站点一堆与内容无关的图片等元素时都有点反感，加一点还觉得活泼有特点，加一堆就感觉有点主次不分了。当然个人网站&#x2F;博客有风格一点完全无可厚非，只是我个人更喜欢简洁一点的。个人认为博客还是应当以内容为主，突出文字，少一些对阅读的干扰。&lt;&#x2F;p&gt;
 &lt;p&gt;Serene 围绕“阅读”的一些功能考虑：&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;ce-lan-mu-lu&quot;&gt;侧栏目录&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;ce-lan-mu-lu&quot;&gt;侧栏目录&lt;a class=&quot;zola-anchor&quot; href=&quot;#ce-lan-mu-lu&quot; aria-label=&quot;Anchor link for: ce-lan-mu-lu&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;我个人看文章喜欢先扫一眼标题大纲，有个大概的概念，可以了解这篇文章要说什么，很多博客（主题）都没有。&lt;&#x2F;p&gt;
 &lt;p&gt;Serene 的文章主体是居中的，目录在文章右侧，是 sticky 的，很多有目录的博客（主题）的目录不是 sticky 的，显示在页面顶部，往下划就看不到了，比没有目录还让人抓狂。&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;yue-du-jin-du-tiao&quot;&gt;阅读进度条&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;yue-du-jin-du-tiao&quot;&gt;阅读进度条&lt;a class=&quot;zola-anchor&quot; href=&quot;#yue-du-jin-du-tiao&quot; aria-label=&quot;Anchor link for: yue-du-jin-du-tiao&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Serene 可以设置显示一个在 header 下方的阅读进度条。加这个功能是因为我自己在阅读一些博客文章的时候会希望对进度和时间有个大概的把握，网页自身的进度条通常并不能提供文章本身的进度信息，因为页面下方通常会有评论区等。一些博客（主题）会显示一个根据字数得到的估计阅读时间，这个我感觉参考意义不大，每个人阅读速度、习惯、目的以及文章本身的类型其实都不太一样，简单显示一下字数可能还比较靠谱。&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;an-se-mo-shi&quot;&gt;暗色模式&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;an-se-mo-shi&quot;&gt;暗色模式&lt;a class=&quot;zola-anchor&quot; href=&quot;#an-se-mo-shi&quot; aria-label=&quot;Anchor link for: an-se-mo-shi&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;Serene 的暗色模式可以做到：&lt;&#x2F;p&gt;
 &lt;ul&gt;
 &lt;li&gt;第一次访问时根据浏览器偏好设置亮&#x2F;暗色&lt;&#x2F;li&gt;
 &lt;li&gt;手动切换亮&#x2F;暗色&lt;&#x2F;li&gt;
 &lt;li&gt;页面在偏好更改时会自动跟随切换亮&#x2F;暗色（不过这个用处不是很大）&lt;&#x2F;li&gt;
 &lt;&#x2F;ul&gt;
-&lt;h2 id=&quot;guo-shi-ti-xing&quot;&gt;过时提醒&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;guo-shi-ti-xing&quot;&gt;过时提醒&lt;a class=&quot;zola-anchor&quot; href=&quot;#guo-shi-ti-xing&quot; aria-label=&quot;Anchor link for: guo-shi-ti-xing&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;一些技术向的文章可能会有较强的时效性，文章的部分内容可能一段时间后就会过时&#x2F;不再适用。Serene 可以设置在若干天后在文章顶部显示一条（可能）过时提醒，是否过时以及多长时间后过时可以每篇文章单独设置。&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;callout&quot;&gt;Callout&lt;&#x2F;h2&gt;
-&lt;p&gt;你可能经常在一些文档类站点看到一些诸如 info、important、tip、warning 等的起强调作用、背景颜色不同的文字块，这个被叫做 callout 或 admonition。Serene 通过 Zola 提供的 shortcodes 特性支持了这个，效果如示例站点的&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;serene-demo-site.vercel.app&#x2F;blog&#x2F;admonitions&#x2F;&quot;&gt;这个页面&lt;&#x2F;a&gt;所示，可以给文章增加一些强调或趣味性。&lt;&#x2F;p&gt;
-&lt;blockquote class=&quot;note info&quot;&gt;
-    &lt;i class=&quot;ri-information-line ri-lg&quot;&gt;&lt;&#x2F;i&gt;
+&lt;h2 id=&quot;callout&quot;&gt;Callout&lt;a class=&quot;zola-anchor&quot; href=&quot;#callout&quot; aria-label=&quot;Anchor link for: callout&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
+&lt;p&gt;你可能经常在一些文档类站点看到一些诸如 note、important、tip、warning 等的起强调作用、背景颜色不同的文字块，这个被叫做 callout 或 admonition。Serene 通过 Zola 提供的 shortcodes 特性支持了这个，效果如示例站点的&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;serene-demo-site.vercel.app&#x2F;blog&#x2F;admonitions&#x2F;&quot;&gt;这个页面&lt;&#x2F;a&gt;所示，可以给文章增加一些强调或趣味性。&lt;&#x2F;p&gt;
+&lt;blockquote class=&quot;callout note&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 7H13V9H11V7ZM11 11H13V17H11V11Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
     &lt;div class=&quot;content&quot;&gt;
         
         &lt;p&gt;Here&#x27;s some relevant information about ...&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
-&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;note important&quot;&gt;
-    &lt;i class=&quot;ri-error-warning-line ri-lg&quot;&gt;&lt;&#x2F;i&gt;
+&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;callout important&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4C7.58172 4 4 7.58172 4 12C4 16.4183 7.58172 20 12 20ZM11 15H13V17H11V15ZM11 7H13V13H11V7Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
     &lt;div class=&quot;content&quot;&gt;
         
         &lt;p&gt;It&#x27;s important to remember that ...&lt;&#x2F;p&gt;
 
     &lt;&#x2F;div&gt;
-&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;note warning&quot;&gt;
-    &lt;i class=&quot;ri-alarm-warning-line ri-lg&quot;&gt;&lt;&#x2F;i&gt;
+&lt;&#x2F;blockquote&gt;&lt;blockquote class=&quot;callout alert&quot;&gt;
+    
+    &lt;div class=&quot;icon&quot;&gt;
+        &lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M4.00098 20V14C4.00098 9.58172 7.5827 6 12.001 6C16.4193 6 20.001 9.58172 20.001 14V20H21.001V22H3.00098V20H4.00098ZM6.00098 20H18.001V14C18.001 10.6863 15.3147 8 12.001 8C8.68727 8 6.00098 10.6863 6.00098 14V20ZM11.001 2H13.001V5H11.001V2ZM19.7792 4.80761L21.1934 6.22183L19.0721 8.34315L17.6578 6.92893L19.7792 4.80761ZM2.80859 6.22183L4.22281 4.80761L6.34413 6.92893L4.92991 8.34315L2.80859 6.22183ZM7.00098 14C7.00098 11.2386 9.23956 9 12.001 9V11C10.3441 11 9.00098 12.3431 9.00098 14H7.00098Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;
+    &lt;&#x2F;div&gt;
     &lt;div class=&quot;content&quot;&gt;
         
         &lt;p&gt;BREAKING !!!&lt;&#x2F;p&gt;
@@ -1016,7 +1054,7 @@
     &lt;&#x2F;div&gt;
 &lt;&#x2F;blockquote&gt;
 &lt;p&gt;不过如果别人是用 RSS 阅读你的包含 callout 的文章，这些文字块会显示为普通的 &lt;code&gt;&amp;lt;blockquote&amp;gt;&lt;&#x2F;code&gt;。&lt;&#x2F;p&gt;
-&lt;h2 id=&quot;qi-ta-yi-xie-xi-jie&quot;&gt;其他一些细节&lt;&#x2F;h2&gt;
+&lt;h2 id=&quot;qi-ta-yi-xie-xi-jie&quot;&gt;其他一些细节&lt;a class=&quot;zola-anchor&quot; href=&quot;#qi-ta-yi-xie-xi-jie&quot; aria-label=&quot;Anchor link for: qi-ta-yi-xie-xi-jie&quot;&gt;#&lt;&#x2F;a&gt;&lt;&#x2F;h2&gt;
 &lt;p&gt;分类、标签、返回顶部按钮、评论支持、流量统计工具支持等博客站点常见的功能也都是有的。另外还有一些细节：毛玻璃效果、一致的主题色、图片缩放、平滑滚动、CC 协议声明等。&lt;&#x2F;p&gt;
 &lt;p&gt;另外我对 Gitalk 的 CSS 做了一些修改以便它可以适配暗色模式以及跟随主题色。&lt;&#x2F;p&gt;
 &lt;hr &#x2F;&gt;
@@ -1028,8 +1066,8 @@
 		<title>Say Hello Again</title>
 		<published>2021-10-21T00:00:00+00:00</published>
 		<updated>2021-10-21T00:00:00+00:00</updated>
-		<link href="https://isunjn.me/blog/say-hello-again/" type="text/html"/>
-		<id>https://isunjn.me/blog/say-hello-again/</id>
+		<link href="https://isunjn/blog/say-hello-again/" type="text/html"/>
+		<id>https://isunjn/blog/say-hello-again/</id>
 		<content type="html">&lt;p&gt;这是博客的第一篇文章。我很喜欢个人博客这种形式，除了通过其他人的博客学了很多技术相关的东西之外，个人博客往往还会有一些作者本人的经历、思考和感悟，有一种独特的人文关怀感，曾带给我许多感动。&lt;&#x2F;p&gt;
 &lt;p&gt;在茫茫的互联网上拥有一个属于自己的空间可以记录、表达、分享，确实很吸引人，不过很多人(就比如我)往往过分注重形式，忽视了博客最重要的其实是有价值的内容，是持续的思考和写作。可能因为有一点强迫症，我搭建过好几次博客，用静态网站生成器做一个博客站点很容易，但是总感觉不是我想要的样子，自己当时也没有内容才是关键的觉悟，没有写下些什么，就不了了之了。&lt;&#x2F;p&gt;
 &lt;p&gt;最终，我还是按自己心中的想法做了&lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;serene&quot;&gt;一个博客主题&lt;&#x2F;a&gt;... 静态网站生成器用的是 &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;getzola.org&quot;&gt;Zola&lt;&#x2F;a&gt;，它是用 Rust 写的，好像每种语言都有相应的 &lt;a rel=&quot;nofollow noreferrer&quot; href=&quot;https:&#x2F;&#x2F;jamstack.org&#x2F;generators&#x2F;&quot;&gt;Static Site Generator&lt;&#x2F;a&gt;，选 Zola 也没什么特殊的理由，只是看文档感觉比较容易上手，各种功能也都有，虽然 Hexo 和 Hugo 用的人更多一些。主题取名 Serene，设计较简洁，围绕阅读做了一些特殊的考虑，我希望这是一个以内容为主的博客主题。书写是为了更好的思考，希望未来能产出一些有价值的内容。&lt;&#x2F;p&gt;

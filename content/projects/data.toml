@@ -1,0 +1,23 @@
+[[project]]
+name = "pianoo"
+desc = "A web app where you can play piano (and a few other instruments) with your computer keyboard, easily and breezily. May it brings you some relaxation and fun. (WIP) "
+links = [
+  { name = "Demo", url = "https://pianoo.vercel.app" },
+  { name = "GitHub", url = "https://github.com/isunjn/pianoo" },
+]
+
+[[project]]
+name = "serene"
+desc = "A blog theme for [zola](https://getzola.org), simple and clean"
+links = [
+  { name = "Demo", url = "https://serene-demo-site.vercel.app" },
+  { name = "Zola Page", url = "https://www.getzola.org/themes/serene/" },
+  { name = "GitHub", url = "https://github.com/isunjn/serene" },
+]
+
+[[project]]
+name = "snlc"
+desc = "Typescript implementation of SNL (a toy programming language used for teaching purpose) compiler front-end"
+links = [
+  { name = "GitHub", url = "https://github.com/isunjn/snlc" },
+]

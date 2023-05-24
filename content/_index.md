@@ -4,9 +4,12 @@ template = 'home.html'
 lang = 'en'
 +++
 
-Hi, this is the personal website of `@isunjn`, a student who is on his way to become a software engineer.
+Hi, welcome to my personal website. I use `isunjn` as my internet handle and sometimes I use `sunset` or `at sunset` as a nickname.
 
-In this cyber hut he built and live, he may write something about programming and capture some daily thoughts (mostly in zh-CN).
+I'm pursuing a career as a software engineer and currently working at a start-up in Beijing. I also contribute to open-soucre projects and enjoy using code to bring my ideas to life.
 
-If you got something to say, welcome to get in touch. You can contact him via [Email](mailto:isunjn@gmail.com) or [Telegram](https://t.me/isunjn).
+Outside of coding, I enjoy reading sci-fi novels and literature books, watching anime and movies, playing video games, going for runs, and playing tennis. Also I'm a cat person.
 
+This site serves as my cyber hut where I capture my daily thoughts. I may also write about programming and share my learning notes here.
+
+If you wish to get in touch, feel free to reach me via [email](mailto:isunjn@gmail.com) or [telegram](https://t.me/isunjn).

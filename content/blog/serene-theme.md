@@ -8,6 +8,10 @@ tags = ["theme"]
 [extra]
 +++
 
+{% warning(header="2023.5 更新:") %}
+Serene v1.0.0 发布了，这篇文章里提到的很多想法已经被我自己推翻了...
+{% end %}
+
 追求形式确实比追求内容要容易许多，有很多想写/计划写博客的人文章还没写多少，却把时间都花在了折腾写作工具、选主题、改样式之上……我就是其中之一，实在惭愧 😢
 
 因为多少有一点强迫症，看了好多别的博客主题，都不是很满意，自己就动手写了一个。其实写这种静态的博客主题主要是写 CSS，并没有太多的'技术含量'，主要还是审美和设计，过程中思考了一些关于博客内容和样式的东西，觉得还是值得说一说的。
@@ -44,9 +48,9 @@ Serene 的暗色模式可以做到：
 
 ## Callout
 
-你可能经常在一些文档类站点看到一些诸如 info、important、tip、warning 等的起强调作用、背景颜色不同的文字块，这个被叫做 callout 或 admonition。Serene 通过 Zola 提供的 shortcodes 特性支持了这个，效果如示例站点的[这个页面](https://serene-demo-site.vercel.app/blog/admonitions/)所示，可以给文章增加一些强调或趣味性。
+你可能经常在一些文档类站点看到一些诸如 note、important、tip、warning 等的起强调作用、背景颜色不同的文字块，这个被叫做 callout 或 admonition。Serene 通过 Zola 提供的 shortcodes 特性支持了这个，效果如示例站点的[这个页面](https://serene-demo-site.vercel.app/blog/admonitions/)所示，可以给文章增加一些强调或趣味性。
 
-{% info() %}
+{% note() %}
 Here's some relevant information about ...
 {% end %}
 
@@ -54,7 +58,7 @@ Here's some relevant information about ...
 It's important to remember that ...
 {% end %}
 
-{% warning() %}
+{% alert() %}
 BREAKING !!!
 {% end %}
 

@@ -1,67 +1,85 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="color-scheme" content="light dark">
-    <title>读《Effective TypeScript》</title>
-    <meta name="description" content="">
-    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Jost&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="/css/var.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/header.css" />
-<link rel="stylesheet" href="/css/footer.css" />
-<link rel="stylesheet" href="/css/post.css" />
-    <script async defer data-website-id="de3a268e-a2d2-4af6-8bfa-46cd6ca13e0d" src="https:&#x2F;&#x2F;umami-isunjn.vercel.app&#x2F;umami.js"></script>
-    
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>读《Effective TypeScript》</title>
+  <meta name="description" content="">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/main.css">
+  
+
+
+  
 </head>
 
-<body>
-    <script>if(localStorage.getItem('theme')=='dark'){document.body.classList.add('dark-mode');}</script>
-    
+<body class="post">
+  <script>if (localStorage.getItem('theme') == 'dark') document.body.classList.add('dark');</script>
+  
 <header  class="blur" >
-    <div class="top">
-        <a class="header blog" href="/blog"><i class="ri-quill-pen-line ri-2x"></i><span>Blog</span></a>
-        <a class="back" href="/"><i class="ri-arrow-left-s-line ri-1x"></i><span>Home</span></a>
-        <div class="icon">
-            <a id="go-home" href="/" aria-label="home" ><i class="ri-user-6-line ri-xl"></i></a>
-            <a href="/blog/feed.xml" aria-label="rss feed" ><i class="ri-rss-line ri-xl"></i></a>
-            <button id="color-toggle" aria-label="dark light mode switch"><i class="ri-moon-line ri-xl"></i></button>
-            </div>
+  <div id="wrapper">
+    <nav>
+      <a href="/">isunjn</a>
+      <span class="separator">::</span>
+      
+      <a href="/blog">blog</a>
+      
+    </nav>
+    <div id="btns">
+      
+      
+      <a href="/blog/feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
+      
+      
+
+      
+      
+      <button id="theme-toggle" aria-label="theme switch" data-moon-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;"
+        data-sun-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
+      </button>
+
+      
+      
+      
+      
+      
     </div>
-    <div id="progress-bar"></div>
+  </div>
 </header>
+<div id="post-wrapper">
+  <div id="blank"></div>
+  <main>
+    <div id="top"></div>
+    <article>
+      <h1>读《Effective TypeScript》</h1>
+      <div id="post-info">
+        <div id="date">
+          <span id="publish">2022-09-20</span>
+          </div>
+        <div id="tags">
+          <a href="https://isunjn/tags/reading"># reading</a><a href="https://isunjn/tags/typescript"># typescript</a>
+        </div>
+      </div>
 
-<div class="wrap">
-    <div class="blank"></div>
-    <main>
-        <div id="top"></div>
-        <article>
-            <h1>读《Effective TypeScript》</h1>
-            <div id="post-info">
-                <div class="date">
-                    <span id="publish">2022-09-20</span>
-                    </div>
-                <div class="tags">
-                    <a class="tag" href="https://isunjn.me/tags/reading"><i class="ri-hashtag ri-sm"></i><span>reading</span></a><a class="tag" href="https://isunjn.me/tags/typescript"><i class="ri-hashtag ri-sm"></i><span>typescript</span></a>
-                </div>
-            </div>    
+      
+      
 
-            
-            
-            <p>《Effective TypeScipt》是一本评价很好的 TS 相关书籍，书中介绍了 62 个类型相关的技巧/建议，对理解 TypeScript 的类型系统以及如何应对一些日常开发中会遇到的实际问题很有帮助。
+      
+
+      <p>《Effective TypeScipt》是一本评价很好的 TS 相关书籍，书中介绍了 62 个类型相关的技巧/建议，对理解 TypeScript 的类型系统以及如何应对一些日常开发中会遇到的实际问题很有帮助。
 我看的英文版，很易读，和读技术文档差别不大。总之这本书还是很推荐的。</p>
 <p>以下是我在读的过程中记的一些要点笔记：</p>
 <hr />
-<h3 id="1-6-getting-to-know-typescript">1-6: Getting to Know TypeScript</h3>
+<h3 id="1-6-getting-to-know-typescript">1-6: Getting to Know TypeScript<a class="zola-anchor" href="#1-6-getting-to-know-typescript" aria-label="Anchor link for: 1-6-getting-to-know-typescript">#</a></h3>
 <ul>
 <li>
 <p>TS 是 JS 的超集，它保留了大部分 JS 的运行时行为模型，一小部分 JS 允许的行为在 TS 中不被允许，另外一些则可以通过编译器 flag 来控制是否保留</p>
@@ -100,7 +118,7 @@
 <p>avoid <code>any</code>!</p>
 </li>
 </ul>
-<h3 id="7-think-of-types-as-sets-of-values">7: Think of Types as Sets of Values</h3>
+<h3 id="7-think-of-types-as-sets-of-values">7: Think of Types as Sets of Values<a class="zola-anchor" href="#7-think-of-types-as-sets-of-values" aria-label="Anchor link for: 7-think-of-types-as-sets-of-values">#</a></h3>
 <ul>
 <li>
 <p>从范畴论的角度来说，类型是值的集合</p>
@@ -127,7 +145,7 @@
 <p>Think of “extends,” “assignable to,” and “subtype of ” as synonyms for “subset of.”</p>
 </li>
 </ul>
-<h3 id="8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space">8: Know How to Tell Whether a Symbol Is in the Tyep Sapce or Value Space</h3>
+<h3 id="8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space">8: Know How to Tell Whether a Symbol Is in the Tyep Sapce or Value Space<a class="zola-anchor" href="#8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space" aria-label="Anchor link for: 8-know-how-to-tell-whether-a-symbol-is-in-the-tyep-sapce-or-value-space">#</a></h3>
 <ul>
 <li>
 <p>TS 中的类型标识符和值标识符互不冲突，可以同名</p>
@@ -145,7 +163,7 @@
 <p><code>typeof</code>、<code>this</code>以及其他许多操作符和关键字在类型和值的上下文中有不同的意义</p>
 </li>
 </ul>
-<h3 id="9-prefer-type-declartions-to-type-assertions">9: Prefer Type Declartions to Type Assertions</h3>
+<h3 id="9-prefer-type-declartions-to-type-assertions">9: Prefer Type Declartions to Type Assertions<a class="zola-anchor" href="#9-prefer-type-declartions-to-type-assertions" aria-label="Anchor link for: 9-prefer-type-declartions-to-type-assertions">#</a></h3>
 <ul>
 <li>
 <p>有两种方式给一个值进行类型注解：<code>const val: Person = {}</code> <code>const cal = {} as Person</code></p>
@@ -169,8 +187,8 @@
 <p><code>const people = ['alice', 'bob'].map((ame): Person =&gt; ({ name }));</code></p>
 </li>
 </ul>
-<h3 id="10-avoid-object-wrapper-types">10: Avoid Object Wrapper Types</h3>
-<h3 id="11-recognize-the-limits-of-excess-prperty-checking">11: Recognize the Limits of Excess Prperty Checking</h3>
+<h3 id="10-avoid-object-wrapper-types">10: Avoid Object Wrapper Types<a class="zola-anchor" href="#10-avoid-object-wrapper-types" aria-label="Anchor link for: 10-avoid-object-wrapper-types">#</a></h3>
+<h3 id="11-recognize-the-limits-of-excess-prperty-checking">11: Recognize the Limits of Excess Prperty Checking<a class="zola-anchor" href="#11-recognize-the-limits-of-excess-prperty-checking" aria-label="Anchor link for: 11-recognize-the-limits-of-excess-prperty-checking">#</a></h3>
 <ul>
 <li>
 <p>尽管是结构化类型系统，Ts 提供了“excess propety checking”检测来帮助发现错误，它作用于对象字面量，（这意味着如果先把对象字面量赋值给一个变量，再用这个变量的话就不会触发该检查）</p>
@@ -185,7 +203,7 @@
 <p>这两种检查均是在结构化类型对可赋值性检查之外的检查，有助于帮助发现 typo 和其他一些涉及属性名的错误，在类型有可选字段时尤其有用</p>
 </li>
 </ul>
-<h3 id="12-apply-types-to-entire-function-expressions-when-possible">12: Apply Types to Entire Function Expressions When Possible</h3>
+<h3 id="12-apply-types-to-entire-function-expressions-when-possible">12: Apply Types to Entire Function Expressions When Possible<a class="zola-anchor" href="#12-apply-types-to-entire-function-expressions-when-possible" aria-label="Anchor link for: 12-apply-types-to-entire-function-expressions-when-possible">#</a></h3>
 <ul>
 <li>
 <p>考虑对整个函数表达式应用一个类型注解，而不是对参数和返回值进行注解</p>
@@ -203,7 +221,7 @@
 <p>使用<code>typeof fn</code>来得到另一个函数的类型来使用</p>
 </li>
 </ul>
-<h3 id="13-know-the-differences-between-type-and-interface">13: Know the Differences Between type and interface</h3>
+<h3 id="13-know-the-differences-between-type-and-interface">13: Know the Differences Between type and interface<a class="zola-anchor" href="#13-know-the-differences-between-type-and-interface" aria-label="Anchor link for: 13-know-the-differences-between-type-and-interface">#</a></h3>
 <ul>
 <li>
 <p>总体上 type 比 interface 更加强大，尤其是涉及到 union type 时，元组和数组类型用 type 也更容易表达</p>
@@ -229,7 +247,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="14-use-type-operations-and-generics-to-avoid-repeating-yourself">14: Use Type Operations and Generics to Avoid Repeating Yourself</h3>
+<h3 id="14-use-type-operations-and-generics-to-avoid-repeating-yourself">14: Use Type Operations and Generics to Avoid Repeating Yourself<a class="zola-anchor" href="#14-use-type-operations-and-generics-to-avoid-repeating-yourself" aria-label="Anchor link for: 14-use-type-operations-and-generics-to-avoid-repeating-yourself">#</a></h3>
 <ul>
 <li>
 <p>DRY 也同样应该应用在类型方面，类型上的重复更加常见，因为人们不熟悉为减少类型重复而采用的模式</p>
@@ -259,7 +277,7 @@
 <p>通过<code>extends</code>关键字来对泛型参数进行约束</p>
 </li>
 </ul>
-<h3 id="15-use-index-signatures-for-dynamic-data">15: Use Index Signatures for Dynamic Data</h3>
+<h3 id="15-use-index-signatures-for-dynamic-data">15: Use Index Signatures for Dynamic Data<a class="zola-anchor" href="#15-use-index-signatures-for-dynamic-data" aria-label="Anchor link for: 15-use-index-signatures-for-dynamic-data">#</a></h3>
 <ul>
 <li>
 <p>索引签名用在动态数据的场景中，例如解析 CSV，列名提前不知道<code>{ [columnName: string]: string }[]</code></p>
@@ -290,7 +308,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures">16: Prefer Arrays, Tuples, and ArrayLike to number Index Signatures</h3>
+<h3 id="16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures">16: Prefer Arrays, Tuples, and ArrayLike to number Index Signatures<a class="zola-anchor" href="#16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures" aria-label="Anchor link for: 16-prefer-arrays-tuples-and-arraylike-to-number-index-signatures">#</a></h3>
 <ul>
 <li>
 <p>数组的索引在运行时实际上也是 string 类型的，但 TS 将其类型声明为 number，有助于帮助发现错误，number index signatures 仅仅是一个 TS 构造</p>
@@ -302,7 +320,7 @@
 <p>标准库提供<code>ArrayLike&lt;T&gt;</code>类型，只有 length 属性和 number index signature</p>
 </li>
 </ul>
-<h3 id="17-use-readonly-to-avoid-errors-associated-with-mutation">17: Use readonly to Avoid Errors Associated with Mutation</h3>
+<h3 id="17-use-readonly-to-avoid-errors-associated-with-mutation">17: Use readonly to Avoid Errors Associated with Mutation<a class="zola-anchor" href="#17-use-readonly-to-avoid-errors-associated-with-mutation" aria-label="Anchor link for: 17-use-readonly-to-avoid-errors-associated-with-mutation">#</a></h3>
 <ul>
 <li>
 <p><code>number[]</code>是<code>readonly number[]</code>的子类型（而不是反过来），所以<code>number[]</code>类型的值可以被赋值给<code>readonly number[]</code>类型的变量，反过来则不行</p>
@@ -317,7 +335,7 @@
 <p><code>readonly</code> is shallow</p>
 </li>
 </ul>
-<h3 id="18-use-mapped-types-to-keep-values-in-sync">18: Use Mapped Types to Keep Values in Sync</h3>
+<h3 id="18-use-mapped-types-to-keep-values-in-sync">18: Use Mapped Types to Keep Values in Sync<a class="zola-anchor" href="#18-use-mapped-types-to-keep-values-in-sync" aria-label="Anchor link for: 18-use-mapped-types-to-keep-values-in-sync">#</a></h3>
 <ul>
 <li>
 <p>如果你想要一个对象有和另一个对象完全一致的属性，使用 mapped types</p>
@@ -329,7 +347,7 @@
 <p><code>const REQUIRES_UPDATE: {[k in keyof ScatterProps]: boolean} = {xs:true, xy: true onClick:false};</code></p>
 </li>
 </ul>
-<h3 id="19-avoid-cluttering-your-code-with-inferable-types">19: Avoid Cluttering Your Code with Inferable Types</h3>
+<h3 id="19-avoid-cluttering-your-code-with-inferable-types">19: Avoid Cluttering Your Code with Inferable Types<a class="zola-anchor" href="#19-avoid-cluttering-your-code-with-inferable-types" aria-label="Anchor link for: 19-avoid-cluttering-your-code-with-inferable-types">#</a></h3>
 <ul>
 <li>
 <p>手动注解可以被推断的类型总体上不被推荐</p>
@@ -350,7 +368,7 @@
 <p>函数返回值类似，能够被 infer，但最好显式注解</p>
 </li>
 </ul>
-<h3 id="20-use-different-variables-for-different-types">20: Use Different Variables for Different Types</h3>
+<h3 id="20-use-different-variables-for-different-types">20: Use Different Variables for Different Types<a class="zola-anchor" href="#20-use-different-variables-for-different-types" aria-label="Anchor link for: 20-use-different-variables-for-different-types">#</a></h3>
 <ul>
 <li>
 <p>丢弃 js 的动态类型特性</p>
@@ -373,7 +391,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="21-understand-type-widening">21: Understand Type Widening</h3>
+<h3 id="21-understand-type-widening">21: Understand Type Widening<a class="zola-anchor" href="#21-understand-type-widening" aria-label="Anchor link for: 21-understand-type-widening">#</a></h3>
 <ul>
 <li>
 <p>类型扩展发生在 ts 尝试通过赋值给变量的值来推断变量的类型时</p>
@@ -385,7 +403,7 @@
 <p>通过显式类型注解、更多的上下文信息、<code>as const</code>等方式来阻止类型猜测</p>
 </li>
 </ul>
-<h3 id="22-understand-type-narrowing">22: Understand Type Narrowing</h3>
+<h3 id="22-understand-type-narrowing">22: Understand Type Narrowing<a class="zola-anchor" href="#22-understand-type-narrowing" aria-label="Anchor link for: 22-understand-type-narrowing">#</a></h3>
 <ul>
 <li>
 <p>TS 通过条件判断和控制流分析来进行类型收缩</p>
@@ -397,7 +415,7 @@
 <p>使用自定义类型谓词函数来在 map/filter/reduce 等地方进行类型收缩</p>
 </li>
 </ul>
-<h3 id="23-create-objects-all-at-once">23: Create Objects All at Once</h3>
+<h3 id="23-create-objects-all-at-once">23: Create Objects All at Once<a class="zola-anchor" href="#23-create-objects-all-at-once" aria-label="Anchor link for: 23-create-objects-all-at-once">#</a></h3>
 <ul>
 <li>
 <p>prefer creating objects all at once, rather than piece by piece</p>
@@ -412,7 +430,7 @@
 <p>如果要条件地添加一个属性，需要使用一个辅助函数 <code>p98</code></p>
 </li>
 </ul>
-<h3 id="24-be-consisitent-in-your-use-of-aliases">24: Be Consisitent in Your Use of Aliases</h3>
+<h3 id="24-be-consisitent-in-your-use-of-aliases">24: Be Consisitent in Your Use of Aliases<a class="zola-anchor" href="#24-be-consisitent-in-your-use-of-aliases" aria-label="Anchor link for: 24-be-consisitent-in-your-use-of-aliases">#</a></h3>
 <ul>
 <li>
 <p>这里的 alias 指引用同一个对象的多个变量，会引入不一致</p>
@@ -427,7 +445,7 @@
 <p>对一个值进行的某个属性信息类型判断后，在这个值之上的函数调用可能会更改这个属性，但 ts 控制流分析不会重新验证去反映出这个变化</p>
 </li>
 </ul>
-<h3 id="25-use-async-functions-instead-of-callbacks-for-asynchronous-code">25: Use async Functions Instead of Callbacks for Asynchronous Code</h3>
+<h3 id="25-use-async-functions-instead-of-callbacks-for-asynchronous-code">25: Use async Functions Instead of Callbacks for Asynchronous Code<a class="zola-anchor" href="#25-use-async-functions-instead-of-callbacks-for-asynchronous-code" aria-label="Anchor link for: 25-use-async-functions-instead-of-callbacks-for-asynchronous-code">#</a></h3>
 <ul>
 <li>
 <p><code>Promise.race()</code>返回值的类型是各个 promise 的类型的 union</p>
@@ -445,7 +463,7 @@
 <p>如果一个函数返回一个 promise，将其声明为 async</p>
 </li>
 </ul>
-<h3 id="26-understand-how-context-is-used-in-type-inference">26: Understand How Context Is Used in Type Inference</h3>
+<h3 id="26-understand-how-context-is-used-in-type-inference">26: Understand How Context Is Used in Type Inference<a class="zola-anchor" href="#26-understand-how-context-is-used-in-type-inference" aria-label="Anchor link for: 26-understand-how-context-is-used-in-type-inference">#</a></h3>
 <ul>
 <li>
 <p>值所在的上下文会影响类型推断，一些在 JS 中结果相同的写法在 TS 中可能导致推断出不同的类型</p>
@@ -465,7 +483,7 @@
 </ul>
 </li>
 </ul>
-<h3 id="27-use-functional-constructs-and-libraries-to-help-types-flow">27: Use Functional Constructs and Libraries to Help Types Flow</h3>
+<h3 id="27-use-functional-constructs-and-libraries-to-help-types-flow">27: Use Functional Constructs and Libraries to Help Types Flow<a class="zola-anchor" href="#27-use-functional-constructs-and-libraries-to-help-types-flow" aria-label="Anchor link for: 27-use-functional-constructs-and-libraries-to-help-types-flow">#</a></h3>
 <ul>
 <li>
 <p>函数式风格的库/构件的 TS 类型声明天然使得类型 flow through</p>
@@ -474,11 +492,11 @@
 <p>使用内置的函数式构件和第三方函数式类库来增强类型流，增加易读性，减少显式类型注解</p>
 </li>
 </ul>
-<h3 id="28-prefer-types-that-always-represent-valid-states">28: Prefer Types That Always Represent Valid States</h3>
+<h3 id="28-prefer-types-that-always-represent-valid-states">28: Prefer Types That Always Represent Valid States<a class="zola-anchor" href="#28-prefer-types-that-always-represent-valid-states" aria-label="Anchor link for: 28-prefer-types-that-always-represent-valid-states">#</a></h3>
 <ul>
 <li>保持状态总是<em>有效/合法</em>状态，设计良好的状态能表达出的所有组合都是合理/有效的</li>
 </ul>
-<h3 id="29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce">29: Be Liberal in What You Accept and Strict in What You Produce</h3>
+<h3 id="29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce">29: Be Liberal in What You Accept and Strict in What You Produce<a class="zola-anchor" href="#29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce" aria-label="Anchor link for: 29-be-liberal-in-what-you-accept-and-strict-in-what-you-produce">#</a></h3>
 <ul>
 <li>
 <p>参数类型可以更 open 一些，有多种不同的形式，这样函数用起来更<em>方便</em></p>
@@ -490,7 +508,7 @@
 <p>可以为参数和返回值设计相关但又不同的类型，一种更规范，用于返回值，一种更宽松，用于参数</p>
 </li>
 </ul>
-<h3 id="30-don-t-repeat-type-information-in-documentation">30: Don’t Repeat Type Information in Documentation</h3>
+<h3 id="30-don-t-repeat-type-information-in-documentation">30: Don’t Repeat Type Information in Documentation<a class="zola-anchor" href="#30-don-t-repeat-type-information-in-documentation" aria-label="Anchor link for: 30-don-t-repeat-type-information-in-documentation">#</a></h3>
 <ul>
 <li>
 <p>避免在文档和变量名中重复类型信息</p>
@@ -499,7 +517,7 @@
 <p>单位信息如果不能通过类型表达出来的话，可以加在变量名中</p>
 </li>
 </ul>
-<h3 id="31-push-null-values-to-the-perimeter-of-your-types">31: Push Null Values to the Perimeter of Your Types</h3>
+<h3 id="31-push-null-values-to-the-perimeter-of-your-types">31: Push Null Values to the Perimeter of Your Types<a class="zola-anchor" href="#31-push-null-values-to-the-perimeter-of-your-types" aria-label="Anchor link for: 31-push-null-values-to-the-perimeter-of-your-types">#</a></h3>
 <ul>
 <li>
 <p>返回一整个完全不为空的对象或者 null，而不是多个相互关联的可能为 null 可能不为 null 的值</p>
@@ -508,7 +526,7 @@
 <p>考虑将类的字段声明为都不为 null，然后用一个静态方法去拿到所有值后再去构造，而不是以 null 作为初始值去构造</p>
 </li>
 </ul>
-<h3 id="32-prefer-unions-of-interfaces-to-interfaces-of-unions">32: Prefer Unions of Interfaces to Interfaces of Unions</h3>
+<h3 id="32-prefer-unions-of-interfaces-to-interfaces-of-unions">32: Prefer Unions of Interfaces to Interfaces of Unions<a class="zola-anchor" href="#32-prefer-unions-of-interfaces-to-interfaces-of-unions" aria-label="Anchor link for: 32-prefer-unions-of-interfaces-to-interfaces-of-unions">#</a></h3>
 <ul>
 <li>
 <p>如果一个类型的多个属性都是 union，通常是错误的抽象，会导致非法状态的出现</p>
@@ -517,7 +535,7 @@
 <p>If you can represent a data type in TypeScript with a tagged union, it’s usually a good idea to do so</p>
 </li>
 </ul>
-<h3 id="33-prefer-more-precise-alternatives-to-string-types">33: Prefer More Precise Alternatives to String Types</h3>
+<h3 id="33-prefer-more-precise-alternatives-to-string-types">33: Prefer More Precise Alternatives to String Types<a class="zola-anchor" href="#33-prefer-more-precise-alternatives-to-string-types" aria-label="Anchor link for: 33-prefer-more-precise-alternatives-to-string-types">#</a></h3>
 <ul>
 <li>
 <p>Avoid “stringly typed”</p>
@@ -526,7 +544,7 @@
 <p>命名类型还可以用<code>/** */</code>来加文档注释</p>
 </li>
 </ul>
-<h3 id="34-prefer-incomplete-types-to-inaccurate-types">34: Prefer Incomplete Types to Inaccurate Types</h3>
+<h3 id="34-prefer-incomplete-types-to-inaccurate-types">34: Prefer Incomplete Types to Inaccurate Types<a class="zola-anchor" href="#34-prefer-incomplete-types-to-inaccurate-types" aria-label="Anchor link for: 34-prefer-incomplete-types-to-inaccurate-types">#</a></h3>
 <ul>
 <li>
 <p>增加类型精确性的同时也导致出现不正确的可能性增大</p>
@@ -535,15 +553,15 @@
 <p>避免过于精确的类型导致使用/理解起来过去复杂，尽量避免导致自动补全失效的改动</p>
 </li>
 </ul>
-<h3 id="35-generate-types-from-apis-and-sepcs-not-data">35: Generate Types from APIs and Sepcs, Not Data</h3>
+<h3 id="35-generate-types-from-apis-and-sepcs-not-data">35: Generate Types from APIs and Sepcs, Not Data<a class="zola-anchor" href="#35-generate-types-from-apis-and-sepcs-not-data" aria-label="Anchor link for: 35-generate-types-from-apis-and-sepcs-not-data">#</a></h3>
 <ul>
 <li>避免从样例数据生成类型</li>
 </ul>
-<h3 id="36-name-types-using-the-language-of-your-problem-domain">36: Name Types Using the Language of Your Problem Domain</h3>
+<h3 id="36-name-types-using-the-language-of-your-problem-domain">36: Name Types Using the Language of Your Problem Domain<a class="zola-anchor" href="#36-name-types-using-the-language-of-your-problem-domain" aria-label="Anchor link for: 36-name-types-using-the-language-of-your-problem-domain">#</a></h3>
 <ul>
 <li>避免不恰当的命名</li>
 </ul>
-<h3 id="37-consider-brands-for-nominal-typing">37: Consider “Brands” for Nominal Typing</h3>
+<h3 id="37-consider-brands-for-nominal-typing">37: Consider “Brands” for Nominal Typing<a class="zola-anchor" href="#37-consider-brands-for-nominal-typing" aria-label="Anchor link for: 37-consider-brands-for-nominal-typing">#</a></h3>
 <ul>
 <li>
 <p>TS 中让类型变为 Nonminal Type 的方式是为类型增加一个独特的标记字段，称为<code>brand</code>，这会引入运行时开销</p>
@@ -552,7 +570,7 @@
 <p>也可以仅在类型层面上使用这些标记，还可以将内置类型变为 nominal 的，需要结合类型谓词/断言来使用，结合运行时的断言，可以做到类型系统原本无法做到的一些事</p>
 </li>
 </ul>
-<h3 id="38-use-the-narrowest-possible-scope-for-any-types">38: Use the Narrowest Possible Scope for <code>any</code> Types</h3>
+<h3 id="38-use-the-narrowest-possible-scope-for-any-types">38: Use the Narrowest Possible Scope for <code>any</code> Types<a class="zola-anchor" href="#38-use-the-narrowest-possible-scope-for-any-types" aria-label="Anchor link for: 38-use-the-narrowest-possible-scope-for-any-types">#</a></h3>
 <ul>
 <li>
 <p>需要类型强转的时候使用<code>as any</code>而不是将类型注解改为<code>any</code>，这样不会把变量在其他地方也搞成<code>any</code></p>
@@ -561,7 +579,7 @@
 <p>永远不要将返回类型声明为<code>any</code></p>
 </li>
 </ul>
-<h3 id="39-prefer-more-precise-variants-of-any-to-plain-any">39: Prefer More Precise Variants of <code>any</code> to Plain <code>any</code></h3>
+<h3 id="39-prefer-more-precise-variants-of-any-to-plain-any">39: Prefer More Precise Variants of <code>any</code> to Plain <code>any</code><a class="zola-anchor" href="#39-prefer-more-precise-variants-of-any-to-plain-any" aria-label="Anchor link for: 39-prefer-more-precise-variants-of-any-to-plain-any">#</a></h3>
 <ul>
 <li>
 <p><code>any[]</code></p>
@@ -573,7 +591,7 @@
 <p><code>() =&gt; any</code> <code>(...args: any[]) =&gt; any</code></p>
 </li>
 </ul>
-<h3 id="40-hide-unsafe-type-assertions-in-well-typed-functions">40: Hide Unsafe Type Assertions in Well-Typed Functions</h3>
+<h3 id="40-hide-unsafe-type-assertions-in-well-typed-functions">40: Hide Unsafe Type Assertions in Well-Typed Functions<a class="zola-anchor" href="#40-hide-unsafe-type-assertions-in-well-typed-functions" aria-label="Anchor link for: 40-hide-unsafe-type-assertions-in-well-typed-functions">#</a></h3>
 <ul>
 <li>
 <p>有一些函数的签名是类型安全的，但具体实现较难做到完全类型安全</p>
@@ -582,7 +600,7 @@
 <p>可以考虑将不安全的类型断言操作隐藏在一个签名类型正确的函数内部</p>
 </li>
 </ul>
-<h3 id="41-understand-evolving-any">41: Understand Evolving <code>any</code></h3>
+<h3 id="41-understand-evolving-any">41: Understand Evolving <code>any</code><a class="zola-anchor" href="#41-understand-evolving-any" aria-label="Anchor link for: 41-understand-evolving-any">#</a></h3>
 <ul>
 <li>
 <p>如果一个变量根据初始赋值被推断为<code>any</code>，会根据后续使用情况变推断成更具体的类型</p>
@@ -591,7 +609,7 @@
 <p>最好还是显式地进行类型注解</p>
 </li>
 </ul>
-<h3 id="42-use-unknown-instead-of-any-for-values-with-an-unknown-type">42: Use <code>unknown</code> Instead of <code>any</code> for Values with an Unknown Type</h3>
+<h3 id="42-use-unknown-instead-of-any-for-values-with-an-unknown-type">42: Use <code>unknown</code> Instead of <code>any</code> for Values with an Unknown Type<a class="zola-anchor" href="#42-use-unknown-instead-of-any-for-values-with-an-unknown-type" aria-label="Anchor link for: 42-use-unknown-instead-of-any-for-values-with-an-unknown-type">#</a></h3>
 <ul>
 <li>
 <p><code>unknown</code>是一个比<code>any</code>更类型安全的类型，如果不知道值的类型，最好用<code>unknown</code></p>
@@ -603,7 +621,7 @@
 <p><code>{}</code> <code>object</code> <code>unknown</code></p>
 </li>
 </ul>
-<h3 id="43-prefer-type-safe-approaches-to-monkey-patching">43: Prefer Type-Safe Approaches to Monkey Patching</h3>
+<h3 id="43-prefer-type-safe-approaches-to-monkey-patching">43: Prefer Type-Safe Approaches to Monkey Patching<a class="zola-anchor" href="#43-prefer-type-safe-approaches-to-monkey-patching" aria-label="Anchor link for: 43-prefer-type-safe-approaches-to-monkey-patching">#</a></h3>
 <ul>
 <li>
 <p>尽可能避免在全局对象/宿主环境对象上加属性这种操作</p>
@@ -612,12 +630,12 @@
 <p>如果避免不了，可以用 interface 的声明合并功能，或 extends 出一个更具体的类型然后再断言</p>
 </li>
 </ul>
-<h3 id="44-track-your-type-coverage-to-prevent-regressions-in-type-safety">44: Track Your Type Coverage to Prevent Regressions in Type Safety</h3>
+<h3 id="44-track-your-type-coverage-to-prevent-regressions-in-type-safety">44: Track Your Type Coverage to Prevent Regressions in Type Safety<a class="zola-anchor" href="#44-track-your-type-coverage-to-prevent-regressions-in-type-safety" aria-label="Anchor link for: 44-track-your-type-coverage-to-prevent-regressions-in-type-safety">#</a></h3>
 <ul>
 <li><code>npx type-coverage</code></li>
 </ul>
-<h3 id="45-put-typescript-and-types-in-devdependencies">45: Put TypeScript and @types in devDependencies</h3>
-<h3 id="46-understand-the-three-versions-involved-in-type-declarations">46: Understand the Three Versions Involved in Type Declarations</h3>
+<h3 id="45-put-typescript-and-types-in-devdependencies">45: Put TypeScript and @types in devDependencies<a class="zola-anchor" href="#45-put-typescript-and-types-in-devdependencies" aria-label="Anchor link for: 45-put-typescript-and-types-in-devdependencies">#</a></h3>
+<h3 id="46-understand-the-three-versions-involved-in-type-declarations">46: Understand the Three Versions Involved in Type Declarations<a class="zola-anchor" href="#46-understand-the-three-versions-involved-in-type-declarations" aria-label="Anchor link for: 46-understand-the-three-versions-involved-in-type-declarations">#</a></h3>
 <ul>
 <li>
 <p>依赖管理涉及到的版本问题：包本身，包类型声明(@types)，TSC</p>
@@ -632,11 +650,11 @@
 <p>如果库本身就是用 TS 写的，可以将类型声明和库一起打包，虽然也可能有一些问题；如果不是，最好是用 DefinitelyTyped 来维护</p>
 </li>
 </ul>
-<h3 id="47-export-all-types-that-appear-in-public-apis">47: Export All Types That Appear in Public APIs</h3>
+<h3 id="47-export-all-types-that-appear-in-public-apis">47: Export All Types That Appear in Public APIs<a class="zola-anchor" href="#47-export-all-types-that-appear-in-public-apis" aria-label="Anchor link for: 47-export-all-types-that-appear-in-public-apis">#</a></h3>
 <ul>
 <li>虽然一些出现在 API 中但没有显式导出的类型可以被库的用户手动提取出来，但最好还是将这些类型都显式地导出比较好</li>
 </ul>
-<h3 id="48-use-tsdoc-for-api-comments">48: Use TSDoc for API Comments</h3>
+<h3 id="48-use-tsdoc-for-api-comments">48: Use TSDoc for API Comments<a class="zola-anchor" href="#48-use-tsdoc-for-api-comments" aria-label="Anchor link for: 48-use-tsdoc-for-api-comments">#</a></h3>
 <ul>
 <li>
 <p><code>/** */</code></p>
@@ -657,11 +675,11 @@
 <p>避免过于 verbose</p>
 </li>
 </ul>
-<h3 id="49-provide-a-type-for-this-in-callbacks">49: Provide a Type for <code>this</code> in Callbacks</h3>
+<h3 id="49-provide-a-type-for-this-in-callbacks">49: Provide a Type for <code>this</code> in Callbacks<a class="zola-anchor" href="#49-provide-a-type-for-this-in-callbacks" aria-label="Anchor link for: 49-provide-a-type-for-this-in-callbacks">#</a></h3>
 <ul>
 <li>如果作为 API 的回调函数中限制了 this 的值/类型，需要在函数签名中指定 this 的类型<code>this: XXXType</code></li>
 </ul>
-<h3 id="50-prefer-conditional-types-to-overloaded-declarations">50: Prefer Conditional Types to Overloaded Declarations</h3>
+<h3 id="50-prefer-conditional-types-to-overloaded-declarations">50: Prefer Conditional Types to Overloaded Declarations<a class="zola-anchor" href="#50-prefer-conditional-types-to-overloaded-declarations" aria-label="Anchor link for: 50-prefer-conditional-types-to-overloaded-declarations">#</a></h3>
 <ul>
 <li>
 <p><code>function double&lt;T extends number | string&gt;(x: T): T extends string ? string : number {...}</code></p>
@@ -670,7 +688,7 @@
 <p>Conditional types distribute over unions</p>
 </li>
 </ul>
-<h3 id="51-mirror-types-to-sever-dependencies">51: Mirror Types to Sever Dependencies</h3>
+<h3 id="51-mirror-types-to-sever-dependencies">51: Mirror Types to Sever Dependencies<a class="zola-anchor" href="#51-mirror-types-to-sever-dependencies" aria-label="Anchor link for: 51-mirror-types-to-sever-dependencies">#</a></h3>
 <ul>
 <li>
 <p>Don’t force JS users to depend on @types, Don’t force web developers to depend on NodeJS</p>
@@ -679,7 +697,7 @@
 <p>可以利用结构化类型将第三方库的类型 mirror 成自己的</p>
 </li>
 </ul>
-<h3 id="52-be-aware-of-the-pitfalls-of-testing-types">52: Be Aware of the Pitfalls of Testing Types</h3>
+<h3 id="52-be-aware-of-the-pitfalls-of-testing-types">52: Be Aware of the Pitfalls of Testing Types<a class="zola-anchor" href="#52-be-aware-of-the-pitfalls-of-testing-types" aria-label="Anchor link for: 52-be-aware-of-the-pitfalls-of-testing-types">#</a></h3>
 <ul>
 <li>
 <p>测试类型时注意 equality 和 assignability 的区别</p>
@@ -688,7 +706,7 @@
 <p>使用 dtslint 之类的工具</p>
 </li>
 </ul>
-<h3 id="53-prefer-ecmascript-features-to-typescript-features">53: Prefer ECMAScript Features to TypeScript Features</h3>
+<h3 id="53-prefer-ecmascript-features-to-typescript-features">53: Prefer ECMAScript Features to TypeScript Features<a class="zola-anchor" href="#53-prefer-ecmascript-features-to-typescript-features" aria-label="Anchor link for: 53-prefer-ecmascript-features-to-typescript-features">#</a></h3>
 <ul>
 <li>
 <p>TS 的部分功能是为了弥补 JS 的缺失，随着 JS 的发展，其中一些不再需要了，现在应该仅将 TS 定位在 type 层面上来使用，避免使用 enum 等</p>
@@ -706,7 +724,7 @@
 <p>装饰器仍然未稳定，尝试避免使用</p>
 </li>
 </ul>
-<h3 id="54-know-how-to-iterate-over-objects">54: Know How to Iterate Over Objects</h3>
+<h3 id="54-know-how-to-iterate-over-objects">54: Know How to Iterate Over Objects<a class="zola-anchor" href="#54-know-how-to-iterate-over-objects" aria-label="Anchor link for: 54-know-how-to-iterate-over-objects">#</a></h3>
 <ul>
 <li>
 <p><code>let k: keyof T</code>&amp;<code>for-in</code> 当对象属性已知时，注意这种方式可能产生运行时错误，比如实际对象包含类型声明之外的属性、对象原型链上有可枚举的属性</p>
@@ -715,23 +733,23 @@
 <p><code>Object.entries()</code></p>
 </li>
 </ul>
-<h3 id="55-understand-the-dom-hierarchy">55: Understand the DOM hierarchy</h3>
+<h3 id="55-understand-the-dom-hierarchy">55: Understand the DOM hierarchy<a class="zola-anchor" href="#55-understand-the-dom-hierarchy" aria-label="Anchor link for: 55-understand-the-dom-hierarchy">#</a></h3>
 <ul>
 <li><code>EventTarget -&gt; Node -&gt; Element -&gt; HTMLElement -&gt; HTMLBUttonElement</code></li>
 </ul>
-<h3 id="56-don-t-rely-on-private-to-hide-information">56: Don’t Rely on Private to Hide Information</h3>
+<h3 id="56-don-t-rely-on-private-to-hide-information">56: Don’t Rely on Private to Hide Information<a class="zola-anchor" href="#56-don-t-rely-on-private-to-hide-information" aria-label="Anchor link for: 56-don-t-rely-on-private-to-hide-information">#</a></h3>
 <ul>
 <li><code>private</code>仅仅是一个类型层面的约束，不要过于依赖</li>
 </ul>
-<h3 id="57-use-source-maps-to-debug-typescript">57: Use Source Maps to Debug TypeScript</h3>
+<h3 id="57-use-source-maps-to-debug-typescript">57: Use Source Maps to Debug TypeScript<a class="zola-anchor" href="#57-use-source-maps-to-debug-typescript" aria-label="Anchor link for: 57-use-source-maps-to-debug-typescript">#</a></h3>
 <ul>
 <li><code>“sourceMap”: true</code></li>
 </ul>
-<h3 id="58-write-modern-javascript">58: Write Modern JavaScript</h3>
+<h3 id="58-write-modern-javascript">58: Write Modern JavaScript<a class="zola-anchor" href="#58-write-modern-javascript" aria-label="Anchor link for: 58-write-modern-javascript">#</a></h3>
 <ul>
 <li>tsc 会执行转译，尽量用最新的 JS 特性</li>
 </ul>
-<h3 id="59-use-ts-check-and-jsdoc-to-experiment-with-typescript">59: Use @ts-check and JSDoc to Experiment with Typescript</h3>
+<h3 id="59-use-ts-check-and-jsdoc-to-experiment-with-typescript">59: Use @ts-check and JSDoc to Experiment with Typescript<a class="zola-anchor" href="#59-use-ts-check-and-jsdoc-to-experiment-with-typescript" aria-label="Anchor link for: 59-use-ts-check-and-jsdoc-to-experiment-with-typescript">#</a></h3>
 <ul>
 <li>
 <p><code>@ts-check</code></p>
@@ -740,11 +758,11 @@
 <p>不要纠结于把 JSDoc 全写对，目标应该是转成 TS 文件</p>
 </li>
 </ul>
-<h3 id="60-use-allowjs-to-mix-typescript-and-javascript">60: Use allowJs to Mix TypeScript and JavaScript</h3>
+<h3 id="60-use-allowjs-to-mix-typescript-and-javascript">60: Use allowJs to Mix TypeScript and JavaScript<a class="zola-anchor" href="#60-use-allowjs-to-mix-typescript-and-javascript" aria-label="Anchor link for: 60-use-allowjs-to-mix-typescript-and-javascript">#</a></h3>
 <ul>
 <li><code>allowJs</code></li>
 </ul>
-<h3 id="61-convert-module-by-module-up-your-dependency-graph">61: Convert Module by Module Up Your Dependency Graph</h3>
+<h3 id="61-convert-module-by-module-up-your-dependency-graph">61: Convert Module by Module Up Your Dependency Graph<a class="zola-anchor" href="#61-convert-module-by-module-up-your-dependency-graph" aria-label="Anchor link for: 61-convert-module-by-module-up-your-dependency-graph">#</a></h3>
 <ul>
 <li>
 <p>一个模块一个模块来</p>
@@ -756,29 +774,59 @@
 <p>从依赖图的底层开始向上依次进行</p>
 </li>
 </ul>
-<h3 id="62-don-t-condider-migration-complete-until-you-enable-noimplicitany">62: Don’t Condider Migration Complete Until You Enable noImplicitAny</h3>
+<h3 id="62-don-t-condider-migration-complete-until-you-enable-noimplicitany">62: Don’t Condider Migration Complete Until You Enable noImplicitAny<a class="zola-anchor" href="#62-don-t-condider-migration-complete-until-you-enable-noimplicitany" aria-label="Anchor link for: 62-don-t-condider-migration-complete-until-you-enable-noimplicitany">#</a></h3>
 <ul>
 <li>将所有隐式 any 去除后才算完全转到 TS</li>
 </ul>
 
-        </article>
-    </main>
-    <aside  class="blur" > 
-        <a id="back-to-top" aria-label="back to top" href="#top"><i class="ri-arrow-up-s-line ri-2x"></i></a>
-    </aside>
-</div>
-<footer>
-    <div class="copyright">
-        Copyright © 2022 isunjn. All rights reserved.
-    </div>
-    <div class="credits">
-        <span>Powered by <a href="https://www.getzola.org/" target="_blank" rel='noreferrer noopener'>Zola</a> and <a href="https://github.com/isunjn/serene" target="_blank" rel='noreferrer noopener'>Serene</a></span>
-    </div>
+    </article>
+
+    
+    
+    <div class="giscus"></div>
+    <script src="https://giscus.app/client.js"
+        data-repo="isunjn/isunjn.github.io"
+        data-repo-id="R_kgDOGPKkyw"
+        data-category="giscus_comment"
+        data-category-id="DIC_kwDOGPKky84CWrAX"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="https://isunjn.me/giscus_light.css"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
+</script>
+    
+
+    <footer>
+  <div class="copyright">
+    <p>© 2023 isunjn</p>
+
+  </div>
+  
+  <div class="credits">
+    Powered by
+    <a href="https://www.getzola.org" target="_blank" rel='noreferrer noopener'>Zola</a>
+    and
+    <a href="https://github.com/isunjn/serene" target="_blank" rel='noreferrer noopener'>Serene</a>
+  </div>
+  
 </footer>
-<script src="/js/dark.js"></script>   
-<script src="/js/progress.js"></script>
+  </main>
+  <aside  class="blur" >
+    
+    
+  </aside>
+</div>
+
+  
 <script src="/js/lightense.min.js"></script>
-<script src="/js/img.js"></script>
+
+
+  <script src="/js/main.js"></script>
 </body>
 
 </html>

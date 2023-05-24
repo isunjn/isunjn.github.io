@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
-<html lang="zh-CN">
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
-  <title>isunjn::blog</title>
-  <meta name="description" content="">
+  <title>isunjn::projects</title>
+  <meta name="description" content="The projects of @isunjn">
   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
@@ -19,7 +19,7 @@
   
 </head>
 
-<body class="tag-single">
+<body class="projects">
   <script>if (localStorage.getItem('theme') == 'dark') document.body.classList.add('dark');</script>
   
 <header  class="blur" >
@@ -28,14 +28,10 @@
       <a href="/">isunjn</a>
       <span class="separator">::</span>
       
-      <a href="/blog">blog</a>
+      <a href="/projects">projects</a>
       
     </nav>
     <div id="btns">
-      
-      
-      <a href="/blog/feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
-      
       
 
       
@@ -46,27 +42,46 @@
       </button>
 
       
-      
-      
-      
-      
     </div>
   </div>
 </header>
-<div id="tag-single-wrapper">
+<div id="proj-wrapper">
   <main>
-    <div class="title">
-      <span># compiler</span>
-      <a href="https://isunjn/tags">All Tags</a>
+    
+    
+    <div class="proj">
+      <p class="name">pianoo</p>
+      <div class="desc"><p>A web app where you can play piano (and a few other instruments) with your computer keyboard, easily and breezily. May it brings you some relaxation and fun. (WIP)</p>
+</div>
+      <div class="links">
+        <a href="https:&#x2F;&#x2F;pianoo.vercel.app" target="_blank" rel='noreferrer noopener'>Demo</a>
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;pianoo" target="_blank" rel='noreferrer noopener'>GitHub</a>
+        
+      </div>
     </div>
-    <div class="post-list">
-      
-      <a class="post" href="https:&#x2F;&#x2F;isunjn&#x2F;blog&#x2F;snl-compiler-in-ts&#x2F;">
-        <span>用 TypeScript 实现 SNL 编译器前端</span>
-        <span class="date">2022-04-30</span>
-      </a>
-      
+    
+    <div class="proj">
+      <p class="name">serene</p>
+      <div class="desc"><p>A blog theme for <a rel="nofollow noreferrer" href="https://getzola.org">zola</a>, simple and clean</p>
+</div>
+      <div class="links">
+        <a href="https:&#x2F;&#x2F;serene-demo-site.vercel.app" target="_blank" rel='noreferrer noopener'>Demo</a>
+        <a href="https:&#x2F;&#x2F;www.getzola.org&#x2F;themes&#x2F;serene&#x2F;" target="_blank" rel='noreferrer noopener'>Zola Page</a>
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;serene" target="_blank" rel='noreferrer noopener'>GitHub</a>
+        
+      </div>
     </div>
+    
+    <div class="proj">
+      <p class="name">snlc</p>
+      <div class="desc"><p>Typescript implementation of SNL (a toy programming language used for teaching purpose) compiler front-end</p>
+</div>
+      <div class="links">
+        <a href="https:&#x2F;&#x2F;github.com&#x2F;isunjn&#x2F;snlc" target="_blank" rel='noreferrer noopener'>GitHub</a>
+        
+      </div>
+    </div>
+    
   </main>
   <footer>
   <div class="copyright">
@@ -81,8 +96,8 @@
     <a href="https://github.com/isunjn/serene" target="_blank" rel='noreferrer noopener'>Serene</a>
   </div>
   
-</footer>
-</div>
+</footer></div>
+
 
   
   <script src="/js/main.js"></script>

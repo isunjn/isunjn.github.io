@@ -11,7 +11,7 @@ SNL (Small Nested Language) 是我校用于教学的一个非常简单(且不完
 
 项目地址: <https://github.com/isunjn/snlc>
 
-{% info() %}
+{% note() %}
 
 本文假设读者对 TypeScript 以及编译原理的相关概念有基本的了解
 

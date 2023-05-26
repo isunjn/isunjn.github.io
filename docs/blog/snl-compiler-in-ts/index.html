@@ -8,9 +8,9 @@
   <meta name="color-scheme" content="light dark">
   <title>用 TypeScript 实现 SNL 编译器前端</title>
   <meta name="description" content="">
-  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
           <span id="publish">2022-04-30</span>
           </div>
         <div id="tags">
-          <a href="https://isunjn.me/tags/typescript"># typescript</a><a href="https://isunjn.me/tags/compiler"># compiler</a>
+          <a href="https://isunjn.github.io/tags/typescript"># typescript</a><a href="https://isunjn.github.io/tags/compiler"># compiler</a>
         </div>
       </div>
 
@@ -118,7 +118,7 @@
 <h3 id="dfa">DFA<a class="zola-anchor" href="#dfa" aria-label="Anchor link for: dfa">#</a></h3>
 <p>词法分析的主要依据是该语言的词法 DFA，通过 DFA 判断某段字符序列是否合法、如果合法的话具体是哪种词法元素。</p>
 <p>SNL 的 DFA：</p>
-<p><img src="https://raw.githubusercontent.com/isunjn/isunjn.github.io/img/202205021124104.png" alt="SNL DFA" /></p>
+<p><img src="/img/snl-dfa.png" alt="SNL DFA" /></p>
 <p>每个状态会根据当前字符进行判断，是转到另一个状态，还是生成一个 Token，还是出错（图中省略了出错状态）。</p>
 <h3 id="token">Token<a class="zola-anchor" href="#token" aria-label="Anchor link for: token">#</a></h3>
 <p>具体到代码实现，我们需要先定义一下 Token 的数据结构。见 <code>src/common/token.ts</code>，它有四个字段，分别是行号、列号、词法类型（lex）、语义信息（sem）。每个关键字算作一种单独的词法类型，用它的大写表示。并非所有 Token 都有语义信息，标识符、整型、字符型需要记录他们具体的值作为其语义信息，其他 Token 则不需要语义信息部分。</p>
@@ -316,7 +316,7 @@
 <p>还可以让命令行输出更加“用户友好”一些。</p>
 <p>打印错误信息时模仿了 Rust 编译器的错误输出风格，会显示行号和那一行的代码，指出错误的位置。</p>
 <p>打印 AST 时则使用了 Linux 的 tree 命名风格的树形输出，这个效果的实现关键在于递归打印时维护一个 prefix 栈。</p>
-<p><img src="https://github.com/isunjn/snlc/blob/main/docs/example.png?raw=true" alt="样例输出截图" /></p>
+<p><img src="/img/snl-example-output.png" alt="样例输出截图" /></p>
 <h2 id="zong-jie">总结<a class="zola-anchor" href="#zong-jie" aria-label="Anchor link for: zong-jie">#</a></h2>
 <p>总的来说，这确实是一个大学生课设级别的玩具语言的玩具编译器实现，还只有前端部分，但真正动手实现一个编译器仍然让我学到了很多东西，也让我体会到了编译器的奥妙。等之后有时间了想再系统地学一学相关的知识，看一下那本编译原理龙书，还有那本《Crafting Interpreters》，可能要等到秋招之后了。</p>
 

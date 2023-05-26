@@ -1,52 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://isunjn.me/</loc>
+        <loc>https://isunjn.github.io/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/blog/</loc>
+        <loc>https://isunjn.github.io/blog/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/blog/read-effective-ts/</loc>
+        <loc>https://isunjn.github.io/blog/read-effective-ts/</loc>
         <lastmod>2022-09-20</lastmod>
     </url>
     <url>
-        <loc>https://isunjn.me/blog/say-hello-again/</loc>
+        <loc>https://isunjn.github.io/blog/say-hello-again/</loc>
         <lastmod>2021-10-21</lastmod>
     </url>
     <url>
-        <loc>https://isunjn.me/blog/serene-theme/</loc>
+        <loc>https://isunjn.github.io/blog/serene-theme/</loc>
         <lastmod>2022-04-19</lastmod>
     </url>
     <url>
-        <loc>https://isunjn.me/blog/snl-compiler-in-ts/</loc>
+        <loc>https://isunjn.github.io/blog/snl-compiler-in-ts/</loc>
         <lastmod>2022-04-30</lastmod>
     </url>
     <url>
-        <loc>https://isunjn.me/categories/</loc>
+        <loc>https://isunjn.github.io/categories/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/categories/tech/</loc>
+        <loc>https://isunjn.github.io/categories/tech/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/categories/thoughts/</loc>
+        <loc>https://isunjn.github.io/categories/thoughts/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/projects/</loc>
+        <loc>https://isunjn.github.io/projects/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/tags/</loc>
+        <loc>https://isunjn.github.io/tags/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/tags/compiler/</loc>
+        <loc>https://isunjn.github.io/tags/compiler/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/tags/reading/</loc>
+        <loc>https://isunjn.github.io/tags/reading/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/tags/theme/</loc>
+        <loc>https://isunjn.github.io/tags/theme/</loc>
     </url>
     <url>
-        <loc>https://isunjn.me/tags/typescript/</loc>
+        <loc>https://isunjn.github.io/tags/typescript/</loc>
     </url>
 </urlset>

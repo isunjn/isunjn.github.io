@@ -1,4 +1,4 @@
-base_url = "https://isunjn.me"
+base_url = "https://isunjn.github.io"
 title = "isunjn::self"
 description = "Personal website of @isunjn"
 default_language = "zh-CN"
@@ -33,7 +33,7 @@ anchors = "on"
 name = "Jianan Sun"
 id = "isunjn"
 bio = "In programming we trust"
-avatar = "img/avatar.webp"
+avatar = "avatar.webp"
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/isunjn" },
     { name = "Twitter", icon = "twitter", url = "https://twitter.com/isunjn" },

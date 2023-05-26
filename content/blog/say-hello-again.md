@@ -15,7 +15,7 @@ cc_license = false
 
 最终，我还是按自己心中的想法做了[一个博客主题](https://github.com/isunjn/serene)... 静态网站生成器用的是 [Zola](https://getzola.org)，它是用 Rust 写的，好像每种语言都有相应的 [Static Site Generator](https://jamstack.org/generators/)，选 Zola 也没什么特殊的理由，只是看文档感觉比较容易上手，各种功能也都有，虽然 Hexo 和 Hugo 用的人更多一些。主题取名 Serene，设计较简洁，围绕阅读做了一些特殊的考虑，我希望这是一个以内容为主的博客主题。书写是为了更好的思考，希望未来能产出一些有价值的内容。
 
-![img](https://raw.githubusercontent.com/isunjn/isunjn.github.io/img/202204191340939.jpg)
+![first hello world](/img/first-hello-world.jpg)
 
 这张图里是我人生第一个 Hello, World, 是在高考结束后的那个暑假写的。
 

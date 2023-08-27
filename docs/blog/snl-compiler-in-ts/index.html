@@ -6,45 +6,128 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="color-scheme" content="light dark">
+  
+  
+  
+
   <title>用 TypeScript 实现 SNL 编译器前端</title>
-  <meta name="description" content="">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Signika&display=swap" rel="stylesheet">
+  <style>
+
+  /* light mode colors */
+  body {
+    --primary-color: #6d90d7;
+    --primary-pale-color: #6d90d720;
+    --text-color: #3C4043;
+    --text-pale-color: #a0a9bf;
+    --bg-color: #ffffff; 
+    --highlight-mark-color: #5f75b045;
+  
+    --callout-note-color: #6d90d7;
+    --callout-important-color: #9971d9;
+    --callout-warning-color: #cb943b;
+    --callout-alert-color: #d35757;
+    --callout-question-color: #4985a2;
+    --callout-tip-color: #38a56e;
+  }
+
+  /* dark mode colors */
+  body.dark {
+    --primary-color: #6d90d7;
+    --primary-pale-color: #6d90d720;
+    --text-color: #9197a5;
+    --text-pale-color: #5d6470;
+    --bg-color: #202124;
+    --highlight-mark-color: #5f75b045;
+
+    --callout-note-color: #6d90d7;
+    --callout-important-color: #9971d9;
+    --callout-warning-color: #cb943b;
+    --callout-alert-color: #d35757;
+    --callout-question-color: #4985a2;
+    --callout-tip-color: #38a56e;
+  }
+
+  /* typography */
+  body {
+    --main-font: 'Signika', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --homepage-max-width: 750px;
+    --main-max-width: 750px;
+    --avatar-size: 70px;
+    --paragraph-font-size: 16px;
+    --paragraph-line-height: 1.75;
+    --aside-font-size: 15px;
+    --img-border-radius: 0px;
+    --inline-code-border-radius: 2px;
+  }
+
+</style>
+
   <link rel="stylesheet" href="/main.css">
   
 
+<link id="hl" rel="stylesheet" type="text/css" href="/hl-light.css" />
 
-  <script async src="https://analytics.umami.is/script.js" data-website-id="dc759791-028b-450d-9eb9-11b1355ee9ad"></script>
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "08f4c0eaa6b54be8982fb76189411559"}'></script>
+
+
+  
 </head>
 
 <body class="post">
-  <script>if (localStorage.getItem('theme') == 'dark') document.body.classList.add('dark');</script>
+  <script>if (localStorage.getItem('theme') == 'dark') { document.body.classList.add('dark'); const hl = document.querySelector('link#hl'); if (hl) hl.href = '/hl-dark.css'; }</script>
   
 <header  class="blur" >
-  <div id="wrapper">
+  <div id="header-wrapper">
     <nav>
       <a href="/">isunjn</a>
-      <span class="separator">::</span>
       
-      <a href="/blog">blog</a>
+        <button id="toggler" class="separator" aria-label="toggle expand">::</button>
+      
+      
+        <span class="wrap left fold">{</span>
+        
+        
+          
+        
+          
+        
+        
+        
+          
+          
+          <a href="&#x2F;blog" >blog</a>
+          <span class="wrap-separator fold">,</span>
+        
+          
+          
+            
+          
+          <a href="&#x2F;projects" class="fold">projects</a>
+          
+        
+        <span class="wrap right fold">} ;</span>
       
     </nav>
     <div id="btns">
       
       
-      <a href="/blog/feed.xml" aria-label="rss feed" data-umami-event="btn-RSS"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
+      
+
+      
+      
+      <a href="&#x2F;blog/feed.xml" aria-label="rss feed"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M3 17C5.20914 17 7 18.7909 7 21H3V17ZM3 10C9.07513 10 14 14.9249 14 21H12C12 16.0294 7.97056 12 3 12V10ZM3 3C12.9411 3 21 11.0589 21 21H19C19 12.1634 11.8366 5 3 5V3Z" fill="currentColor"></path></svg></a>
       
       
 
       
       
-      <button id="theme-toggle" aria-label="theme switch" data-moon-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;"
-        data-sun-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;">
+      <button id="theme-toggle" aria-label="theme switch" data-moon-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;" data-sun-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M12 18C8.68629 18 6 15.3137 6 12C6 8.68629 8.68629 6 12 6C15.3137 6 18 8.68629 18 12C18 15.3137 15.3137 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16ZM11 1H13V4H11V1ZM11 20H13V23H11V20ZM3.51472 4.92893L4.92893 3.51472L7.05025 5.63604L5.63604 7.05025L3.51472 4.92893ZM16.9497 18.364L18.364 16.9497L20.4853 19.0711L19.0711 20.4853L16.9497 18.364ZM19.0711 3.51472L20.4853 4.92893L18.364 7.05025L16.9497 5.63604L19.0711 3.51472ZM5.63604 16.9497L7.05025 18.364L4.92893 20.4853L3.51472 19.0711L5.63604 16.9497ZM23 11V13H20V11H23ZM4 11V13H1V11H4Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M10 7C10 10.866 13.134 14 17 14C18.9584 14 20.729 13.1957 21.9995 11.8995C22 11.933 22 11.9665 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C12.0335 2 12.067 2 12.1005 2.00049C10.8043 3.27098 10 5.04157 10 7ZM4 12C4 16.4183 7.58172 20 12 20C15.0583 20 17.7158 18.2839 19.062 15.7621C18.3945 15.9187 17.7035 16 17 16C12.0294 16 8 11.9706 8 7C8 6.29648 8.08133 5.60547 8.2379 4.938C5.71611 6.28423 4 8.9417 4 12Z" fill="currentColor"></path></svg>
       </button>
 
@@ -60,19 +143,132 @@
     </div>
   </div>
 </header>
-<div id="post-wrapper">
+<div id="wrapper">
   <div id="blank"></div>
+  <aside  class="blur" >
+    
+    
+    <nav>
+      <ul>
+        
+        <li>
+          <a class="h2" href="#snl-yu-yan">SNL 语言</a>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#ci-fa-fen-xi">词法分析</a>
+          
+          <ul>
+            
+            <li>
+              <a class="h3" href="#dfa">DFA</a>
+            </li>
+            
+            <li>
+              <a class="h3" href="#token">Token</a>
+            </li>
+            
+            <li>
+              <a class="h3" href="#ci-fa-fen-xi-de-shi-xian">词法分析的实现</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#yu-fa-fen-xi">语法分析</a>
+          
+          <ul>
+            
+            <li>
+              <a class="h3" href="#predict-ji">Predict 集</a>
+            </li>
+            
+            <li>
+              <a class="h3" href="#ast-ding-yi">AST 定义</a>
+            </li>
+            
+            <li>
+              <a class="h3" href="#di-gui-xia-jiang-jie-xi">递归下降解析</a>
+            </li>
+            
+            <li>
+              <a class="h3" href="#ll-1-jie-xi">LL(1)解析</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#yu-yi-fen-xi">语义分析</a>
+          
+          <ul>
+            
+            <li>
+              <a class="h3" href="#fu-hao-biao">符号表</a>
+            </li>
+            
+            <li>
+              <a class="h3" href="#zuo-yong-yu">作用域</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#ming-ling-xing-jie-mian">命令行界面</a>
+          
+          <ul>
+            
+            <li>
+              <a class="h3" href="#pretty-print">Pretty Print</a>
+            </li>
+            
+          </ul>
+          
+        </li>
+        
+        <li>
+          <a class="h2" href="#zong-jie">总结</a>
+          
+        </li>
+        
+      </ul>
+    </nav>
+    
+    
+    <button id="back-to-top" aria-label="back to top">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M11.9997 10.8284L7.04996 15.7782L5.63574 14.364L11.9997 8L18.3637 14.364L16.9495 15.7782L11.9997 10.8284Z" fill="currentColor"></path></svg>
+    </button>
+    
+  </aside>
   <main>
-    <div id="top"></div>
-    <article>
+    
+    
+    
+    
+    <div id="copy-cfg" style="display: none;" data-copy-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M6.9998 6V3C6.9998 2.44772 7.44752 2 7.9998 2H19.9998C20.5521 2 20.9998 2.44772 20.9998 3V17C20.9998 17.5523 20.5521 18 19.9998 18H16.9998V20.9991C16.9998 21.5519 16.5499 22 15.993 22H4.00666C3.45059 22 3 21.5554 3 20.9991L3.0026 7.00087C3.0027 6.44811 3.45264 6 4.00942 6H6.9998ZM5.00242 8L5.00019 20H14.9998V8H5.00242ZM8.9998 6H16.9998V16H18.9998V4H8.9998V6Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;" data-check-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;24&quot; height=&quot;24&quot;&gt;&lt;path d=&quot;M10.0007 15.1709L19.1931 5.97852L20.6073 7.39273L10.0007 17.9993L3.63672 11.6354L5.05093 10.2212L10.0007 15.1709Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;"></div>
+    
+    
+    <article class="prose" data-backlink-icon="&lt;svg xmlns=&quot;http:&#x2F;&#x2F;www.w3.org&#x2F;2000&#x2F;svg&quot; viewBox=&quot;0 0 24 24&quot; width=&quot;20&quot; height=&quot;20&quot;&gt;&lt;path d=&quot;M9.41421 8L18.0208 16.6066L16.6066 18.0208L8 9.41421V17H6V6H17V8H9.41421Z&quot; fill=&quot;currentColor&quot;&gt;&lt;&#x2F;path&gt;&lt;&#x2F;svg&gt;">
       <h1>用 TypeScript 实现 SNL 编译器前端</h1>
       <div id="post-info">
         <div id="date">
           <span id="publish">2022-04-30</span>
           </div>
+
+        
+
+        
         <div id="tags">
           <a href="https://isunjn.github.io/tags/typescript"># typescript</a><a href="https://isunjn.github.io/tags/compiler"># compiler</a>
         </div>
+        
       </div>
 
       
@@ -80,7 +276,10 @@
 
       
 
-      <p>SNL (Small Nested Language) 是我校用于教学的一个非常简单(且不完整)的&quot;高级&quot;编程语言, 编译原理的课设就是实现它的编译器前端部分, 我试着用 TypeScript 完成了这个任务, 整体做下来感觉难度不大，确实是个玩具语言的玩具编译器，这里简单记录一下实现过程。</p>
+      
+
+      
+        <p>SNL (Small Nested Language) 是我校用于教学的一个非常简单(且不完整)的&quot;高级&quot;编程语言, 编译原理的课设就是实现它的编译器前端部分, 我试着用 TypeScript 完成了这个任务, 整体做下来感觉难度不大，确实是个玩具语言的玩具编译器，这里简单记录一下实现过程。</p>
 <p>项目地址: <a rel="nofollow noreferrer" href="https://github.com/isunjn/snlc">https://github.com/isunjn/snlc</a></p>
 <blockquote class="callout note">
     
@@ -95,23 +294,23 @@
 </blockquote><h2 id="snl-yu-yan">SNL 语言<a class="zola-anchor" href="#snl-yu-yan" aria-label="Anchor link for: snl-yu-yan">#</a></h2>
 <p>这是一个长得基本和 Pascal 一样的过程式语言。变量先声明再使用，数据类型支持整型、字符型、数组、记录，过程允许嵌套定义，允许递归调用。作为一个教学用的简易语言，SNL 有非常大的局限性，比如不支持布尔类型和逻辑运算（但比较表达式实际上会产生一个布尔型的值）、条件表达式必须有 else 块且至少一条语句、字符型仅能声明而不能对其赋值……尽管如此，它仍然“具备高级程序设计语言的常见特征”，至少教材上它自己是这么说 :）</p>
 <p>一段简单的 SNL 代码：</p>
-<pre style="background-color:#2e3440;color:#d8dee9;"><code><span>program p
-</span><span>type
-</span><span>    t = integer;
-</span><span>var
-</span><span>    t i, j, k;
-</span><span>    char ch;
-</span><span>    array [1..20] of integer arr;
-</span><span>procdure
-</span><span>    fn(integer num);
-</span><span>    begin
-</span><span>        return(num + 1)
-</span><span>    end
-</span><span>begin
-</span><span>    read(i);
-</span><span>    j := i + k;
-</span><span>    fn(j * arr[1])
-</span><span>end.
+<pre class="z-code"><code><span class="z-text z-plain">program p
+type
+    t = integer;
+var
+    t i, j, k;
+    char ch;
+    array [1..20] of integer arr;
+procdure
+    fn(integer num);
+    begin
+        return(num + 1)
+    end
+begin
+    read(i);
+    j := i + k;
+    fn(j * arr[1])
+end.
 </span></code></pre>
 <p>你还可以看下 <code>sample/</code> 文件夹下的其他几个代码示例，以及 <code>docs/snl.bnf</code> （注意该文件并没有按照严格的 BNF 格式书写）</p>
 <h2 id="ci-fa-fen-xi">词法分析<a class="zola-anchor" href="#ci-fa-fen-xi" aria-label="Anchor link for: ci-fa-fen-xi">#</a></h2>
@@ -119,7 +318,7 @@
 <h3 id="dfa">DFA<a class="zola-anchor" href="#dfa" aria-label="Anchor link for: dfa">#</a></h3>
 <p>词法分析的主要依据是该语言的词法 DFA，通过 DFA 判断某段字符序列是否合法、如果合法的话具体是哪种词法元素。</p>
 <p>SNL 的 DFA：</p>
-<p><img src="/img/snl-dfa.png" alt="SNL DFA" /></p>
+<p><img src="/assets/snl-dfa.png" alt="SNL DFA" /></p>
 <p>每个状态会根据当前字符进行判断，是转到另一个状态，还是生成一个 Token，还是出错（图中省略了出错状态）。</p>
 <h3 id="token">Token<a class="zola-anchor" href="#token" aria-label="Anchor link for: token">#</a></h3>
 <p>具体到代码实现，我们需要先定义一下 Token 的数据结构。见 <code>src/common/token.ts</code>，它有四个字段，分别是行号、列号、词法类型（lex）、语义信息（sem）。每个关键字算作一种单独的词法类型，用它的大写表示。并非所有 Token 都有语义信息，标识符、整型、字符型需要记录他们具体的值作为其语义信息，其他 Token 则不需要语义信息部分。</p>
@@ -158,7 +357,7 @@
 <li>变量相关节点</li>
 </ul>
 <p>节点的具体定义请见 <code>src/common/ast.ts</code>，这里的类型定义使用了 TypeScript 的 type 而不是 JavaScript 的 class，为此需要考虑如何新建节点的问题。因为我们的节点定义里大部分字段的类型并非可为 null 的类型，但后面新建节点时却又需要它暂时为 null，因为在新建时可能还没有字段的具体值，也许应该将其定义为类似 Rust 中的 Option 类型的东西，但这些字段在概念上又确实不为空，所以并不合适，我这里的解决办法是定义了一个 Nullable 泛型，将一个对象类型的所有字段变为可为 null，这样在新建节点时创建目标类型的 Nullable 类型，然后等字段全部赋值后再进行一次类型断言，转为非空类型。</p>
-<pre data-lang="ts" style="background-color:#2e3440;color:#d8dee9;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#81a1c1;">type Nullable</span><span>&lt;</span><span style="color:#8fbcbb;">T</span><span>&gt; </span><span style="color:#81a1c1;">= </span><span>{ [</span><span style="color:#8fbcbb;">P </span><span style="color:#81a1c1;">in keyof </span><span style="color:#8fbcbb;">T</span><span>]</span><span style="color:#81a1c1;">: </span><span style="color:#8fbcbb;">T</span><span>[</span><span style="color:#8fbcbb;">P</span><span>] </span><span style="color:#81a1c1;">| </span><span style="color:#8fbcbb;">null </span><span>}</span><span style="color:#eceff4;">;
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-meta z-type z-declaration z-ts"><span class="z-storage z-type z-type z-ts">type</span> <span class="z-entity z-name z-type z-alias z-ts">Nullable</span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span><span class="z-entity z-name z-type z-ts">T</span><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-object z-type z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span><span class="z-meta z-indexer z-mappedtype z-declaration z-ts"> <span class="z-meta z-brace z-square z-ts">[</span><span class="z-entity z-name z-type z-ts">P</span> <span class="z-keyword z-operator z-expression z-in z-ts">in</span> <span class="z-keyword z-operator z-expression z-keyof z-ts">keyof</span> <span class="z-entity z-name z-type z-ts">T</span><span class="z-meta z-brace z-square z-ts">]</span></span><span class="z-meta z-type z-annotation z-ts"><span class="z-keyword z-operator z-type z-annotation z-ts">:</span> <span class="z-entity z-name z-type z-ts">T</span><span class="z-meta z-type z-tuple z-ts"><span class="z-meta z-brace z-square z-ts">[</span><span class="z-entity z-name z-type z-ts">P</span><span class="z-meta z-brace z-square z-ts">]</span></span> <span class="z-keyword z-operator z-type z-ts">|</span> <span class="z-support z-type z-builtin z-ts">null</span> </span><span class="z-punctuation z-definition z-block z-ts">}</span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
 </span></code></pre>
 <p>通过 createNode 函数来新建一个 <code>NullableNode&lt;T&gt;</code>，根据 kind 参数的值来新建具体的类型。</p>
 <p>这样处理确实能用，但感觉不太优雅，代码看起来也比较怪，也许将每一个类型定义为 class 然后写构造函数会更好一点，我的 TS 水平还有待提高 😢</p>
@@ -167,21 +366,21 @@
 <p>现在有了 AST 的定义，可以进行具体的语法分析了，先来看看更加直观的递归下降法。</p>
 <p>所谓递归下降法，说的是为每一个非终结符写一个子程序，处理其产生式右部，终结符则进行匹配，非终结符则递归调用该非终结符的处理子程序。</p>
 <p>很容易可以写出这样的代码：</p>
-<pre data-lang="ts" style="background-color:#2e3440;color:#d8dee9;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#81a1c1;">function </span><span style="color:#88c0d0;">parseXX</span><span>() {
-</span><span>    </span><span style="color:#81a1c1;">const </span><span style="font-weight:bold;color:#d8dee9;">node </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">createNode</span><span>(</span><span style="color:#a3be8c;">&quot;XX&quot;</span><span>)</span><span style="color:#eceff4;">;
-</span><span>    </span><span style="color:#81a1c1;">const </span><span style="font-weight:bold;color:#d8dee9;">currentToken </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">getNext</span><span>()</span><span style="color:#eceff4;">;
-</span><span>    </span><span style="color:#81a1c1;">if </span><span>(currentToken</span><span style="color:#81a1c1;">.</span><span>lex </span><span style="color:#81a1c1;">!= </span><span style="color:#a3be8c;">&quot;XXX&quot;</span><span>) {
-</span><span>        </span><span style="color:#81a1c1;">throw new </span><span style="color:#8fbcbb;">SyntaxError</span><span>(</span><span style="color:#a3be8c;">&quot;Expect a XXX&quot;</span><span>)</span><span style="color:#eceff4;">;
-</span><span>    } </span><span style="color:#81a1c1;">else </span><span>{
-</span><span>        node</span><span style="color:#81a1c1;">.</span><span>xxx </span><span style="color:#81a1c1;">= </span><span style="color:#616e88;">/* somthing generated based on currentToken */
-</span><span>    }
-</span><span>    </span><span style="color:#616e88;">// ...
-</span><span>}
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-storage z-type z-function z-ts">function</span> <span class="z-meta z-definition z-function z-ts"><span class="z-entity z-name z-function z-ts">parseXX</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+    <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">node</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">createNode</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>XX<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+    <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">currentToken</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">getNext</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+    <span class="z-keyword z-control z-conditional z-ts">if</span> <span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-object z-ts">currentToken</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">lex</span> <span class="z-keyword z-operator z-comparison z-ts">!=</span> <span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>XXX<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+        <span class="z-keyword z-control z-trycatch z-ts">throw</span> <span class="z-new z-expr z-ts"><span class="z-keyword z-operator z-new z-ts">new</span> <span class="z-entity z-name z-type z-ts">SyntaxError</span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Expect a XXX<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+    <span class="z-punctuation z-definition z-block z-ts">}</span></span> <span class="z-keyword z-control z-conditional z-ts">else</span> <span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+        <span class="z-variable z-other z-object z-ts">node</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">xxx</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-comment z-block z-ts"><span class="z-punctuation z-definition z-comment z-ts">/*</span> somthing generated based on currentToken <span class="z-punctuation z-definition z-comment z-ts">*/</span></span>
+    <span class="z-punctuation z-definition z-block z-ts">}</span></span>
+<span class="z-punctuation z-whitespace z-comment z-leading z-ts">    </span><span class="z-comment z-line z-double-slash z-ts"><span class="z-punctuation z-definition z-comment z-ts">//</span></span><span class="z-comment z-line z-double-slash z-ts"> ...</span>
+<span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
 </span></code></pre>
 <p>然后得为每个非终结符都写上一个这样的函数，属于是累活了。</p>
 <p>不过仔细观察我们会发现&quot;拿到下一个 Token，判断是否匹配或是否落入预测集，成功则生成相应值，失败则出错&quot;这样的代码逻辑在每一个 parseXXX 函数中都一样，这里的共性暗示着我们可以为其建立一种抽象。</p>
 <p>我们通过构建一种函数式风格的、语义化的链式调用来将这种共性抽象出来，它用起来大概是这样：</p>
-<pre data-lang="ts" style="background-color:#2e3440;color:#d8dee9;" class="language-ts "><code class="language-ts" data-lang="ts"><span>node</span><span style="color:#81a1c1;">.</span><span>xxx </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">next</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">match</span><span>(</span><span style="color:#a3be8c;">&quot;XXX&quot;</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">then_take</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">or_err</span><span>(</span><span style="color:#a3be8c;">&quot;Expect a `xxx`&quot;</span><span>)</span><span style="color:#eceff4;">;
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-variable z-other z-object z-ts">node</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-variable z-other z-property z-ts">xxx</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">next</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-ts">match</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>XXX<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">then_take</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">or_err</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Expect a `xxx`<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
 </span></code></pre>
 <p>这里链式调用的关键是需要为我们的抽象定义一个类，这个类的实例方法会返回类实例本身，因此就可以再次调用另一个实例方法。我们将这个类称为 ParsingWorker，调用 next 函数会返回一个 ParsingWorker 的实例，该实例记录着当前的 Token，然后通过其上的实例方法执行具体的递归下降解析逻辑。</p>
 <p>ParsingWorker 上主要有这几个字段：</p>
@@ -213,22 +412,22 @@
 </ul>
 <p>具体代码还有更多的逻辑细节，比如它还需要两个泛型参数，用来指定 result 的类型。这里就不展开详细说了，请查看 <code>src/rd-parser.ts</code></p>
 <p>基于 ParsingWorker 我们可以写出这样的 parse 函数：</p>
-<pre data-lang="ts" style="background-color:#2e3440;color:#d8dee9;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#81a1c1;">function </span><span style="color:#88c0d0;">parseProgram</span><span>()</span><span style="color:#81a1c1;">: </span><span style="color:#8fbcbb;">Node</span><span>&lt;</span><span style="color:#a3be8c;">&quot;Program&quot;</span><span>&gt; {
-</span><span>  </span><span style="color:#81a1c1;">const </span><span style="font-weight:bold;color:#d8dee9;">node </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">createNode</span><span>(</span><span style="color:#a3be8c;">&quot;Program&quot;</span><span>)</span><span style="color:#eceff4;">;
-</span><span>  </span><span style="color:#88c0d0;">next</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">match</span><span>(</span><span style="color:#a3be8c;">&quot;PROGRAM&quot;</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">or_err</span><span>(</span><span style="color:#a3be8c;">&quot;Expect keyword `program`&quot;</span><span>)</span><span style="color:#eceff4;">;
-</span><span>  node</span><span style="color:#81a1c1;">.</span><span>name </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">next</span><span>&lt;</span><span style="color:#a3be8c;">&quot;Identifier&quot;</span><span>&gt;()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">match</span><span>(</span><span style="color:#a3be8c;">&quot;ID&quot;</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">then_take</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">or_err</span><span>(</span><span style="color:#a3be8c;">&quot;Expect an identifier&quot;</span><span>)</span><span style="color:#81a1c1;">!</span><span style="color:#eceff4;">;
-</span><span>  node</span><span style="color:#81a1c1;">.</span><span>declare </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">parseDeclarePart</span><span>()</span><span style="color:#eceff4;">;
-</span><span>  node</span><span style="color:#81a1c1;">.</span><span>body </span><span style="color:#81a1c1;">= </span><span style="color:#88c0d0;">parseProgramBody</span><span>()</span><span style="color:#eceff4;">;
-</span><span>  </span><span style="color:#88c0d0;">next</span><span>()</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">match</span><span>(</span><span style="color:#a3be8c;">&quot;DOT&quot;</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">or_err</span><span>(</span><span style="color:#a3be8c;">&quot;Expect `.`&quot;</span><span>)</span><span style="color:#eceff4;">;
-</span><span>  </span><span style="color:#81a1c1;">return </span><span>node </span><span style="color:#81a1c1;">as </span><span style="color:#8fbcbb;">Node</span><span>&lt;</span><span style="color:#a3be8c;">&quot;Program&quot;</span><span>&gt;</span><span style="color:#eceff4;">;
-</span><span>}
-</span><span>
-</span><span style="color:#81a1c1;">function </span><span style="color:#88c0d0;">parseTypeDecMore</span><span>()</span><span style="color:#81a1c1;">: </span><span style="color:#8fbcbb;">Node</span><span>&lt;</span><span style="color:#a3be8c;">&quot;TypeDeclaration&quot;</span><span>&gt; </span><span style="color:#81a1c1;">| </span><span style="color:#8fbcbb;">null </span><span>{
-</span><span>  </span><span style="color:#81a1c1;">return </span><span style="color:#88c0d0;">next</span><span>&lt;</span><span style="color:#a3be8c;">&quot;TypeDeclaration&quot;</span><span style="color:#eceff4;">, </span><span style="color:#8fbcbb;">null</span><span>&gt;()
-</span><span>  </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">in_predict</span><span>(</span><span style="color:#b48ead;">9</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">then_take</span><span>(() </span><span style="color:#81a1c1;">=&gt; null</span><span>)
-</span><span>  </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">in_predict</span><span>(</span><span style="color:#b48ead;">10</span><span>)</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">then_take</span><span>(parseTypeDecList)
-</span><span>  </span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">or_err</span><span>(</span><span style="color:#a3be8c;">&quot;Expect an identifier or keyword `var`, `procedure`, `begin`&quot;</span><span>)</span><span style="color:#81a1c1;">!</span><span style="color:#eceff4;">;
-</span><span>}
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-meta z-function z-ts"><span class="z-storage z-type z-function z-ts">function</span> <span class="z-meta z-definition z-function z-ts"><span class="z-entity z-name z-function z-ts">parseProgram</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span><span class="z-meta z-return z-type z-ts"><span class="z-keyword z-operator z-type z-annotation z-ts">:</span> <span class="z-entity z-name z-type z-ts">Node</span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Program<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span> </span><span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+  <span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">node</span></span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">createNode</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Program<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">next</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-ts">match</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>PROGRAM<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">or_err</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Expect keyword `program`<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+  <span class="z-variable z-other z-object z-ts">node</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">name</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">next</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Identifier<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-ts">match</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>ID<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">then_take</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">or_err</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Expect an identifier<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-keyword z-operator z-logical z-ts">!</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+  <span class="z-variable z-other z-object z-ts">node</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">declare</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">parseDeclarePart</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+  <span class="z-variable z-other z-object z-ts">node</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-variable z-property z-dom z-ts">body</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">parseProgramBody</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">next</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-ts">match</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>DOT<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">or_err</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Expect `.`<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+  <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-variable z-other z-readwrite z-ts">node</span> <span class="z-keyword z-control z-as z-ts">as</span> <span class="z-entity z-name z-type z-ts">Node</span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Program<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
+
+<span class="z-meta z-function z-ts"><span class="z-storage z-type z-function z-ts">function</span> <span class="z-meta z-definition z-function z-ts"><span class="z-entity z-name z-function z-ts">parseTypeDecMore</span></span><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span><span class="z-meta z-return z-type z-ts"><span class="z-keyword z-operator z-type z-annotation z-ts">:</span> <span class="z-entity z-name z-type z-ts">Node</span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>TypeDeclaration<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span> <span class="z-keyword z-operator z-type z-ts">|</span> <span class="z-support z-type z-builtin z-ts">null</span> </span><span class="z-meta z-block z-ts"><span class="z-punctuation z-definition z-block z-ts">{</span>
+  <span class="z-keyword z-control z-flow z-ts">return</span> <span class="z-meta z-function-call z-ts"><span class="z-entity z-name z-function z-ts">next</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>TypeDeclaration<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-support z-type z-builtin z-ts">null</span><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">in_predict</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-constant z-numeric z-decimal z-ts">9</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">then_take</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-arrow z-ts"><span class="z-meta z-parameters z-ts"><span class="z-punctuation z-definition z-parameters z-begin z-ts">(</span><span class="z-punctuation z-definition z-parameters z-end z-ts">)</span></span> </span><span class="z-meta z-arrow z-ts"><span class="z-storage z-type z-function z-arrow z-ts">=&gt;</span> </span><span class="z-constant z-language z-null z-ts">null</span><span class="z-meta z-brace z-round z-ts">)</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">in_predict</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-constant z-numeric z-decimal z-ts">10</span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">then_take</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-variable z-other z-readwrite z-ts">parseTypeDecList</span><span class="z-meta z-brace z-round z-ts">)</span>
+  <span class="z-meta z-function-call z-ts"><span class="z-punctuation z-accessor z-ts">.</span><span class="z-entity z-name z-function z-ts">or_err</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-string z-quoted z-double z-ts"><span class="z-punctuation z-definition z-string z-begin z-ts">&quot;</span>Expect an identifier or keyword `var`, `procedure`, `begin`<span class="z-punctuation z-definition z-string z-end z-ts">&quot;</span></span><span class="z-meta z-brace z-round z-ts">)</span><span class="z-keyword z-operator z-logical z-ts">!</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-punctuation z-definition z-block z-ts">}</span></span></span>
 </span></code></pre>
 <p>可以看到代码更加简短，且更加语义化。</p>
 <p>更高层级的抽象通常会带来额外的性能开销，这里的 ParsingWorker 跟直接在每个 parse 函数里写 if 相比会有新建实例和方法调用的额外开销，而编译器属于偏底层、性能敏感型的系统级程序，一个真实世界中 non-trivial 的编译器一定不会大量使用有额外开销的抽象。不过咱这是个玩具编译器，为了简洁性和语义化牺牲一点性能完全是可以接受的。</p>
@@ -238,10 +437,10 @@
 <p>问题在于，我们不仅要对 Token 序列是否合法进行判定，还需要在判定的过程中构建抽象语法树。为此除了符号栈之外，还需要一个语法树栈，以及用于处理表达式的操作数栈和操作符栈。</p>
 <p>构建语法树的主要思路是，在将产生式右部压入符号栈时适时地进行一些额外的动作（这里称之为 action），比如创建一个相应的树节点并将其字段指针压入语法树栈，后面再生成节点时会从语法树栈中弹出一个这样的字段指针并将其赋值为该新建的节点，新节点的字段也相应地入栈。</p>
 <p>JS/TS 并没有指针类型，你无法取到一个值的“地址”，不过我们可以通过 JS 对象的 <em>可计算属性</em> 来模拟出字段指针的效果。JS 的可计算属性指的是对象的字段可以通过一个在运行时求值的字符串来访问（方括号语法）。语法树栈中的元素是一个二元组，包含一个节点本身的引用和该节点某个字段的字符串表示，这样就可以在后面弹栈后对这个字段进行赋值。</p>
-<pre data-lang="ts" style="background-color:#2e3440;color:#d8dee9;" class="language-ts "><code class="language-ts" data-lang="ts"><span style="color:#81a1c1;">type Pointer = </span><span>[</span><span style="color:#8fbcbb;">Record</span><span>&lt;</span><span style="color:#81a1c1;">string</span><span style="color:#eceff4;">, </span><span style="color:#81a1c1;">unknown</span><span>&gt;</span><span style="color:#eceff4;">, </span><span style="color:#81a1c1;">string</span><span>]</span><span style="color:#eceff4;">;
-</span><span style="color:#81a1c1;">const </span><span style="font-weight:bold;color:#d8dee9;">astStack</span><span style="color:#81a1c1;">: </span><span style="color:#8fbcbb;">Pointer</span><span>[]</span><span style="color:#eceff4;">;
-</span><span style="color:#81a1c1;">const </span><span>[</span><span style="font-weight:bold;color:#d8dee9;">node</span><span style="color:#eceff4;">, </span><span style="font-weight:bold;color:#d8dee9;">key</span><span>] </span><span style="color:#81a1c1;">= </span><span>astStack</span><span style="color:#81a1c1;">.</span><span style="color:#88c0d0;">pop</span><span>()</span><span style="color:#eceff4;">;
-</span><span>node[key] </span><span style="color:#81a1c1;">= </span><span>value</span><span style="color:#eceff4;">;
+<pre data-lang="ts" class="language-ts z-code"><code class="language-ts" data-lang="ts"><span class="z-source z-ts"><span class="z-meta z-type z-declaration z-ts"><span class="z-storage z-type z-type z-ts">type</span> <span class="z-entity z-name z-type z-alias z-ts">Pointer</span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-type z-tuple z-ts"><span class="z-meta z-brace z-square z-ts">[</span><span class="z-entity z-name z-type z-ts">Record</span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-begin z-ts">&lt;</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-support z-type z-primitive z-ts">string</span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-support z-type z-primitive z-ts">unknown</span></span><span class="z-meta z-type z-parameters z-ts"><span class="z-punctuation z-definition z-typeparameters z-end z-ts">&gt;</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-support z-type z-primitive z-ts">string</span><span class="z-meta z-brace z-square z-ts">]</span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-var-single-variable z-expr z-ts"><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">astStack</span></span><span class="z-meta z-type z-annotation z-ts"><span class="z-keyword z-operator z-type z-annotation z-ts">:</span> <span class="z-entity z-name z-type z-ts">Pointer</span><span class="z-meta z-type z-tuple z-ts"><span class="z-meta z-brace z-square z-ts">[</span><span class="z-meta z-brace z-square z-ts">]</span></span></span></span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-meta z-var z-expr z-ts"><span class="z-storage z-type z-ts">const</span> <span class="z-meta z-array-binding-pattern-variable z-ts"><span class="z-punctuation z-definition z-binding-pattern z-array z-ts">[</span><span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">node</span></span><span class="z-punctuation z-separator z-comma z-ts">,</span> <span class="z-meta z-definition z-variable z-ts"><span class="z-variable z-other z-constant z-ts">key</span></span><span class="z-punctuation z-definition z-binding-pattern z-array z-ts">]</span> </span><span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-meta z-function-call z-ts"><span class="z-variable z-other z-object z-ts">astStack</span><span class="z-punctuation z-accessor z-ts">.</span><span class="z-support z-function z-ts">pop</span></span><span class="z-meta z-brace z-round z-ts">(</span><span class="z-meta z-brace z-round z-ts">)</span></span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
+<span class="z-variable z-other z-readwrite z-ts">node</span><span class="z-meta z-array z-literal z-ts"><span class="z-meta z-brace z-square z-ts">[</span><span class="z-variable z-other z-readwrite z-ts">key</span><span class="z-meta z-brace z-square z-ts">]</span></span> <span class="z-keyword z-operator z-assignment z-ts">=</span> <span class="z-variable z-other z-readwrite z-ts">value</span><span class="z-punctuation z-terminator z-statement z-ts">;</span>
 </span></code></pre>
 <p>这里这个所谓的 Pointer 类型是不能保证类型安全的，需要手动保证字段和节点类型相匹配。</p>
 <p>大部分的 action 都是“创建一个新节点，弹出语法树栈的栈顶元素，将其赋值成该新节点，将新节点的相应字段压入语法树栈”，我们将其抽象到一个 <code>link</code> 函数，表示“连接”到语法树。然后观察产生式，为每个产生式定义一个相应的 action（一个函数），大部分 action 都只是调用一次 <code>link</code>。</p>
@@ -317,10 +516,11 @@
 <p>还可以让命令行输出更加“用户友好”一些。</p>
 <p>打印错误信息时模仿了 Rust 编译器的错误输出风格，会显示行号和那一行的代码，指出错误的位置。</p>
 <p>打印 AST 时则使用了 Linux 的 tree 命名风格的树形输出，这个效果的实现关键在于递归打印时维护一个 prefix 栈。</p>
-<p><img src="/img/snl-example-output.png" alt="样例输出截图" /></p>
+<p><img src="/assets/snl-example-output.png" alt="样例输出截图" /></p>
 <h2 id="zong-jie">总结<a class="zola-anchor" href="#zong-jie" aria-label="Anchor link for: zong-jie">#</a></h2>
 <p>总的来说，这确实是一个大学生课设级别的玩具语言的玩具编译器实现，还只有前端部分，但真正动手实现一个编译器仍然让我学到了很多东西，也让我体会到了编译器的奥妙。等之后有时间了想再系统地学一学相关的知识，看一下那本编译原理龙书，还有那本《Crafting Interpreters》，可能要等到秋招之后了。</p>
 
+      
     </article>
 
     
@@ -337,7 +537,7 @@
         data-emit-metadata="0"
         data-input-position="bottom"
         data-theme="https://isunjn.me/giscus_light.css"
-        data-lang="zh-CN"
+        data-lang="en"
         crossorigin="anonymous"
         async>
 </script>
@@ -350,110 +550,14 @@
   </div>
   
   <div class="credits">
-    Powered by
-    <a href="https://www.getzola.org" target="_blank" rel='noreferrer noopener' data-umami-event="credit-Zola">Zola</a>
+    powered by
+    <a href="https://www.getzola.org" target="_blank" rel='noreferrer noopener'>zola</a>
     and
-    <a href="https://github.com/isunjn/serene" target="_blank" rel='noreferrer noopener' data-umami-event="credit-Serene">Serene</a>
+    <a href="https://github.com/isunjn/serene" target="_blank" rel='noreferrer noopener'>serene</a>
   </div>
   
 </footer>
   </main>
-  <aside  class="blur" >
-    
-    
-    <nav>
-      <ul>
-        
-        <li>
-          <a href="#snl-yu-yan">SNL 语言</a>
-          
-        </li>
-        
-        <li>
-          <a href="#ci-fa-fen-xi">词法分析</a>
-          
-          <ul>
-            
-            <li>
-              <a href="#dfa">DFA</a>
-            </li>
-            
-            <li>
-              <a href="#token">Token</a>
-            </li>
-            
-            <li>
-              <a href="#ci-fa-fen-xi-de-shi-xian">词法分析的实现</a>
-            </li>
-            
-          </ul>
-          
-        </li>
-        
-        <li>
-          <a href="#yu-fa-fen-xi">语法分析</a>
-          
-          <ul>
-            
-            <li>
-              <a href="#predict-ji">Predict 集</a>
-            </li>
-            
-            <li>
-              <a href="#ast-ding-yi">AST 定义</a>
-            </li>
-            
-            <li>
-              <a href="#di-gui-xia-jiang-jie-xi">递归下降解析</a>
-            </li>
-            
-            <li>
-              <a href="#ll-1-jie-xi">LL(1)解析</a>
-            </li>
-            
-          </ul>
-          
-        </li>
-        
-        <li>
-          <a href="#yu-yi-fen-xi">语义分析</a>
-          
-          <ul>
-            
-            <li>
-              <a href="#fu-hao-biao">符号表</a>
-            </li>
-            
-            <li>
-              <a href="#zuo-yong-yu">作用域</a>
-            </li>
-            
-          </ul>
-          
-        </li>
-        
-        <li>
-          <a href="#ming-ling-xing-jie-mian">命令行界面</a>
-          
-          <ul>
-            
-            <li>
-              <a href="#pretty-print">Pretty Print</a>
-            </li>
-            
-          </ul>
-          
-        </li>
-        
-        <li>
-          <a href="#zong-jie">总结</a>
-          
-        </li>
-        
-      </ul>
-    </nav>
-    
-  </aside>
 </div>
 
   

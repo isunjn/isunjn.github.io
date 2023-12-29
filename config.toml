@@ -40,7 +40,8 @@ bio = "In programming we trust"
 avatar = "img/avatar.webp"
 links = [
     { name = "GitHub", icon = "github", url = "https://github.com/isunjn" },
-    { name = "Twitter", icon = "twitter", url = "https://twitter.com/isunjn" },
+    # { name= "Email", icon = "email", url= "mailto:isunjn@gmail.com" },
+    # { name = "Twitter", icon = "twitter", url = "https://twitter.com/isunjn" },
     { name = "GPG", icon = "fingerprint", url = "https://github.com/isunjn.gpg" },
 ]
 

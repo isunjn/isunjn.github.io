@@ -58,7 +58,6 @@ nav_wrapper_left = "{"
 nav_wrapper_right = "} ;"
 nav_wrapper_separator = ","
 
-
 display_id = true
 blog_categorized = false
 blur_effect = true
@@ -75,3 +74,7 @@ outdate_alert_text_after = " 天前，部分内容可能已失去时效性，请
 
 footer_copyright = "© 2023 isunjn"
 footer_credits = true
+
+not_found_title = "404"
+not_found_error_text = "Not Found"
+not_found_recover_text = "« back to home »"

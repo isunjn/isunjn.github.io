@@ -42,7 +42,7 @@ links = [
     { name = "GitHub", icon = "github", url = "https://github.com/isunjn" },
     # { name= "Email", icon = "email", url= "mailto:isunjn@gmail.com" },
     # { name = "Twitter", icon = "twitter", url = "https://twitter.com/isunjn" },
-    { name = "GPG", icon = "fingerprint", url = "https://github.com/isunjn.gpg" },
+    # { name = "GPG", icon = "fingerprint", url = "https://github.com/isunjn.gpg" },
 ]
 
 homepage_layout = "about"
@@ -72,7 +72,7 @@ outdate_alert_days = 120
 outdate_alert_text_before = "本文最后更新于 "
 outdate_alert_text_after = " 天前，部分内容可能已失去时效性，请谨慎参考"
 
-footer_copyright = "© 2023 isunjn"
+footer_copyright = "© 2024 isunjn"
 footer_credits = true
 
 not_found_title = "404"

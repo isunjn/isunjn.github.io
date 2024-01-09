@@ -1,5 +1,5 @@
 +++
-title = "Serene - 一款简洁优雅的博客主题"
+title = "Serene: 一款简洁优雅的博客主题"
 date = 2022-01-19
 updated = 2022-04-19
 [taxonomies]

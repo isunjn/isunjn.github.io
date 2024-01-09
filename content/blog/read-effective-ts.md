@@ -13,7 +13,7 @@ toc = false
 
 以下是我在读的过程中记的一些要点笔记：
 
-## 1-6: Getting to Know TypeScript
+### 1-6: Getting to Know TypeScript
 
 - TS 是 JS 的超集，它保留了大部分 JS 的运行时行为模型，一小部分 JS 允许的行为在 TS 中不被允许，另外一些则可以通过编译器 flag 来控制是否保留
 
@@ -39,7 +39,7 @@ toc = false
 
 - avoid `any`!
 
-## 7: Think of Types as Sets of Values
+### 7: Think of Types as Sets of Values
 
 - 从范畴论的角度来说，类型是值的集合
 
@@ -57,7 +57,7 @@ toc = false
 
 - Think of “extends,” “assignable to,” and “subtype of ” as synonyms for “subset of.”
 
-## 8: Know How to Tell Whether a Symbol Is in the Tyep Sapce or Value Space
+### 8: Know How to Tell Whether a Symbol Is in the Tyep Sapce or Value Space
 
 - TS 中的类型标识符和值标识符互不冲突，可以同名
 
@@ -69,7 +69,7 @@ toc = false
 
 - `typeof`、`this`以及其他许多操作符和关键字在类型和值的上下文中有不同的意义
 
-## 9: Prefer Type Declartions to Type Assertions
+### 9: Prefer Type Declartions to Type Assertions
 
 - 有两种方式给一个值进行类型注解：`const val: Person = {}` `const cal = {} as Person`
 
@@ -85,9 +85,9 @@ toc = false
 
 - `const people = ['alice', 'bob'].map((ame): Person => ({ name }));`
 
-## 10: Avoid Object Wrapper Types
+### 10: Avoid Object Wrapper Types
 
-## 11: Recognize the Limits of Excess Prperty Checking
+### 11: Recognize the Limits of Excess Prperty Checking
 
 - 尽管是结构化类型系统，Ts 提供了“excess propety checking”检测来帮助发现错误，它作用于对象字面量，（这意味着如果先把对象字面量赋值给一个变量，再用这个变量的话就不会触发该检查）
 
@@ -97,7 +97,7 @@ toc = false
 
 - 这两种检查均是在结构化类型对可赋值性检查之外的检查，有助于帮助发现 typo 和其他一些涉及属性名的错误，在类型有可选字段时尤其有用
 
-## 12: Apply Types to Entire Function Expressions When Possible
+### 12: Apply Types to Entire Function Expressions When Possible
 
 - 考虑对整个函数表达式应用一个类型注解，而不是对参数和返回值进行注解
 
@@ -109,7 +109,7 @@ toc = false
 
 - 使用`typeof fn`来得到另一个函数的类型来使用
 
-## 13: Know the Differences Between type and interface
+### 13: Know the Differences Between type and interface
 
 - 总体上 type 比 interface 更加强大，尤其是涉及到 union type 时，元组和数组类型用 type 也更容易表达
 
@@ -125,7 +125,7 @@ toc = false
 
   - 如果类型仅仅是内部使用，声明合并通常不是希望的，prefer type
 
-## 14: Use Type Operations and Generics to Avoid Repeating Yourself
+### 14: Use Type Operations and Generics to Avoid Repeating Yourself
 
 - DRY 也同样应该应用在类型方面，类型上的重复更加常见，因为人们不熟悉为减少类型重复而采用的模式
 
@@ -145,7 +145,7 @@ toc = false
 
 - 通过`extends`关键字来对泛型参数进行约束
 
-## 15: Use Index Signatures for Dynamic Data
+### 15: Use Index Signatures for Dynamic Data
 
 - 索引签名用在动态数据的场景中，例如解析 CSV，列名提前不知道`{ [columnName: string]: string }[]`
 
@@ -163,7 +163,7 @@ toc = false
 
     - `type ABC = { [k in 'a' | 'b']: k extends 'b' ? string : number }`
 
-## 16: Prefer Arrays, Tuples, and ArrayLike to number Index Signatures
+### 16: Prefer Arrays, Tuples, and ArrayLike to number Index Signatures
 
 - 数组的索引在运行时实际上也是 string 类型的，但 TS 将其类型声明为 number，有助于帮助发现错误，number index signatures 仅仅是一个 TS 构造
 
@@ -171,7 +171,7 @@ toc = false
 
 - 标准库提供`ArrayLike<T>`类型，只有 length 属性和 number index signature
 
-## 17: Use readonly to Avoid Errors Associated with Mutation
+### 17: Use readonly to Avoid Errors Associated with Mutation
 
 - `number[]`是`readonly number[]`的子类型（而不是反过来），所以`number[]`类型的值可以被赋值给`readonly number[]`类型的变量，反过来则不行
 
@@ -181,7 +181,7 @@ toc = false
 
 - `readonly` is shallow
 
-## 18: Use Mapped Types to Keep Values in Sync
+### 18: Use Mapped Types to Keep Values in Sync
 
 - 如果你想要一个对象有和另一个对象完全一致的属性，使用 mapped types
 
@@ -189,7 +189,7 @@ toc = false
 
 - `const REQUIRES_UPDATE: {[k in keyof ScatterProps]: boolean} = {xs:true, xy: true onClick:false};`
 
-## 19: Avoid Cluttering Your Code with Inferable Types
+### 19: Avoid Cluttering Your Code with Inferable Types
 
 - 手动注解可以被推断的类型总体上不被推荐
 
@@ -203,7 +203,7 @@ toc = false
 
 - 函数返回值类似，能够被 infer，但最好显式注解
 
-## 20: Use Different Variables for Different Types
+### 20: Use Different Variables for Different Types
 
 - 丢弃 js 的动态类型特性
 
@@ -217,7 +217,7 @@ toc = false
 
   - 使用 const 而不是 let
 
-## 21: Understand Type Widening
+### 21: Understand Type Widening
 
 - 类型扩展发生在 ts 尝试通过赋值给变量的值来推断变量的类型时
 
@@ -225,7 +225,7 @@ toc = false
 
 - 通过显式类型注解、更多的上下文信息、`as const`等方式来阻止类型猜测
 
-## 22: Understand Type Narrowing
+### 22: Understand Type Narrowing
 
 - TS 通过条件判断和控制流分析来进行类型收缩
 
@@ -233,7 +233,7 @@ toc = false
 
 - 使用自定义类型谓词函数来在 map/filter/reduce 等地方进行类型收缩
 
-## 23: Create Objects All at Once
+### 23: Create Objects All at Once
 
 - prefer creating objects all at once, rather than piece by piece
 
@@ -243,7 +243,7 @@ toc = false
 
 - 如果要条件地添加一个属性，需要使用一个辅助函数 `p98`
 
-## 24: Be Consisitent in Your Use of Aliases
+### 24: Be Consisitent in Your Use of Aliases
 
 - 这里的 alias 指引用同一个对象的多个变量，会引入不一致
 
@@ -253,7 +253,7 @@ toc = false
 
 - 对一个值进行的某个属性信息类型判断后，在这个值之上的函数调用可能会更改这个属性，但 ts 控制流分析不会重新验证去反映出这个变化
 
-## 25: Use async Functions Instead of Callbacks for Asynchronous Code
+### 25: Use async Functions Instead of Callbacks for Asynchronous Code
 
 - `Promise.race()`返回值的类型是各个 promise 的类型的 union
 
@@ -265,7 +265,7 @@ toc = false
 
 - 如果一个函数返回一个 promise，将其声明为 async
 
-## 26: Understand How Context Is Used in Type Inference
+### 26: Understand How Context Is Used in Type Inference
 
 - 值所在的上下文会影响类型推断，一些在 JS 中结果相同的写法在 TS 中可能导致推断出不同的类型
 
@@ -277,17 +277,17 @@ toc = false
 
   - 设计字面量和元组的对象也有相同的问题，同样使用显式类型注解或`as const`
 
-## 27: Use Functional Constructs and Libraries to Help Types Flow
+### 27: Use Functional Constructs and Libraries to Help Types Flow
 
 - 函数式风格的库/构件的 TS 类型声明天然使得类型 flow through
 
 - 使用内置的函数式构件和第三方函数式类库来增强类型流，增加易读性，减少显式类型注解
 
-## 28: Prefer Types That Always Represent Valid States
+### 28: Prefer Types That Always Represent Valid States
 
 - 保持状态总是*有效/合法*状态，设计良好的状态能表达出的所有组合都是合理/有效的
 
-## 29: Be Liberal in What You Accept and Strict in What You Produce
+### 29: Be Liberal in What You Accept and Strict in What You Produce
 
 - 参数类型可以更 open 一些，有多种不同的形式，这样函数用起来更*方便*
 
@@ -295,57 +295,57 @@ toc = false
 
 - 可以为参数和返回值设计相关但又不同的类型，一种更规范，用于返回值，一种更宽松，用于参数
 
-## 30: Don’t Repeat Type Information in Documentation
+### 30: Don’t Repeat Type Information in Documentation
 
 - 避免在文档和变量名中重复类型信息
 
 - 单位信息如果不能通过类型表达出来的话，可以加在变量名中
 
-## 31: Push Null Values to the Perimeter of Your Types
+### 31: Push Null Values to the Perimeter of Your Types
 
 - 返回一整个完全不为空的对象或者 null，而不是多个相互关联的可能为 null 可能不为 null 的值
 
 - 考虑将类的字段声明为都不为 null，然后用一个静态方法去拿到所有值后再去构造，而不是以 null 作为初始值去构造
 
-## 32: Prefer Unions of Interfaces to Interfaces of Unions
+### 32: Prefer Unions of Interfaces to Interfaces of Unions
 
 - 如果一个类型的多个属性都是 union，通常是错误的抽象，会导致非法状态的出现
 
 - If you can represent a data type in TypeScript with a tagged union, it’s usually a good idea to do so
 
-## 33: Prefer More Precise Alternatives to String Types
+### 33: Prefer More Precise Alternatives to String Types
 
 - Avoid “stringly typed”
 
 - 命名类型还可以用`/** */`来加文档注释
 
-## 34: Prefer Incomplete Types to Inaccurate Types
+### 34: Prefer Incomplete Types to Inaccurate Types
 
 - 增加类型精确性的同时也导致出现不正确的可能性增大
 
 - 避免过于精确的类型导致使用/理解起来过去复杂，尽量避免导致自动补全失效的改动
 
-## 35: Generate Types from APIs and Sepcs, Not Data
+### 35: Generate Types from APIs and Sepcs, Not Data
 
 - 避免从样例数据生成类型
 
-## 36: Name Types Using the Language of Your Problem Domain
+### 36: Name Types Using the Language of Your Problem Domain
 
 - 避免不恰当的命名
 
-## 37: Consider “Brands” for Nominal Typing
+### 37: Consider “Brands” for Nominal Typing
 
 - TS 中让类型变为 Nonminal Type 的方式是为类型增加一个独特的标记字段，称为`brand`，这会引入运行时开销
 
 - 也可以仅在类型层面上使用这些标记，还可以将内置类型变为 nominal 的，需要结合类型谓词/断言来使用，结合运行时的断言，可以做到类型系统原本无法做到的一些事
 
-## 38: Use the Narrowest Possible Scope for `any` Types
+### 38: Use the Narrowest Possible Scope for `any` Types
 
 - 需要类型强转的时候使用`as any`而不是将类型注解改为`any`，这样不会把变量在其他地方也搞成`any`
 
 - 永远不要将返回类型声明为`any`
 
-## 39: Prefer More Precise Variants of `any` to Plain `any`
+### 39: Prefer More Precise Variants of `any` to Plain `any`
 
 - `any[]`
 
@@ -353,19 +353,19 @@ toc = false
 
 - `() => any` `(...args: any[]) => any`
 
-## 40: Hide Unsafe Type Assertions in Well-Typed Functions
+### 40: Hide Unsafe Type Assertions in Well-Typed Functions
 
 - 有一些函数的签名是类型安全的，但具体实现较难做到完全类型安全
 
 - 可以考虑将不安全的类型断言操作隐藏在一个签名类型正确的函数内部
 
-## 41: Understand Evolving `any`
+### 41: Understand Evolving `any`
 
 - 如果一个变量根据初始赋值被推断为`any`，会根据后续使用情况变推断成更具体的类型
 
 - 最好还是显式地进行类型注解
 
-## 42: Use `unknown` Instead of `any` for Values with an Unknown Type
+### 42: Use `unknown` Instead of `any` for Values with an Unknown Type
 
 - `unknown`是一个比`any`更类型安全的类型，如果不知道值的类型，最好用`unknown`
 
@@ -373,19 +373,19 @@ toc = false
 
 - `{}` `object` `unknown`
 
-## 43: Prefer Type-Safe Approaches to Monkey Patching
+### 43: Prefer Type-Safe Approaches to Monkey Patching
 
 - 尽可能避免在全局对象/宿主环境对象上加属性这种操作
 
 - 如果避免不了，可以用 interface 的声明合并功能，或 extends 出一个更具体的类型然后再断言
 
-## 44: Track Your Type Coverage to Prevent Regressions in Type Safety
+### 44: Track Your Type Coverage to Prevent Regressions in Type Safety
 
 - `npx type-coverage`
 
-## 45: Put TypeScript and @types in devDependencies
+### 45: Put TypeScript and @types in devDependencies
 
-## 46: Understand the Three Versions Involved in Type Declarations
+### 46: Understand the Three Versions Involved in Type Declarations
 
 - 依赖管理涉及到的版本问题：包本身，包类型声明(@types)，TSC
 
@@ -395,11 +395,11 @@ toc = false
 
 - 如果库本身就是用 TS 写的，可以将类型声明和库一起打包，虽然也可能有一些问题；如果不是，最好是用 DefinitelyTyped 来维护
 
-## 47: Export All Types That Appear in Public APIs
+### 47: Export All Types That Appear in Public APIs
 
 - 虽然一些出现在 API 中但没有显式导出的类型可以被库的用户手动提取出来，但最好还是将这些类型都显式地导出比较好
 
-## 48: Use TSDoc for API Comments
+### 48: Use TSDoc for API Comments
 
 - `/** */`
 
@@ -413,29 +413,29 @@ toc = false
 
 - 避免过于 verbose
 
-## 49: Provide a Type for `this` in Callbacks
+### 49: Provide a Type for `this` in Callbacks
 
 - 如果作为 API 的回调函数中限制了 this 的值/类型，需要在函数签名中指定 this 的类型`this: XXXType`
 
-## 50: Prefer Conditional Types to Overloaded Declarations
+### 50: Prefer Conditional Types to Overloaded Declarations
 
 - `function double<T extends number | string>(x: T): T extends string ? string : number {...}`
 
 - Conditional types distribute over unions
 
-## 51: Mirror Types to Sever Dependencies
+### 51: Mirror Types to Sever Dependencies
 
 - Don’t force JS users to depend on @types, Don’t force web developers to depend on NodeJS
 
 - 可以利用结构化类型将第三方库的类型 mirror 成自己的
 
-## 52: Be Aware of the Pitfalls of Testing Types
+### 52: Be Aware of the Pitfalls of Testing Types
 
 - 测试类型时注意 equality 和 assignability 的区别
 
 - 使用 dtslint 之类的工具
 
-## 53: Prefer ECMAScript Features to TypeScript Features
+### 53: Prefer ECMAScript Features to TypeScript Features
 
 - TS 的部分功能是为了弥补 JS 的缺失，随着 JS 的发展，其中一些不再需要了，现在应该仅将 TS 定位在 type 层面上来使用，避免使用 enum 等
 
@@ -447,39 +447,39 @@ toc = false
 
 - 装饰器仍然未稳定，尝试避免使用
 
-## 54: Know How to Iterate Over Objects
+### 54: Know How to Iterate Over Objects
 
 - `let k: keyof T`&`for-in` 当对象属性已知时，注意这种方式可能产生运行时错误，比如实际对象包含类型声明之外的属性、对象原型链上有可枚举的属性
 
 - `Object.entries()`
 
-## 55: Understand the DOM hierarchy
+### 55: Understand the DOM hierarchy
 
 - `EventTarget -> Node -> Element -> HTMLElement -> HTMLBUttonElement`
 
-## 56: Don’t Rely on Private to Hide Information
+### 56: Don’t Rely on Private to Hide Information
 
 - `private`仅仅是一个类型层面的约束，不要过于依赖
 
-## 57: Use Source Maps to Debug TypeScript
+### 57: Use Source Maps to Debug TypeScript
 
 - `“sourceMap”: true`
 
-## 58: Write Modern JavaScript
+### 58: Write Modern JavaScript
 
 - tsc 会执行转译，尽量用最新的 JS 特性
 
-## 59: Use @ts-check and JSDoc to Experiment with Typescript
+### 59: Use @ts-check and JSDoc to Experiment with Typescript
 
 - `@ts-check`
 
 - 不要纠结于把 JSDoc 全写对，目标应该是转成 TS 文件
 
-## 60: Use allowJs to Mix TypeScript and JavaScript
+### 60: Use allowJs to Mix TypeScript and JavaScript
 
 - `allowJs`
 
-## 61: Convert Module by Module Up Your Dependency Graph
+### 61: Convert Module by Module Up Your Dependency Graph
 
 - 一个模块一个模块来
 
@@ -487,6 +487,6 @@ toc = false
 
 - 从依赖图的底层开始向上依次进行
 
-## 62: Don’t Condider Migration Complete Until You Enable noImplicitAny
+### 62: Don’t Condider Migration Complete Until You Enable noImplicitAny
 
 - 将所有隐式 any 去除后才算完全转到 TS

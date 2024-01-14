@@ -42,7 +42,7 @@ links = [
     { name = "GitHub", icon = "github", url = "https://github.com/isunjn" },
     { name= "Email", icon = "email", url= "mailto:isunjn@gmail.com" },
     # { name = "Twitter", icon = "twitter", url = "https://twitter.com/isunjn" },
-    { name = "GPG", icon = "fingerprint", url = "https://github.com/isunjn.gpg" },
+    # { name = "GPG", icon = "fingerprint", url = "https://github.com/isunjn.gpg" },
 ]
 
 homepage_layout = "about"
@@ -67,7 +67,7 @@ blog_categorized = false
 blur_effect = true
 
 toc = true
-comment = true
+comment = false
 copy = true
 back_to_top = true
 

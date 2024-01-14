@@ -1,6 +1,4 @@
 <style>
-
-  /* light mode colors */
   body {
     --primary-color: #5871a2;
     --primary-pale-color: #5871a210;
@@ -17,7 +15,6 @@
     --callout-tip-color: #3c8460;
   }
 
-  /* dark mode colors */
   body.dark {
     --primary-color: #5d77ac;
     --primary-pale-color: #5d77ac20;
@@ -34,11 +31,10 @@
     --callout-tip-color: #3c8460;
   }
 
-  /* typography */
   body {
     --main-font: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --code-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-    --homepage-max-width: 688px;
+    --homepage-max-width: 718px;
     --main-max-width: 768px;
     --avatar-size: 60px;
     --icon-size: 20px;
@@ -52,31 +48,5 @@
     --inline-code-bg-color: var(--primary-pale-color);
     --block-code-border-radius: 0px;
     --block-code-border-color: var(--primary-color);
-  }
-
-  .homepage #wrapper::before {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: -1;
-    background: radial-gradient(circle,rgba(2,0,36,0) 0,#fcfcfc 100%);
-  }
-  .homepage #wrapper::after {
-    content: "";
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    z-index: -2;
-    background-image: url(/img/grid.svg);
-    filter: invert(1);
-    opacity: .4;
-  }
-  .dark.homepage #wrapper::before {
-    background: radial-gradient(circle,rgba(231, 231, 232, 0) 0,#242424 100%);
-  }
-  .dark.homepage #wrapper::after {
-    filter: none;
-    opacity: 0.2;
   }
 </style>

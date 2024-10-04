@@ -1,0 +1,29 @@
+[[project]]
+name = "serene"
+desc = "A blog theme for [zola](https://getzola.org), simple, clean, well-crafted"
+tags = ["css", "theme"]
+links = [
+    { name = "demo", url = "https://serene-demo-site.vercel.app" },
+    { name = "github", url = "https://github.com/isunjn/serene" },
+]
+
+[[project]]
+name = "ravel"
+desc = "Minimal typora theme"
+tags = ["css", "theme"]
+links = [{ name = "github", url = "https://github.com/isunjn/ravel" }]
+
+[[project]]
+name = "pianoo"
+desc = "[Deprecated] A web app where you can play piano with your computer keyboard, easily and breezily"
+tags = ["typescript", "react", "music"]
+links = [
+    { name = "demo", url = "https://pianoo.vercel.app" },
+    { name = "github", url = "https://github.com/isunjn/pianoo" },
+]
+
+[[project]]
+name = "snlc"
+desc = "[Deprecated] TypeScript implementation of SNL compiler front-end (SNL is a toy programming language used for teaching purpose)"
+tags = ["typescript", "compiler"]
+links = [{ name = "github", url = "https://github.com/isunjn/snlc" }]

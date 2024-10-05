@@ -3,8 +3,17 @@ name = "serene"
 desc = "A blog theme for [zola](https://getzola.org), simple, clean, well-crafted"
 tags = ["css", "theme"]
 links = [
-    { name = "demo", url = "https://serene-demo-site.vercel.app" },
-    { name = "github", url = "https://github.com/isunjn/serene" },
+  { name = "demo", url = "https://serene-demo-site.vercel.app" },
+  { name = "github", url = "https://github.com/isunjn/serene" },
+]
+
+[[project]]
+name = "consoo"
+desc = "A set of helper functions for *quick and dirty* frontend debugging"
+tags = ["typescript", "debugging"]
+links = [
+  { name = "npm", url = "https://www.npmjs.com/package/consoo" },
+  { name = "github", url = "https://github.com/isunjn/consoo" },
 ]
 
 [[project]]
@@ -18,8 +27,8 @@ name = "pianoo"
 desc = "[Deprecated] A web app where you can play piano with your computer keyboard, easily and breezily"
 tags = ["typescript", "react", "music"]
 links = [
-    { name = "demo", url = "https://pianoo.vercel.app" },
-    { name = "github", url = "https://github.com/isunjn/pianoo" },
+  { name = "demo", url = "https://pianoo.vercel.app" },
+  { name = "github", url = "https://github.com/isunjn/pianoo" },
 ]
 
 [[project]]

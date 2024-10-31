@@ -4,6 +4,7 @@ description = "The favs of @isunjn"
 template = "prose.html"
 [extra]
 lang = 'en'
+reaction = false
 +++
 
 _Things I like_

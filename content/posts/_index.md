@@ -1,5 +1,5 @@
 +++
-title = "isunjn::blog"
+title = "isunjn::posts"
 description = "The blog of @isunjn"
 sort_by = "date"
 template = "blog.html"

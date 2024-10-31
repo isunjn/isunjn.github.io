@@ -1,31 +1,43 @@
 [[project]]
-name = "serene"
-desc = "A blog theme for [zola](https://getzola.org), simple, clean, well-crafted"
-tags = ["css", "theme"]
-links = [
-  { name = "demo", url = "https://serene-demo-site.vercel.app" },
-  { name = "github", url = "https://github.com/isunjn/serene" },
-]
-
-[[project]]
 name = "consoo"
 desc = "A set of helper functions for *quick and dirty* frontend debugging"
-tags = ["typescript", "debugging"]
+tags = ["lib", "debugging", "typescript"]
 links = [
   { name = "npm", url = "https://www.npmjs.com/package/consoo" },
   { name = "github", url = "https://github.com/isunjn/consoo" },
 ]
 
 [[project]]
+name = "hami-melon-zed"
+desc = "Organic code editor theme for Zed"
+tags = ["theme", "editor"]
+links = [
+  { name = "link", url = "https://zed.dev/extensions?query=hami+melon" },
+  { name = "github", url = "https://github.com/isunjn/hami-melon-zed" },
+]
+
+[[project]]
+name = "serene"
+desc = "A spiffy blog theme for Zola, well crafted"
+tags = ["theme", "blog"]
+links = [
+  { name = "demo", url = "https://serene-demo.pages.dev" },
+  { name = "github", url = "https://github.com/isunjn/serene" },
+]
+
+[[project]]
 name = "ravel"
 desc = "Minimal typora theme"
-tags = ["css", "theme"]
-links = [{ name = "github", url = "https://github.com/isunjn/ravel" }]
+tags = ["theme", "writing"]
+links = [
+  { name = "link", url = "https://theme.typora.io/theme/Ravel" },
+  { name = "github", url = "https://github.com/isunjn/ravel" },
+]
 
 [[project]]
 name = "pianoo"
-desc = "[Deprecated] A web app where you can play piano with your computer keyboard, easily and breezily"
-tags = ["typescript", "react", "music"]
+desc = "*(Archived)* A web app where you can play piano with your computer keyboard, easily and breezily"
+tags = ["music", "typescript", "react"]
 links = [
   { name = "demo", url = "https://pianoo.vercel.app" },
   { name = "github", url = "https://github.com/isunjn/pianoo" },
@@ -33,6 +45,6 @@ links = [
 
 [[project]]
 name = "snlc"
-desc = "[Deprecated] TypeScript implementation of SNL compiler front-end (SNL is a toy programming language used for teaching purpose)"
-tags = ["typescript", "compiler"]
+desc = "TypeScript implementation of SNL compiler front-end (SNL is a toy programming language used for teaching purpose)"
+tags = ["compiler", "typescript"]
 links = [{ name = "github", url = "https://github.com/isunjn/snlc" }]
